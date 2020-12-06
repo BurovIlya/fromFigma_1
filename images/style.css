@@ -1,0 +1,446 @@
+/*@import url(https://volgastat.gks.ru/storage//2019/05-08/hd9YBJOv/2020/font_roboto.css);*/
+* {box-sizing:border-box;margin:0;padding:0;}
+
+body, html {
+    width:100vw;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    background-color: #1D1F20;
+    /*overflow-x: hidden;*/
+    overflow: hidden;
+}
+.title-page {
+    width: 100%;
+    height: 100vh;
+    /*display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 80px;
+    grid-gap: 0;*/
+    box-sizing:border-box;
+    background-image: url(../images/BG.png);
+    background-origin: border-box;
+    background-position: 0% 0%;
+    background-repeat: no-repeat;
+    background-size: auto auto;
+    cursor: pointer;
+}
+
+.title-page-main {
+    /*grid-column: 1;
+    grid-row: 1;*/
+    width: 100%;
+    height: 100%;
+}
+
+.title-page-info {
+    width: 1170px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.flexblock1 {
+    display: flex;
+    flex-wrap:nowrap;
+    justify-content:flex-start;
+    align-items:center;
+}
+
+.buttons-wrapper {
+    position: absolute;
+    left: 0;
+}
+
+.title-page-banners {
+    top: 49px;
+    height:58px;
+    
+}
+
+.fond-type {
+    position: absolute;
+    left: 0;
+    top: 254px;
+}
+
+.fond-type > h3 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 86px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #1BA4CE;
+}
+
+.fond-name {
+    position: absolute;
+    left: -5px;
+    top: 329px;
+}
+
+.fond-name > h1 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 80px;
+    line-height: 82px;
+    color: #FFFFFF;
+}
+
+.title-page-buttons {
+    top: 579px;
+    /*height: 54px;*/
+}
+
+.donuts {
+    width: 170px;
+    height: 54px;
+    border-radius: 6px;
+    background-color: rgba(250,144,84,1);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 54px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    cursor:pointer;
+}
+
+.donuts:hover {
+    background-color: rgba(240,109,36,1);
+    transition: background-color 0.4s linear;
+}
+
+.watch-translation {
+    width: 260px;
+    height: 48px;
+}
+
+.watch-translation .play {
+    width: 48px;
+    height: 48px;
+    background-color: rgba(27,164,206,0.2);
+    border-radius: 50%;
+    position: relative;
+    
+}
+.watch-translation .play::before {
+    content: '';
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    background-color: rgba(27,164,206,1);
+    background-image: url(../images/Polygon1.png);
+    background-origin: border-box;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: auto auto;
+}
+
+.watch-translation:hover .play {
+    background-color: rgba(27,164,206,1);
+    transition: background-color 0.2s linear;
+}
+
+.watch-translation .play-label {
+    margin-left: 18px;
+    height: 100%;
+    position: relative;
+    flex-grow: 1;
+}
+
+.watch-translation .play-label .onair {
+    position: absolute;
+    left: 0;
+    top: 4px;
+    height: 15px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: #1BA4CE;
+    white-space: nowrap;
+}
+
+.watch-translation .play-label .translation {
+    position: absolute;
+    left: 0;
+    top: 22px;
+    height: 22px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 22px;
+    color: #FFFFFF;
+}
+
+.title-page-header {
+    /*grid-column: 1;
+    grid-row: 2;
+    position: relative;*/
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 80px;
+    /*padding-top: 15px;*/
+}
+
+.title-page-header::before, .title-page-header::after {
+    content: '';
+    position: absolute;
+    left:0;
+    right:0;
+    height:1px;
+    background-color: #393B3D;
+}
+.title-page-header::after {
+    bottom:0;
+}
+.title-page-header::before {
+    top:0;
+}
+
+.menu {
+    justify-content: space-between;
+    width: 100%;
+    /*height: auto;*/
+    height: 100%;
+}
+
+.menu > .logo {
+    
+}
+
+.menu > .navbar {
+    justify-content: space-between;
+}
+
+.navbar > ul.navbar-items {
+    list-style: none;
+    
+}
+
+.navbar > ul.navbar-items li {
+    display: inline;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    font-style:normal;
+    line-height: 100%;
+    margin-right: 20px;
+}
+.navbar > ul.navbar-items li:last-child {
+    margin-right: 24px;
+}
+
+.navbar > ul.navbar-items li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar > .phone {
+    /*position: relative;*/
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: #121212;
+    overflow: hidden;
+    cursor: pointer;
+    padding: 10px 21px 10px 10px;
+    box-sizing: border-box;
+    margin: 0;
+    
+}
+
+.navbar > .phone:hover {
+    width: auto;
+    overflow: auto;
+    border-radius: 100px;
+    cursor: default;
+}
+
+.phone > .phone-icon {
+    margin-right: 10px;
+    width: 24px;
+    height: 24px;
+}
+.phone > .phone-number {
+    white-space: nowrap;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    font-style:normal;
+    line-height: 100%;
+}
+
+.volume {
+    width: 24px;
+    height: 24px;
+    box-sizing:border-box;
+    cursor: pointer;
+    background-origin: border-box;
+    background-position: 0% 0%;
+    background-repeat: no-repeat;
+    background-size: auto auto;
+    background-image: url('../images/volume-2.png'); 
+}
+
+
+.off {
+    background-image: url('../images/volume-off.png');
+}
+
+.flexblock2 {
+    justify-content: flex-start;
+}
+
+.title-page-content {
+    width: 100%;
+    /*height: auto;*/
+    height: 4913px;
+    overflow-y: scroll;
+}
+
+section.programms {
+    position: absolute;
+    width: 100%;
+    height: 612px;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 78px 1fr 1fr;
+}
+
+
+.programms-title {
+    display: flex;
+    justify-content:flex-start;
+    align-items: flex-start;
+}
+h2.prog-name {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 44px;
+    /*line-height: 54px;*/
+    color: #FFFFFF;
+    
+}
+
+.flexblock3 {
+    display: flex;
+    flex-wrap: nowrap;
+    justfy-content: stretch;
+    align-items:flex-start;
+}
+
+.programms-slider {
+    width:100%;
+    height:100%;
+    overflow: hidden;
+}
+.slider-text {
+    height: auto;
+    flex-grow:1;
+}
+.slider-text p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 150%;
+    /* or 150% */
+    color: #ACBCC6;
+}
+
+.slider-arrows {
+    flex-shrink:0;
+    flex-basis: 68px;
+    width: 68px;
+    height: 24px;
+    position: relative;
+    align-self: center;
+}
+.slider-arrows > .arrows {
+    position: absolute;
+    top: 0;
+    width: 24px;
+    height: 24px;
+    background-origin: border-box;
+    background-position: 0% 0%;
+    background-repeat: no-repeat;
+    background-size: auto auto;
+}
+.slider-arrows > .arrows[data-name="left"] {
+    left: 0;
+    background-image: url(../images/chevron-left.png);
+}
+.slider-arrows > .arrows[data-name="right"] {
+    right: 0;
+    background-image: url(../images/chevron-left_color.png);
+    /*transform: rotate(-180deg);*/
+}
+.prog {
+    position: relative;
+    background: #161717;
+    border-radius: 15px;
+    box-sizing: border-box;
+    padding: 50px 0 33px 46px;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.prog > .prog-header {
+    
+    font-size: 34px;
+    line-height: 100%;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+.prog > .prog-description {
+    width: 100%;
+    max-width:370px;
+    box-sizing: border-box;
+    max-height: 98px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.prog-description > p {
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    line-height: 150%;
+    color: #ACBCC6;
+}
+.prog > .prog-icon {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 85px;
+    height: 85px;
+    
+}
+.prog-icon > img {
+    width: 100%;
+    height: 100%;
+    
+}
+.prog > .prog-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-sizing: border-box;
+    transition: all 0.2s linear;
+}
+.prog > .prog-link:hover {
+    border: 3px solid #1BA4CE;
+    border-radius: 15px;
+}

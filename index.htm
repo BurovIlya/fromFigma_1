@@ -1,0 +1,1431 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Благотворительный фонд "Возрождение нации"</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="styles/style.css">
+    
+</head>
+<body>
+
+<div id="popup-wrapper" class="popup hide">
+    
+    <div id="popup-block" class="fixedBlock">
+        
+        <div id="popup-content">
+        
+            <header>Пожертвовать</header>
+            
+            <p class="simple-text">Вы можете стать частью нашей команды,<br /> помогая спасать судьбы людей.</p>
+        
+            <div class="popup-form">
+            
+                <form id="popup-donut-form" name="popup-donut-form" action="" method="POST" class="donut-form">
+                    
+                        <div class="form-elems-wrapper">
+                        
+                            <div class="switch-period">
+                            
+                                <div class="custom-radio">
+                                
+                                    <div class="custom-radio-variant">
+                                        <input type="radio" name="payperiod" id="period11" value="onetime" checked="checked" autocomplete="off" />
+                                        <label for="period11">Единоразово</label>
+                                    </div>
+                                    
+                                    <div class="switcher">
+                                    
+                                        <div class="switcher-ball"></div>
+                                    
+                                    </div>
+                                    
+                                    <div class="custom-radio-variant alter">
+                                        <input type="radio" name="payperiod" id="period22" value="monthly" autocomplete="off" />
+                                        <label for="period22">Ежемесячно</label>
+                                    </div>
+                                
+                                </div>
+                            
+                            </div>
+                            
+                            <div class="input-field">
+                            
+                                <input type="text" autocomplete="off" name="summa" required />
+                                
+                                <div class="custom-field custom-input">
+                                    
+                                    <div class="custom-input-inner">
+                                        
+                                        <p class="simple-text">Сумма в рублях<span>*</span></p>
+                                        <p class="input-value-text"></p>
+                                    </div>
+                                    
+                                    <div class="clear-field"></div>
+                                    
+                                </div>
+                            
+                            </div>
+                            
+                            <div class="select-field">
+                            
+                                <div class="custom-select">
+                                
+                                    <select name="paymode" id="paymode2">
+                                
+                                        <option value="0">Банковская карта</option>
+                                        <option value="1">Платежная квитанция</option>
+                                        <option value="2">PayPal</option>
+                                
+                                    </select>
+                                    <p class="select-field-title">Способ оплаты</p>
+                                    <div class="select-selected"></div>    
+                                
+                                </div>
+                            
+                            </div>
+                            
+                            <div class="input-field">
+                            
+                                <input type="text" autocomplete="off" name="first-name" required />
+                                
+                                <div class="custom-field custom-input">
+                                    
+                                    <div class="custom-input-inner">
+                                        
+                                        <p class="simple-text">Имя<span>*</span></p>
+                                        <p class="input-value-text"></p>
+                                        
+                                    </div>
+                                    
+                                    <div class="clear-field"></div>
+                                    
+                                </div>
+                            
+                            </div>
+                            
+                            
+                            <div class="input-field">
+                            
+                                <input type="text" autocomplete="off" name="last-name" required />
+                                
+                                <div class="custom-field custom-input">
+                                    
+                                    <div class="custom-input-inner">
+                                        
+                                        <p class="simple-text">Фамилия<span>*</span></p>
+                                        <p class="input-value-text"></p>
+                                        
+                                    </div>
+                                    
+                                    <div class="clear-field"></div>
+                                    
+                                </div>
+                            
+                            </div>
+                            
+                            <div class="checkboxes-wrapper">
+                            
+                                <div class="flexblock1 fond-detailed-text" style="margin-bottom: 6px;">
+                                
+                                    <input type="checkbox" checked="checked" class="custom-checkbox" id="oferta2" name="oferta2" value="agree" />
+                                    <label for="oferta2"><p class="simple-text">Я принимаю <a href="#" target="_blank" class="kontract">Договор оферты</a></p></label>
+                                    
+                        
+                                </div>
+                                
+                                <div class="flexblock1 fond-detailed-text">
+                        
+                                    <input type="checkbox" class="custom-checkbox" id="persData2" name="persData2" value="agree" />
+                                    <label for="persData2"><p class="simple-text">Я согласен на обработку моих персональных данных</p></label>
+                        
+                                </div>
+                            
+                            </div>
+                            
+                            <div class="big-button-wrapper">
+                                <button type="submit" class="donuts-big">Пожертвовать</button>
+                            </div>
+                        
+                        </div>
+                    
+                    </form>
+            
+            </div>
+        
+        </div>
+        
+        <div class="popup-close"></div>
+    
+    </div>
+    
+    
+    
+</div>
+
+<div id="popup2" class="popup hide">
+
+        <div id="popup2-block" class="fixedBlock hide">
+        
+            <div class="popup2-content">
+            
+                <img alt="" src="images/help2.png" class="illustration" />
+                
+                <h6>Спасибо<br />за вашу помощь</h6>
+                
+                <p>Ваше пожертвование было<br />успешно отправлено</p>
+            
+            </div>
+        
+        </div>
+        
+        <div id="popup-thanks" class="fixedBlock hide">
+        
+            <div class="popup2-content">
+            
+               
+            
+            </div>
+            
+            <div class="popup-close"></div> 
+        
+        </div>
+        
+        <div id="popup-instruct" class="fixedBlock hide">
+        
+            <!--<div class="popup2-content container" data-control="wheel">-->
+            <div class="popup2-content container">
+            
+                <div class="viewport-wrapper">
+                
+                    <div class="viewport">
+                    
+                        <div class="content">
+                        
+                            <h5>Инструкция к пожертвованию</h5>
+                            
+                            <p>Выберите вкладку удобного способа</p>
+                            
+                            <div class="flexblock1 tabs-menu">
+                            
+                                <div class="tabs-menu-item active-tab" data-tab="tab1">приложение</div>
+                                
+                                <div class="tabs-menu-item" data-tab="tab2">Веб-портал</div>
+                                
+                            </div>
+                            
+                            <div class="tab" id="tab1">
+                            
+                                <div class="api-steps-wrapper">
+                                
+                                    <div class="api-step">
+                                    
+                                        <div class="api-step-pic">
+                                        
+                                            <img alt="" src="images/api_step1.png" />
+                                        
+                                        </div>
+                                        
+                                        <div class="step-descript">
+                                
+                                            <header class="step-title">Шаг 1</header>
+                                    
+                                            <p>Выберите раздел <strong>Платежи &gt; Автоплатежи и автопереводы</strong></p>
+                                
+                                        </div>
+                                    
+                                    </div>
+                                    
+                                    <div class="api-step">
+                                    
+                                        <div class="api-step-pic">
+                                        
+                                            <img alt="" src="images/api_step2.png" />
+                                        
+                                        </div>
+                                        
+                                        <div class="step-descript">
+                                
+                                            <header class="step-title">Шаг 2</header>
+                                    
+                                            <p>Выберите <strong>Подключить &gt; Автоплатеж</strong></p>
+                                
+                                        </div>
+                                    
+                                    </div>
+                                    
+                                    <div class="api-step">
+                                    
+                                        <div class="api-step-pic">
+                                        
+                                            <img alt="" src="images/api_step3.png" />
+                                        
+                                        </div>
+                                        
+                                        <div class="step-descript">
+                                
+                                            <header class="step-title">Шаг 3</header>
+                                    
+                                            <p>В панели навигации выберите иконку поиска и введите ИНН фонда <strong>1100113477100</strong></p>
+                                
+                                        </div>
+                                    
+                                    </div>
+                                    
+                                    <div class="api-step">
+                                    
+                                        <div class="api-step-pic">
+                                        
+                                            <img alt="" src="images/api_step4.png" />
+                                        
+                                        </div>
+                                        
+                                        <div class="step-descript">
+                                
+                                            <header class="step-title">Шаг 4</header>
+                                    
+                                            <p>Нажмите на название фонда</p>
+                                
+                                        </div>
+                                    
+                                    </div>
+                                    
+                                    <div class="api-step">
+                                    
+                                        <div class="api-step-pic">
+                                        
+                                            <img alt="" src="images/api_step5.png" />
+                                        
+                                        </div>
+                                        
+                                        <div class="step-descript">
+                                
+                                            <header class="step-title">Шаг 5</header>
+                                    
+                                            <p>Введите свои <strong>ФИО и карту</strong>, с которой планируете перевод</p>
+                                
+                                        </div>
+                                    
+                                    </div>
+                                    
+                                    <div class="api-step">
+                                    
+                                        <div class="api-step-pic">
+                                        
+                                            <img alt="" src="images/api_step6.png" />
+                                        
+                                        </div>
+                                        
+                                        <div class="step-descript">
+                                
+                                            <header class="step-title">Шаг 6</header>
+                                    
+                                            <p>Введите назначение платежа, например: <strong>Пожертвование</strong></p>
+                                
+                                        </div>
+                                    
+                                    </div>
+                                
+                                </div>
+                            
+                            </div>
+                            
+                            <div class="tab hide" id="tab2">
+                            
+                                <div class="web-steps-wrapper">
+                                
+                                  <div class="number"></div>
+                                  
+                                  <div class="web-step-pic" style="align-self: end">
+                                    <img alt="" src="images/web_step_1_1.png" />
+                                  </div>
+                                  
+                                  <div class="web-step-pic" style="margin-left: 40px;align-self: end">
+                                    <img alt="" src="images/web_step_1_2.png" />
+                                  </div> 
+                                  
+                                 <div class="step-descript step1">
+                                
+                                            <header class="step-title">Шаг 1</header>
+                                    
+                                            <p>Войдите в личный кабинет Сбербанк Онлайн. <br />В верхней навгиационной панели найдите вкладку <strong>Переводы и платежи</strong>. <br />Ниже справа обратитесь к разделу <strong>Личное меню &gt; Мои автоплатежи &gt; Подключить автоплатеж</strong>.</p>
+                                
+                                 </div>
+                                 
+                                 <div class="empty"></div>
+                                 
+                                  <div class="number"></div>
+                                  
+                                  <div class="web-step-pic pic2">
+                                    <img alt="" src="images/web_step_2.png" />
+                                  </div>
+                                  
+                                  <div class="step-descript" style="margin-left: 40px;margin-bottom:26px;">
+                                
+                                            <header class="step-title">Шаг 2</header>
+                                    
+                                            <p>Ниже по центру вы найдете поисковое поле. Введите в него ИНН фонда: <strong>6166070187</strong> и нажмите <strong>Найти</strong>.</p>
+                                
+                                  </div>
+                                  
+                                   <div class="number"></div>
+                                   
+                                   <div class="step-descript" style="margin-left: 40px;">
+                                
+                                            <header class="step-title">Шаг 3</header>
+                                    
+                                            <p>Убедитесь, что для вас показаны результаты <strong>без учета региона</strong>. Нажмите на название фонда.</p>
+                                
+                                  </div>
+                                  
+                                  <div class="empty"></div>
+                                  
+                                  <div class="number"></div>
+                                  
+                                  <div class="web-step-pic">
+                                    <img alt="" src="images/web_step_4.png" />
+                                  </div>
+                                  
+                                  <div class="step-descript" style="margin-left: 40px;">
+                                
+                                            <header class="step-title">Шаг 4</header>
+                                    
+                                            <p>Заполните ваши ФИО и нажмите кнопку <strong>Продолжить</strong>.</p>
+                                
+                                  </div>
+                                
+                                </div>
+                            
+                            </div>
+                            
+                            <div class="step7">
+                            
+                                <div class="step-descript">
+                                
+                                    <header class="step-title">Шаг 7</header>
+                                    
+                                    <p>В следующем экране введите значение<br />суммы платежа и подтвердите ваше<br />подключение автоплатежа.</p>
+                                
+                                </div>
+                                
+                                <div class="step-title">Готово</div>
+                            
+                            </div>
+                        
+                        </div>
+                        
+                    </div>
+                
+                </div>
+            
+            </div>
+            
+            <div class="popup-close"></div>
+        
+        </div>
+        
+        <div id="dogovor" class="fixedBlock hide">
+        
+            <div class="popup2-content container">
+            
+                <div class="viewport-wrapper">
+                
+                    <div class="viewport">
+                    
+                        <div class="content">
+                        
+                            <a href="#" target="_blank" class="block-style">
+                    
+                                <div class="flexblock1 fond-detailed-text">
+                        
+                                    <img alt="" src="images/download.png" width="24" height="24" />
+                                    <span style="margin-left: 10px;">Скачать PDF</span>
+                                                           
+                                </div>
+                                
+                            </a>
+                            
+                            <h5 style="text-align: left;">Договор публичной оферты</h5>
+                                
+                            <div><p><span style="float:left;text-align: left;">г. Ростов-на-Дону</span><span style="float:right;text-align: right;">30 августа  2020  г.</span></p></div>
+                              
+                            <p style="clear: both;padding-top: 25px;">Благотворительный фонд «Возрождение нации», в лице    Председателя  Масловой Алисы Винченциуевны,  действующей  на  основании  Устава, именуемый  в  дальнейшем Благополучатель, настоящим предлагает физическим лицам или их представителям, именуемым  в  дальнейшем  Благотворитель,  совместно именуемые Стороны, заключить Договор о благотворительном пожертвовании на нижеследующих условиях:</p>
+                            
+                            <p class="punkt">1.  Общие положения о публичной оферте</p>
+                            <p>1.1. Данное предложение является публичной офертой в соответствии с пунктом 2  статьи 437  Гражданского Кодекса РФ.</p>
+                            <p>1.2. Акцептом настоящей оферты является осуществление Благотворителем перечисления денежных средств на расчётный счёт Благополучателя в качестве благотворительного пожертвования на уставную деятельность Благополучателя. Акцепт данного предложения Благотворителем означает, что последний ознакомился и согласен со всеми условиями настоящего Договора о благотворительном пожертвовании с Благополучателем.</p>
+                            <p>1.3. Оферта вступает в силу со дня, следующего за днём её публикации на официальном сайте Благополучателя  <a href="https://возрождение-нации.рф/" target="_blank">https://возрождение-нации.рф/</a>, именуемом в дальнейшем «Сайт».</p>
+                            <p>1.4. Текст  настоящей  оферты  может  быть  изменен  Благополучателем  без предварительного уведомления и действует со дня, следующего за днём его размещения на Сайте.</p>
+                            <p>1.5. Оферта действует до дня, следующего за днем размещения на Сайте извещения об отмене Оферты. Благополучатель вправе отменить Оферту в любое время без объяснения причин.</p>
+                            <p>1.6. Недействительность  одного  или  нескольких  условий  Оферты  не  влечёт недействительности всех остальных условий Оферты.</p>
+                            <p>1.7. Принимая условия данного соглашения, Благотворитель подтверждает добровольный и безвозмездный характер пожертвования.</p>
+                            
+                            <p class="punkt">2. Предмет договора</p> 
+                            <p>2.1.  По  настоящему  договору  Благотворитель  в  качестве благотворительного пожертвования  перечисляет  собственные  денежные  средства  на  расчётный  счёт Благополучателя, а Благополучатель принимает пожертвование и использует на уставные цели.</p>
+                            
+                            <p class="punkt">3. Деятельность Благополучателя</p>
+                            <p>3.1. Уставной деятельностью Благополучателя является реализация благотворительных программ  Благополучателя,  направленных   на социальную поддержку и защиту граждан, включая улучшение материального положения малообеспеченных, инвалидов и иных лиц, которые в силу своих физических или интеллектуальных возможностей, иных обстоятельств не способны самостоятельно реализовать свои права и законные интересы; социальную реабилитацию инвалидов; поддержку малообеспеченных семей с детьми инвалидами и многодетных семей; а также другие виды деятельности, указанные в Уставе Благотворительного фонда «Возрождение нации», утвержденного Протоколом № 3 от 13 февраля 2017 г. Благополучатель публикует информацию о своей работе, целях и задачах, мероприятиях и результатах на сайте <a href="https://возрождение-нации.рф/" target="_blank">https://возрождение-нации.рф/</a>, в Годовом отчете и в других открытых источниках.</p>
+
+                            <p class="punkt">4. Заключение договора</p> 
+                            <p>4.1. Акцептовать Оферту и тем самым заключить с Благополучателем Договор вправе только физическое лицо. </p>
+                            <p>4.2. Датой акцепта Оферты и соответственно датой заключения Договора является дата зачисления денежных средств на банковский счёт Благополучателя. Местом заключения Договора считается город Ростов-на-Дону Российской Федерации. В соответствии с пунктом 3 статьи 434 Гражданского кодекса Российской Федерации Договор считается заключенным в письменной форме.</p>
+                            <p>4.3. Условия  Договора  определяются  Офертой  в  редакции  (с  учётом  изменений  и дополнений),  действующей  (действующих)  на  день  оформления  платёжного распоряжения или день внесения наличных денег в кассу Благополучателя.</p>
+                            
+                            <p class="punkt">5. Внесение пожертвования</p> 
+                            <p>5.1. Благотворитель  самостоятельно  определяет  размер  суммы благотворительного пожертвования  и  перечисляет  его  Благополучателю  любым  платёжным  методом, указанным на сайте https://возрождение-нации.рф/, на условиях настоящего Договора.</p>
+                            <p>5.2. Благотворитель может оформить на сайте <a href="https://возрождение-нации.рф/" target="_blank">https://возрождение-нации.рф/</a> поручение на регулярное (ежемесячное) списание пожертвования с банковской карты.</p>
+                            <p>5.2.1. Благотворитель в соответствующей форме на сайте <a href="https://возрождение-нации.рф/" target="_blank">https://возрождение-нации.рф/</a> может выбрать сумму регулярного списания из предлагаемых вариантов или ввести свою, а так же определить дату регулярного списания из предлагаемых вариантов.</p>
+                            <p>5.2.2. Поручение считается оформленным после успешного завершения первого списания с карты с применением 3DS аутентификации в случае, если Благотворитель подключил соответствующую услугу в своем банке для обеспечения дополнительной безопасности при осуществлении онлайн-платежей, и получении уведомления об успешном списании на электронный адрес Благотворителя, указанный при оформлении поручения.</p> 
+                            <p>5.2.3. Поручение на регулярное списание действует до момента окончания срока действия карты владельца или  до  подачи  Благотворителем  письменного  уведомления  о прекращении действия поручения. Уведомление должно быть направлено на электронный адрес <a href="mailto:vnfond@mail.ru">vnfond@mail.ru</a> не менее чем за 15  календарных дней до даты очередного автоматического списания. Уведомление должно содержать следующие данные: фамилия и имя, как указано на карте; четыре последних цифры карты, с которой осуществляется автоматическое  списание  средств;  электронный  адрес,  на  который  Благополучатель отправит подтверждение о прекращении регулярного списания.</p>
+                            <p>5.3. Перечисление пожертвования на счёт Благополучателя путём списания средств со счёта мобильного телефона допускается только с номеров телефонов, оформленных на физическое лицо.</p>
+                            <p>5.4. При перечислении пожертвования через систему терминалов моментальной оплаты «Киви» (Qiwi),  для  правильной  идентификации  плательщика  Благотворитель  должен указать свой телефонный номер.</p>
+                            <p>5.5. При перечислении пожертвования путём оформления списания с банковского счёта через личный кабинет на интернет-сайте банка Благотворителя, в назначении платежа следует указать «Пожертвование на уставную деятельность Благотворительного фонда «Возрождение нации».</p>
+                            
+                            <p class="punkt">6. Права и обязанности сторон</p>
+                            <p>6.1. Благополучатель  обязуется  использовать  полученные  от  Благотворителя  по настоящему  договору  денежные  средства  строго  в  соответствии  с  действующим законодательством РФ и в рамках уставной деятельности.</p>
+                            <p>6.2. Благотворитель даёт разрешение на обработку и хранение персональных данных, используемых Благополучателем исключительно для исполнения указанного договора.</p>
+                            <p>6.3. Благополучатель  обязуется  не  раскрывать  третьим  лицам  личную  и  контактную информацию  Благотворителя  без  его  письменного  согласия,  за  исключением  случаев требования  данной  информации  государственными  органами,  имеющими  полномочия требовать такую информацию.</p>
+                            <p>6.4. Полученное от Благотворителя пожертвование, по причине закрытия потребности частично  или  полностью  не  израсходованное  согласно  назначению  пожертвования, указанному Благотворителем в платежном поручении, не возвращается Благотворителю, а перераспределяется Благополучателем самостоятельно на другие актуальные программы.</p>
+                            <p>6.5. Благополучатель имеет право извещать Благотворителя  о текущих программах с помощью электронных, почтовых и СМС-рассылок, а также с помощью телефонных обзвонов.</p>
+                            <p>6.6. По запросу Благотворителя (в виде электронного  или  обычного  письма) Благополучатель  обязан  предоставить  Благотворителю  информацию  о  сделанных Благотворителем пожертвованиях.</p>
+                            <p>6.7.  Благополучатель  не  несет  перед  Благотворителем  иных  обязательств,  кроме обязательств, указанных в настоящем Договоре.</p>
+                            
+                            <p class="punkt">7. Прочие условия</p>
+                            <p>7.1. В случае возникновения споров и разногласий между Сторонами по настоящему договору,  они  будут  по  возможности  разрешаться  путем  переговоров.  В  случае невозможности  разрешения  спора  путем  переговоров,  споры и  разногласия  могут решаться в соответствии с действующим законодательством Российской Федерации в судебных инстанциях по месту нахождения Благополучателя.</p>
+                            
+                            <p class="punkt">8. Реквизиты сторон</p>
+                            
+                            <p class="punkt">Б Л А Г О П О Л У Ч А Т Е Л Ь:</p>
+                            
+                            <p style="margin-top: 25px;">Адрес, указанный в ЕГРЮЛ: г. Ростов-на-Дону, ул. Серафимовича, д. 58 а, 3 этаж, оф. 1</p>
+                            <p>Почтовый адрес: г. Ростов-на-Дону, ул. Серафимовича, д. 58 а, 3 этаж, оф. 1</p>
+                            
+                            <p style="margin-top: 25px;">Телефон: +7 900 121 43 03</p>
+                            <p>Электронная почта: <a href="mailto:vnfond@mail.ru">vnfond@mail.ru</a></p>
+                            <p>сайт: <a href="https://возрождение-нации.рф/" target="_blank">https://возрождение-нации.рф/</a></p>
+                            
+                            <p style="margin-top: 25px;">ОГРН 1096100001843</p>
+                            <p>ИНН 6166070187</p>
+                            <p>КПП 616101001</p>
+                            
+                            <p style="margin-top: 25px;">р/с 40703810852090001143 Юго-Западный банк ПАО Сбербанк</p>
+                            <p>г. Ростов-на-Дону,</p>
+                            <p>к/с 30101810600000000602, БИК 046015602</p>
+                            
+                            <p style="margin-top: 25px;"><strong style="margin-right: 30px">Председатель</strong>  Маслова Алиса Винченциуевна</p>  
+                              
+                         </div>
+                                
+                    </div>
+                
+                </div>
+            
+            </div>
+            
+            <div class="popup-close"></div>
+        
+        </div>
+
+</div>
+
+
+
+
+    <div class="title-page">
+    
+      <div class="title-page-main">
+      
+        <div class="title-page-info inner-block">
+      
+          <div class="flexblock1 buttons-wrapper title-page-banners">
+        
+            <a href="https://fpg.ru" target="_blank" style="margin-right: 50px;" data-type="clickable"><img alt="banner" src="images/banner1.png" /></a>
+            <a href="https://azps.ru" target="_blank"><img alt="banner" src="images/banner2.png" data-type="clickable" /></a>
+        
+          </div>
+          
+          <div class="fond-type">
+            
+            <h3>Благотворительный фонд</h3>
+            
+          </div>
+          
+          <div class="fond-name">
+          
+            <h1>Возрождение<br />нации</h1>
+          
+          </div>
+          
+          <div class="flexblock1 buttons-wrapper title-page-buttons">
+        
+            <div class="donuts" style="margin-right: 55px;" data-type="clickable">Пожертвовать</div>
+            
+            <a href="pages/video.htm" target="_blank" data-type="clickable">
+                
+                <div class="flexblock1 watch-translation">
+                
+                   <div class="play"></div>
+                    
+                    <div class="play-label">
+                    
+                        <div class="onair">Идет эфир</div>
+                        
+                        <div class="translation">Смотреть трансляцию</div>
+                    
+                    </div>
+                
+                </div>
+            
+            </a>
+        
+          </div>
+        
+        </div>
+      
+      </div>
+      
+      <div class="title-page-header">
+      
+        <div class="title-page-info inner-block">
+        
+            <div class="flexblock1 menu">
+            
+                <div class="flexblock1 logo">
+                
+                    <a href="pages/programs.htm" style="height: 49px;" data-type="clickable"><img alt="logotip" src="images/row-logo_inverted.png" width="170" height="49" style="margin-right: 20px;" /></a>
+                    <div class="volume" style="margin-right: 20px;" data-type="clickable"></div>
+                    <!--<img alt="volume-icon" src="images/volume-2.png" width="24" height="24" />-->
+                
+                </div>
+                
+                <div class="flexblock1 navbar">
+                
+                    <ul class="navbar-items" data-type="clickable">
+                    
+                        <li><a href="pages/reports.htm">Отчетность</a></li>
+                        <li><a href="pages/programs.htm">Программы</a></li>
+                        <li><a href="pages/fosterlings.htm">Подопечные</a></li>
+                        <li><a href="pages/volonters.htm">Волонтерам</a></li>
+                        <li><a href="pages/video.htm">Видео</a></li>
+                        <li><a href="pages/about.htm">О фонде</a></li>
+                        <li><a href="pages/blog.htm">Блог</a></li>
+                    
+                    </ul>
+                    
+                    <div class="flexblock1 phone">
+                    
+                       <div class="phone-icon">
+                         
+                         <img alt="phone-icon" src="images/smartphone.png" width="24" height="24" />
+                         
+                       </div> 
+                       
+                       <div class="phone-number"><span style="margin-right: 10px;">Телефон:</span>+7(900)121-43-03</div>
+                    
+                    </div>
+                    
+                    <div class="donuts" style="margin-left: 30px;display:none" data-type="clickable">Пожертвовать</div>
+                
+                </div>
+            
+            </div>
+        
+        </div>
+      
+      </div> 
+    
+    </div>
+    
+    <div class="title-page-content container" data-control="wheel">
+    
+     <div class="viewport-wrapper">
+     
+      <div class="viewport">
+      
+      <div class="content">
+    
+      <div class="programms-wrapper">
+      
+        <section class="programms" data-type="clickable">
+        
+            <div class="programms-title">
+            
+              <h4 class="header-four" style="margin-top: 0;">Наши программы</h4>
+            
+            </div>
+            <div class="programms-slider flexblock3">
+            
+                <div class="slider-text" style="padding-top: 8px;">
+                
+                    <p>Программы фонда нуждаются в вашей поддержке.</p>
+                    <p>Мы очень признательны всем, кто ее оказывает. Спасибо Вам!</p>
+                    
+                
+                </div>
+                <div class="slider-arrows">
+                
+                    <div class="arrows" data-name="left"></div>
+                    <div class="arrows" data-name="right"></div>
+                
+                </div>
+            
+            </div>
+            <div class="prog">
+            
+                <header class="prog-header">Светлица</header>
+                
+                <article class="prog-description">
+                    <p>Программа осуществляется при поддержке Фонда Президентских грантов. Направлена на реабилитацию семей, воспитывающих детей с синдромом Дауна, аутизмом, отставанием в развитии.</p>                    
+                </article>
+                
+                <aside class="prog-icon">
+                    <img alt="" src="images/sun.png" />
+                </aside>
+            
+                <a href="pages/programms#1" class="prog-link" target="_blank"></a>
+            
+            </div>
+            
+            <div class="prog">
+            
+               <header class="prog-header">Рука помощи</header>
+                
+               <article class="prog-description">
+                    <p>Программа направленна на оказание
+ комплексных мер поддержки нуждающихся.
+ В рамках программы фонд оказывает
+ психологическую, юридическую и
+ материальную поддержку.</p>
+               </article>
+                
+               <aside class="prog-icon">
+                    <img alt="" src="images/heart 1.png" />
+               </aside>
+               
+               <a href="pages/programms#2" class="prog-link" target="_blank"></a>
+            
+            </div>
+            
+            <div class="prog">
+            
+                <header class="prog-header">Читайка</header>
+                
+                <article class="prog-description">
+                    <p>Программа направленна на развитие у
+ ребенка любви к чтению. В уютной атмосфере
+ библиотеки фонда, у камина с часами, читаем
+ с детьми интересные книги и обсуждаем
+ прочитанное.</p>
+                </article>
+                
+                <aside class="prog-icon">
+                    <img alt="" src="images/book-open.png" />
+                </aside>
+                
+                <a href="pages/programms#3" class="prog-link" target="_blank"></a>
+            
+            </div>
+            
+            <div class="prog">
+            
+                <header class="prog-header">Мама<br />тоже человек</header>
+                
+                <article class="prog-description">
+                    <p>Программа призвана снять напряжение с
+ многодетных мам, позволяет развеяться и
+ ощутить атмосферу праздника, любви и
+ заботы.</p>
+                </article>
+                
+                <aside class="prog-icon">
+                    <img alt="" src="images/mother 2.png" />
+                </aside>
+                
+                <a href="pages/programms#4" class="prog-link" target="_blank"></a>
+            
+            </div>
+        
+        </section>
+      
+      </div>
+      
+      <div class="patron-wrapper">
+      
+        <section class="patron inner-block">
+        
+            <aside class="fond-patron" data-type="clickable">
+            
+                <h5 class="header-five">Покровитель фонда</h5>
+                
+                <div class="title-line flexblock1">
+                    <span>Святитель</span>
+                    <img alt="" src="images/Rectangle 4.png" width="350" height="1" />
+                </div>
+                
+                <h4 class="header-four">Лука Войно-Яснецкий</h4>
+                
+                <div class="citate">
+                    <p class="simple-text" style="margin-bottom: 20px;">«Будь добрее, чем принято, ибо у каждого своя война, бои и потери. Живи просто, люби щедро, вникай внутрь другого пристально, говори мягко...».</p>
+                    <p class="simple-text">«Всё теряет силу, если не будет основного – любви к человеку.».</p>
+                </div>
+                
+                <div class="fond-detailed flexblock1">
+                
+                    <a href="#" target="_blank" class="block-style">
+                    
+                        <div class="flexblock1 fond-detailed-text">
+                        
+                            <span style="margin-right: 18px;">Подробнее о фонде</span>
+                            <img alt="" src="images/arrow.png" width="24" height="24" />
+                        
+                        </div>
+                    
+                    </a>
+                    
+                    <a href="#" target="_blank">
+                    
+                        <div class="volonters">Стать волонтером</div>
+                    
+                    </a>
+                    
+                
+                </div>
+            
+            </aside>
+        
+        </section>
+      
+      </div>
+      
+      <div class="make-donut-wrapper">
+      
+        <section class="inner-block make-donuts" data-type="clickable">
+        
+            <div class="make-donuts-info">
+            
+                <h4 class="header-four" style="margin-bottom: 20px;">Пожертвовать</h4>
+                
+                <p class="simple-text">Отправить пожертвование легко<br />с помощью Сбербанк-Онлайн:</p>
+                
+                <ul class="info-list" style="margin-top: 16px;margin-bottom: 30px;">
+                
+                    <li>Подключите <a href="#" target="_blank">Автоплатеж</a>.</li>
+                    <li>Введите в поисковую строку ИНН фонда: <strong>6166070187</strong></li>
+                    <li>Кликните по названию фонда для заполнения данных.</li>
+                
+                </ul>
+                
+                <a href="#" target="_blank" class="block-style instruction">
+                    
+                        <div class="flexblock1 fond-detailed-text">
+                        
+                            <span style="margin-right: 18px;">Подробная инструкция</span>
+                            <img alt="" src="images/arrow.png" width="24" height="24" />
+                        
+                        </div>
+                    
+                 </a>
+                 
+                 <img alt="boy" src="images/Group247.png" width="373" height="280" class="illustration" style="margin-top: 15px;" />
+            
+            </div>
+            <div class="make-donuts-form">
+            
+                <div class="form-text-wrapper">
+                    <p class="simple-text">Или воспользуйтесь нашей формой для принятия платежей,
+указав любой удобный для вас способ из списка.</p>
+                </div>
+                
+                <div class="spacer"></div>
+                
+                <div>
+                
+                    <form id="send-donut-form" name="send-donut-form" action="" method="POST" class="donut-form">
+                    
+                        <div class="form-elems-wrapper">
+                        
+                            <div class="switch-period">
+                            
+                                <div class="custom-radio">
+                                
+                                    <div class="custom-radio-variant">
+                                        <input type="radio" name="payperiod" id="period1" value="onetime" checked="checked" autocomplete="off" />
+                                        <label for="period1">Единоразово</label>
+                                    </div>
+                                    
+                                    <div class="switcher">
+                                    
+                                        <div class="switcher-ball"></div>
+                                    
+                                    </div>
+                                    
+                                    <div class="custom-radio-variant alter">
+                                        <input type="radio" name="payperiod" id="period2" value="monthly" autocomplete="off" />
+                                        <label for="period2">Ежемесячно</label>
+                                    </div>
+                                
+                                </div>
+                            
+                            </div>
+                            
+                            <div class="input-field">
+                            
+                                <input type="text" autocomplete="off" name="summa" required />
+                                
+                                <div class="custom-field custom-input">
+                                    
+                                    <div class="custom-input-inner">
+                                        
+                                        <p class="simple-text">Сумма в рублях<span>*</span></p>
+                                        <p class="input-value-text"></p>
+                                    </div>
+                                    
+                                    <div class="clear-field"></div>
+                                    
+                                </div>
+                            
+                            </div>
+                            
+                            <div class="select-field">
+                            
+                                <div class="custom-select">
+                                
+                                    <select name="paymode" id="paymode">
+                                
+                                        <option value="0">Банковская карта</option>
+                                        <option value="1">Платежная квитанция</option>
+                                        <option value="2">PayPal</option>
+                                
+                                    </select>
+                                    <p class="select-field-title">Способ оплаты</p>
+                                    <div class="select-selected"></div>    
+                                
+                                </div>
+                            
+                            </div>
+                            
+                            <div class="input-field">
+                            
+                                <input type="text" autocomplete="off" name="first-name" required />
+                                
+                                <div class="custom-field custom-input">
+                                    
+                                    <div class="custom-input-inner">
+                                        
+                                        <p class="simple-text">Имя<span>*</span></p>
+                                        <p class="input-value-text"></p>
+                                        
+                                    </div>
+                                    
+                                    <div class="clear-field"></div>
+                                    
+                                </div>
+                            
+                            </div>
+                            
+                            
+                            <div class="input-field">
+                            
+                                <input type="text" autocomplete="off" name="last-name" required />
+                                
+                                <div class="custom-field custom-input">
+                                    
+                                    <div class="custom-input-inner">
+                                        
+                                        <p class="simple-text">Фамилия<span>*</span></p>
+                                        <p class="input-value-text"></p>
+                                        
+                                    </div>
+                                    
+                                    <div class="clear-field"></div>
+                                    
+                                </div>
+                            
+                            </div>
+                            
+                            <div class="checkboxes-wrapper">
+                            
+                                <div class="flexblock1 fond-detailed-text" style="margin-bottom: 6px;">
+                                
+                                    <input type="checkbox" checked="checked" class="custom-checkbox" id="oferta" name="oferta" value="agree" />
+                                    <label for="oferta"><p class="simple-text">Я принимаю <a href="#" target="_blank" class="kontract">Договор оферты</a></p></label>
+                                    
+                        
+                                </div>
+                                
+                                <div class="flexblock1 fond-detailed-text">
+                        
+                                    <input type="checkbox" class="custom-checkbox" id="persData" name="persData" value="agree" />
+                                    <label for="persData"><p class="simple-text">Я согласен на обработку моих персональных данных</p></label>
+                        
+                                </div>
+                            
+                            </div>
+                            
+                            <div class="big-button-wrapper">
+                                <button type="submit" class="donuts-big">Пожертвовать</button>
+                            </div>
+                        
+                        </div>
+                    
+                    </form>
+                
+                </div>
+            
+            </div>
+        
+        </section>
+      
+      </div>
+      
+      <div class="from-blog-wrapper">
+      
+        <section class="inner-block from-blog" data-type="clickable">
+        
+            <header class="from-blog-title">
+            
+                <h4 class="header-four">Последнее из блога</h4>
+            
+            </header>
+            
+            <article class="blog-card slider-item">
+                  
+                  <div class="blog-photo" style="">
+                    <img alt="" src="images/rect32.png" />
+                  </div>
+                  
+                  <header class="blog-card-header">
+                    <h5 class="header-five">Прошло мероприятие крупного масштаба при поддержке наших спонсоров</h5>
+                  </header>
+                  
+                  <div class="blog-card-date">
+                    <p class="simple-text">01.10.2020</p>
+                  </div>
+                  
+                  <a href="#" target="_blank" class="prog-link"></a>
+                  
+              </article>
+                
+              <article class="blog-card slider-item">
+                  
+                   <div class="blog-photo">
+                     <img alt="" src="images/rect32_2.png" />
+                   </div>
+                   
+                   <header class="blog-card-header">
+                     <h5 class="header-five">Нам удалось помочь в сборе средств на лечение новорожденному</h5>
+                   </header>
+                   
+                   <div class="blog-card-date">
+                    <p class="simple-text">01.10.2020</p>
+                   </div>
+                   
+                   <a href="#" target="_blank" class="prog-link"></a>
+                   
+               </article>
+               
+               <article class="blog-card slider-item hide">
+                  
+                  <div class="blog-photo" style="">
+                    <img alt="" src="images/rect32.png" />
+                  </div>
+                  
+                  <header class="blog-card-header">
+                    <h5 class="header-five">Прошло третье мероприятие...</h5>
+                  </header>
+                  
+                  <div class="blog-card-date">
+                    <p class="simple-text">01.10.2020</p>
+                  </div>
+                  
+                  <a href="#" target="_blank" class="prog-link"></a>
+                  
+              </article>
+              
+              <article class="blog-card slider-item hide">
+                  
+                  <div class="blog-photo" style="">
+                    <img alt="" src="images/rect32.png" />
+                  </div>
+                  
+                  <header class="blog-card-header">
+                    <h5 class="header-five">Прошло четвертое мероприятие...</h5>
+                  </header>
+                  
+                  <div class="blog-card-date">
+                    <p class="simple-text">01.10.2020</p>
+                  </div>
+                  
+                  <a href="#" target="_blank" class="prog-link"></a>
+                  
+              </article>
+               
+               <footer class="flexblock1 from-blog-footer">
+               
+                 <div class="flexblock1 blog-slide">
+                 
+                    <p class="simple-text">Листать публикации</p>
+                 
+                   <div class="slider-arrows">
+                
+                    <div class="arrows" data-name="left"></div>
+                    <div class="arrows active" data-name="right"></div>
+                
+                   </div>
+                 
+                 </div>
+                 <div class="flexblock1 blog-line"></div>
+                 <div class="blog-link">
+                   <a href="#" target="_blank">
+                    <div class="flexblock1 fond-detailed-text">
+                        
+                            <span style="">Перейти в блог</span>
+                            <img alt="" src="images/arrow.png" width="24" height="24">
+                        
+                    </div>
+                   </a>
+                 </div>
+               
+               </footer>
+                
+        
+        </section>
+      
+      </div>
+      
+      <div class="thanks-wrapper">
+      
+        <section class="inner-block thanks" data-type="clickable">
+        
+          <header class="from-blog-title">
+            
+                <h4 class="header-four">Выражаем благодарность</h4>
+            
+          </header>
+          
+          <article class="thanks-card slider-item">
+          
+            <div class="org-card">
+            
+              <div class="org-emb">
+              
+                <img alt="" src="images/pyaterka.png" />
+              
+              </div>
+              
+              <p class="org-name">"Пятерочка"</p>
+              <p class="org-data">Ростов-на-Дону</p>
+              <p class="org-data">26.12.2017</p>
+            
+            </div>
+            
+            <div class="thanks-text">
+            
+                <div>
+                
+                  <p class="simple-text2">Благотворительный фонд «Возрождение нации» выражает глубокую признательность и искреннюю благодарность руководству ООО «Пятерочка» за участие в жизни и нуждах  подопечных фонда. Благодаря благотворительной  поддержке  ООО «Пятерочка» продуктовую помощь получили 30 семей подопечных фонда. Это многодетные , малоимущие семьи и семьи воспитывающие детей инвалидов.</p>
+                
+                </div>
+                
+                <div class="fulltext-link">Читать полностью</div>
+            
+            </div>
+          
+          </article>
+          
+          <article class="thanks-card slider-item">
+          
+            <div class="org-card">
+            
+              <div class="org-emb">
+              
+                <img alt="" src="images/lenta.png" />
+              
+              </div>
+              
+              <p class="org-name">"Лента"</p>
+              <p class="org-data">Ростов-на-Дону</p>
+              <p class="org-data">26.12.2017</p>
+            
+            </div>
+            <div class="thanks-text">
+            
+                <div>
+                
+                  <p class="simple-text2">Благотворительный фонд «Возрождение нации» выражает глубокую признательность и искреннюю благодарность руководству ООО «Пятерочка» за участие в жизни и нуждах  подопечных фонда. Благодаря благотворительной  поддержке  ООО «Пятерочка» продуктовую помощь получили 30 семей подопечных фонда. Это многодетные , малоимущие семьи и семьи воспитывающие детей инвалидов.</p>
+                
+                </div>
+                
+                <div class="fulltext-link">Читать полностью</div>
+            
+            </div>
+          
+          </article>
+          
+          <article class="thanks-card slider-item hide">
+          
+            <div class="org-card">
+            
+              <div class="org-emb">
+              
+                <img alt="" src="images/pyaterka.png" />
+              
+              </div>
+              
+              <p class="org-name">"Пятерочка"</p>
+              <p class="org-data">Волгоград</p>
+              <p class="org-data">11.11.2020</p>
+            
+            </div>
+            
+            <div class="thanks-text">
+            
+                <div>
+                
+                  <p class="simple-text2">Благотворительный фонд «Возрождение нации» выражает глубокую признательность и искреннюю благодарность руководству ООО «Пятерочка» за участие в жизни и нуждах  подопечных фонда. Благодаря благотворительной  поддержке  ООО «Пятерочка» продуктовую помощь получили 30 семей подопечных фонда. Это многодетные , малоимущие семьи и семьи воспитывающие детей инвалидов.</p>
+                
+                </div>
+                
+                <div class="fulltext-link">Читать полностью</div>
+            
+            </div>
+          
+          </article>
+          
+          <article class="thanks-card slider-item hide">
+          
+            <div class="org-card">
+            
+              <div class="org-emb">
+              
+                <img alt="" src="images/pyaterka.png" />
+              
+              </div>
+              
+              <p class="org-name">"Покупочка"</p>
+              <p class="org-data">Волгоград</p>
+              <p class="org-data">11.11.2020</p>
+            
+            </div>
+            
+            <div class="thanks-text">
+            
+                <div>
+                
+                  <p class="simple-text2">Благотворительный фонд «Возрождение нации» выражает глубокую признательность и искреннюю благодарность руководству ООО «Пятерочка» за участие в жизни и нуждах  подопечных фонда. Благодаря благотворительной  поддержке  ООО «Пятерочка» продуктовую помощь получили 30 семей подопечных фонда. Это многодетные , малоимущие семьи и семьи воспитывающие детей инвалидов.</p>
+                
+                </div>
+                
+                <div class="fulltext-link">Читать полностью</div>
+            
+            </div>
+          
+          </article>
+          
+          <article class="thanks-card slider-item hide">
+          
+            <div class="org-card">
+            
+              <div class="org-emb">
+              
+                <img alt="" src="images/pyaterka.png" />
+              
+              </div>
+              
+              <p class="org-name">"Магнит"</p>
+              <p class="org-data">Волгоград</p>
+              <p class="org-data">11.11.2020</p>
+            
+            </div>
+            
+            <div class="thanks-text">
+            
+                <div>
+                
+                  <p class="simple-text2">Благотворительный фонд «Возрождение нации» выражает глубокую признательность и искреннюю благодарность руководству ООО «Пятерочка» за участие в жизни и нуждах  подопечных фонда. Благодаря благотворительной  поддержке  ООО «Пятерочка» продуктовую помощь получили 30 семей подопечных фонда. Это многодетные , малоимущие семьи и семьи воспитывающие детей инвалидов.</p>
+                
+                </div>
+                
+                <div class="fulltext-link">Читать полностью</div>
+            
+            </div>
+          
+          </article>
+          
+          <footer class="flexblock1 from-blog-footer">
+               
+                 <div class="flexblock1 blog-slide">
+                 
+                    <p class="simple-text">Листать благодарности</p>
+                 
+                   <div class="slider-arrows">
+                
+                    <div class="arrows" data-name="left"></div>
+                    <div class="arrows active" data-name="right"></div>
+                
+                   </div>
+                 
+                 </div>
+                 <div class="flexblock1 blog-line"></div>
+                 
+               
+               </footer>
+        
+        </section>
+      
+      </div>
+      
+      <div class="inner-block support-wrapper">
+      
+        <section class="support" data-type="clickable">
+        
+          <div class="support-emb"></div>
+          
+          <div class="fulltext-link">Настроены на добро</div>
+          
+          <h4 class="header-four">Окажем поддержку</h4>
+          
+          <p class="simple-text">Следите за нашей деятельностью<br />в социальных сетях.</p>
+          
+          <div class="socnets-wrapper">
+          
+           <a href="#">
+            <div class="socnets-icon vk"></div>
+           </a><a href="#">
+            <div class="socnets-icon ok"></div>
+           </a><a href="#">
+            <div class="socnets-icon fb"></div>
+           </a>  
+          
+          </div>
+        
+        </section>
+      
+      </div>
+      
+    <footer class="footer-wrapper">
+    
+      <div class="footer-big">
+      
+        <section class="inner-block footer-big-main" data-type="clickable">
+        
+            <a href="pages/programs.htm" style="height: 49px;justify-self: start;" class="pict"><img alt="logotip" src="images/row-logo_inverted.png" width="170" height="49"></a>
+            
+            <div class="navbar" style="align-self:center;">
+            
+                <ul class="flexblock1 navbar-items">
+                    
+                        <li><a href="pages/reports.htm" target="_blank">Отчетность</a></li>
+                        <li><a href="pages/programs.htm" target="_blank">Программы</a></li>
+                        <li><a href="pages/fosterlings.htm" target="_blank">Подопечные</a></li>
+                        <li><a href="pages/volonters.htm" target="_blank">Волонтерам</a></li>
+                        <li><a href="pages/video.htm" target="_blank">Видео</a></li>
+                        <li><a href="pages/about.htm" target="_blank">О фонде</a></li>
+                        <li><a href="pages/blog.htm" target="_blank">Блог</a></li>
+                    
+              </ul>
+            
+            </div>
+            
+            <div class="blog-line" style="align-self:center;"></div>
+            
+            <div style="padding-top: 9px;">
+            
+                <p class="simple-text">Начните помогать людям уже сегодня, пожертвовав любую удобную для вас сумму.</p>
+                
+                <div class="donuts" style="margin-top: 51px;">Пожертвовать</div>
+            
+            </div>
+            
+            <div class="recvisits"  style="padding-top: 9px;">
+            
+                <h5 class="header-five">Реквизиты</h5>
+                
+                <div class="flexblock3 recvisits-data">
+                
+                    <div>
+                    
+                        <p class="footer-text">Свидетельство Министерства юстиции РФ<br />о государственной регистрации<br />некоммерческой организации от 16.06.2009 г.</p>
+                        
+                        <p class="footer-text" style="line-height: 28px;">ОГРН 1096100001843<br />ИНН/КПП 6166070187/616401001</p>
+                        
+                    </div>
+                    
+                    <div>
+                    
+                        <p class="footer-text" style="line-height: 28px;">р/с 40703810852090001143<br />Юго-Западный банк ПАО Сбербанк<br />г. Ростов-на-Дону,<br />к/с 30101810600000000602,<br />БИК 046015602</p>
+                    
+                    </div>
+                    
+                    <div>
+                    
+                        <p class="footer-text" style="margin-bottom: 15px;">344002, Ростовская область,<br />г. Ростов-на-Дону,<br />ул. Серафимовича, д. 58 А, эт. 3, оф. 1</p>
+                        
+                        <div class="flexblock1 contacts" style="margin-bottom: 15px;">
+                        
+                            <img alt="phone-icon" src="images/smartphone.png" width="20" height="20" style="margin-right: 7px;">
+                            
+                            <p class="phone-number">+7(900)121-43-03</p>
+                        
+                        </div>
+                        
+                        <div class="flexblock1 contacts">
+                        
+                           <img alt="phone-icon" src="images/mail.png" width="20" height="20" style="margin-right: 13px;"> 
+                           
+                           <p class="phone-number">vnfond@mail.ru</p>
+                        
+                        </div>
+                    
+                    </div>
+                
+                </div>
+            
+            </div>
+        
+        </section>
+      
+      </div>
+      
+      <div class="footer-small">
+      
+        <section class="inner-block flexblock1 footer-small-main" data-type="clickable">
+        
+            <div>
+            
+                <p class="footer-text">Благотворительный фонд «Возрождение Нации» 2020</p>
+            
+            </div>
+            
+            <div class="flexblock1">
+            
+                <p class="footer-text" style="margin-right: 37px;"><a href="" target="_blank">Политика конфиденциальности</a></p>
+                
+                <p class="footer-text"><a href="" target="_blank">Условия возврата</a></p>
+            
+            </div>
+        
+        </section>
+      
+      </div>
+    
+    </footer>
+    
+     </div>
+    
+     </div>
+    
+     </div>  
+    
+    </div>
+    
+    <script type="text/javascript" src="scripts/main.js"></script>
+    <!--<script type="text/javascript" src="scripts/scrollbox.function.js"></script>-->
+    
+    
+  
+</body>
+
+</html>
