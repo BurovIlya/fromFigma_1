@@ -4,12 +4,146 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Благотворительный фонд "Возрождение нации"</title>
+    <title>Благотворительный фонд "Возрождение нации". Отчетность</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="../styles/style.css">
+    
+    <script type="text/javascript">
+
+        let currentChart;
+
+    </script>
+    
+    <script src="../scripts/chartData.js"></script>
+    
+    <script src="../scripts/Chart.min.js"></script>
+    
+    <script src="../scripts/reportchart.js"></script>
+    
+<style type="text/css">
+    
+/*диаграмма*/
+.chartWrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    /*width: 700px;
+    height: 100%;*/
+    
+}
+
+@keyframes chartEffect1 {
+    from {width:0;opacity:0;}
+    to {width:100%;opacity:1;}
+}
+
+@keyframes chartEffect2 {
+    from {font-size:0;}
+    to {font-size:50%;}
+}
+
+div.chartWrapper div.innerInf {
+    position: absolute;
+    display: none;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 114px;
+    height: 101px;
+    text-align: center;
+    z-index: -1;
+    transition: all 0.2s linear;
+    animation: chartEffect1 0.3s ease-in-out;
+}
+
+#chartItemVal {
+   font-style: normal;
+   font-weight: 600;
+   font-size: 48px;
+   line-height: 100%;
+   text-align: center;
+   margin: 0 auto 10px auto; 
+}
+
+#chartItemVal > img {
+   display: block;
+   width: 48px;
+   height: 48px;
+   margin: 0 auto; 
+}
+
+#chartItemLabel {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: var(--bluecolor3);
+    display: none;
+    animation: chartEffect2 0.2s linear;
+}
+
+#myLegend {
+	position: absolute;
+	left: 50%;
+    bottom: 20px;
+	transform: translate(-40%,0);
+    width: 270px;
+    height: 65px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: space-between;
+	margin: 0;
+	padding: 0;
+}
+
+#myLegend div.legendItem {
+	position:relative;
+	width:50%;
+    margin: 0;
+	padding:0 0 0 20px;
+	flex-basis: 50%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    font-size: 10px;
+    line-height: 24px;
+    color: black;
+ }
+
+#myLegend div.legendItem::before {
+	content:'';
+	position:absolute;
+	top:4px;
+	left:0;
+	width:14px;
+	height:14px;
+	border-radius:4px;
+	
+}
+
+#myLegend div.legendItem:nth-child(1)::before {
+	background-color:rgba(63, 210, 193, 1);
+}
+
+#myLegend div.legendItem:nth-child(2)::before {
+	background-color:rgba(250, 144, 84, 1);
+}
+
+#myLegend div.legendItem:nth-child(3)::before {
+	background-color:rgba(17, 131, 180, 1);
+}
+
+#myLegend div.legendItem:nth-child(4)::before {
+	background-color:rgba(69, 205, 235, 1);
+}    
+    
+    </style>
     
 </head>
-<body class="main-page">
+<body>
 
 <div id="popup-wrapper" class="popup hide">
     
@@ -181,21 +315,16 @@
         
         </div>
         
-        <div id="popup-thanks" class="fixedBlock hide">
+        <!--<div id="popup-thanks" class="fixedBlock hide">
         
-            <div class="popup2-content">
-            
-               
-            
-            </div>
+            <div class="popup2-content"></div>
             
             <div class="popup-close"></div> 
         
-        </div>
+        </div>-->
         
-        <div id="popup-instruct" class="fixedBlock hide">
+        <!--<div id="popup-instruct" class="fixedBlock hide">
         
-            <!--<div class="popup2-content container" data-control="wheel">-->
             <div class="popup2-content container">
             
                 <div class="viewport-wrapper">
@@ -424,7 +553,7 @@
             
             <div class="popup-close"></div>
         
-        </div>
+        </div>-->
         
         <div id="dogovor" class="fixedBlock hide">
         
@@ -530,87 +659,33 @@
 
 </div>
 
+<div class="pages-main">
 
-
-
-    <div class="title-page">
-    
-      <div class="title-page-main">
-      
-        <div class="title-page-info inner-block">
-      
-          <div class="flexblock1 buttons-wrapper title-page-banners">
-        
-            <a href="https://fpg.ru" target="_blank" style="margin-right: 50px;" data-type="clickable"><img alt="banner" src="images/banner1.png" /></a>
-            <a href="https://azps.ru" target="_blank"><img alt="banner" src="images/banner2.png" data-type="clickable" /></a>
-        
-          </div>
-          
-          <div class="fond-type">
-            
-            <h3>Благотворительный фонд</h3>
-            
-          </div>
-          
-          <div class="fond-name">
-          
-            <h1>Возрождение<br />нации</h1>
-          
-          </div>
-          
-          <div class="flexblock1 buttons-wrapper title-page-buttons">
-        
-            <div class="button donuts" style="margin-right: 55px;" data-type="clickable">Пожертвовать</div>
-            
-            <a href="pages/video.htm" target="_blank" data-type="clickable">
-                
-                <div class="flexblock1 watch-translation">
-                
-                   <div class="play"></div>
-                    
-                    <div class="play-label">
-                    
-                        <div class="onair">Идет эфир</div>
-                        
-                        <div class="translation">Смотреть трансляцию</div>
-                    
-                    </div>
-                
-                </div>
-            
-            </a>
-        
-          </div>
-        
-        </div>
-      
-      </div>
-      
-      <div class="title-page-header">
+   <div class="title-page-header">
       
         <div class="title-page-info inner-block">
         
-            <div class="flexblock1 menu">
+            <div class="flexblock1 menu flexblock2">
             
                 <div class="flexblock1 logo">
                 
-                    <a href="pages/programs.htm" style="height: 49px;" data-type="clickable"><img alt="logotip" src="images/row-logo_inverted.png" width="170" height="49" style="margin-right: 20px;" /></a>
-                    <div class="volume" style="margin-right: 20px;" data-type="clickable"></div>
-                    <!--<img alt="volume-icon" src="images/volume-2.png" width="24" height="24" />-->
+                    <a href="programs.htm" style="height: 49px;"><img alt="logotip" src="../images/group26.png" style="margin-right: 20px;" width="170" height="49"></a>
+                    <div class="volume" style="margin-right: 20px;"></div>
+                    
                 
                 </div>
                 
                 <div class="flexblock1 navbar">
                 
-                    <ul class="navbar-items" data-type="clickable">
+                    <ul class="navbar-items">
                     
-                        <li><a href="pages/reports.htm">Отчетность</a></li>
-                        <li><a href="pages/programs.htm">Программы</a></li>
-                        <li><a href="pages/fosterlings.htm">Подопечные</a></li>
-                        <li><a href="pages/volonters.htm">Волонтерам</a></li>
-                        <li><a href="pages/video.htm">Видео</a></li>
-                        <li><a href="pages/about.htm">О фонде</a></li>
-                        <li><a href="pages/blog.htm">Блог</a></li>
+                        <li><a href="#" class="current-page">Отчетность</a></li>
+                        <li><a href="programs.htm">Программы</a></li>
+                        <li><a href="fosterlings.htm">Подопечные</a></li>
+                        <li><a href="volonters.htm">Волонтерам</a></li>
+                        <li><a href="video.htm">Видео</a></li>
+                        <li><a href="about.htm">О фонде</a></li>
+                        <li><a href="blog.htm">Блог</a></li>
                     
                     </ul>
                     
@@ -618,7 +693,7 @@
                     
                        <div class="phone-icon">
                          
-                         <img alt="phone-icon" src="images/smartphone.png" width="24" height="24" />
+                         <img alt="phone-icon" src="../images/smartphone2.png" width="24" height="24">
                          
                        </div> 
                        
@@ -626,7 +701,7 @@
                     
                     </div>
                     
-                    <div class="button donuts" style="margin-left: 30px;display:none" data-type="clickable">Пожертвовать</div>
+                    <div class="button donuts" style="margin-left: 35px; display: block;">Пожертвовать</div>
                 
                 </div>
             
@@ -634,696 +709,126 @@
         
         </div>
       
-      </div> 
-    
-    </div>
-    
-    <div class="title-page-content container" data-control="wheel">
-    
-     <div class="viewport-wrapper">
-     
-      <div class="viewport">
-      
-      <div class="content">
-    
-      <div class="programms-wrapper">
-      
-        <section class="programms" data-type="clickable">
-        
-            <div class="programms-title">
-            
-              <h4 class="header-four" style="margin-top: 0;">Наши программы</h4>
-            
-            </div>
-            <div class="programms-slider flexblock3">
-            
-                <div class="slider-text" style="padding-top: 8px;">
-                
-                    <p>Программы фонда нуждаются в вашей поддержке.</p>
-                    <p>Мы очень признательны всем, кто ее оказывает. Спасибо Вам!</p>
-                    
-                
-                </div>
-                <div class="slider-arrows">
-                
-                    <div class="arrows" data-name="left"></div>
-                    <div class="arrows" data-name="right"></div>
-                
-                </div>
-            
-            </div>
-            <div class="prog">
-            
-                <header class="prog-header">Светлица</header>
-                
-                <article class="prog-description">
-                    <p>Программа осуществляется при поддержке Фонда Президентских грантов. Направлена на реабилитацию семей, воспитывающих детей с синдромом Дауна, аутизмом, отставанием в развитии.</p>                    
-                </article>
-                
-                <aside class="prog-icon">
-                    <img alt="" src="images/sun.png" />
-                </aside>
-            
-                <a href="pages/programms#1" class="prog-link" target="_blank"></a>
-            
-            </div>
-            
-            <div class="prog">
-            
-               <header class="prog-header">Рука помощи</header>
-                
-               <article class="prog-description">
-                    <p>Программа направленна на оказание
- комплексных мер поддержки нуждающихся.
- В рамках программы фонд оказывает
- психологическую, юридическую и
- материальную поддержку.</p>
-               </article>
-                
-               <aside class="prog-icon">
-                    <img alt="" src="images/heart 1.png" />
-               </aside>
-               
-               <a href="pages/programms#2" class="prog-link" target="_blank"></a>
-            
-            </div>
-            
-            <div class="prog">
-            
-                <header class="prog-header">Читайка</header>
-                
-                <article class="prog-description">
-                    <p>Программа направленна на развитие у
- ребенка любви к чтению. В уютной атмосфере
- библиотеки фонда, у камина с часами, читаем
- с детьми интересные книги и обсуждаем
- прочитанное.</p>
-                </article>
-                
-                <aside class="prog-icon">
-                    <img alt="" src="images/book-open.png" />
-                </aside>
-                
-                <a href="pages/programms#3" class="prog-link" target="_blank"></a>
-            
-            </div>
-            
-            <div class="prog">
-            
-                <header class="prog-header">Мама<br />тоже человек</header>
-                
-                <article class="prog-description">
-                    <p>Программа призвана снять напряжение с
- многодетных мам, позволяет развеяться и
- ощутить атмосферу праздника, любви и
- заботы.</p>
-                </article>
-                
-                <aside class="prog-icon">
-                    <img alt="" src="images/mother 2.png" />
-                </aside>
-                
-                <a href="pages/programms#4" class="prog-link" target="_blank"></a>
-            
-            </div>
-        
-        </section>
-      
       </div>
       
-      <div class="patron-wrapper">
+      <div class="pages-content">
       
-        <section class="patron inner-block">
+        <div class="inner-block vitrine">
         
-            <aside class="fond-patron" data-type="clickable">
+            <div class="years">
             
-                <h5 class="header-five">Покровитель фонда</h5>
+                <h1 style="margin-bottom: 65px;">Годовая отчетность</h1>
                 
-                <div class="title-line flexblock1">
-                    <span>Святитель</span>
-                    <img alt="" src="images/Rectangle 4.png" width="350" height="1" />
+                <div class="years-slider-wrapper">
+                
+                    <div id="currentYear">2019</div>
+                    
+                    <div id="years-slider-block">
+                    
+                        <div class="years-slider">
+                        
+                          <div class="years-slider-data">
+                          
+                            <div class="years-slider-data-content">
+                            
+                                <p>2019</p>
+                                <p>2018</p>
+                                <p>2017</p>
+                                <p>2016</p>
+                                <p>2015</p>
+                            
+                            </div>
+                          
+                          </div>
+                          
+                          <div class="flexblock5 years-slider-arrows">
+                          
+                            <div class="arrows" data-name="up"></div>
+                            <div class="arrows" data-name="down"></div>
+                          
+                          </div>  
+                        
+                        </div>
+                    
+                    </div>
+                
                 </div>
                 
-                <h4 class="header-four">Лука Войно-Яснецкий</h4>
+                <div class="years-text">
                 
-                <div class="citate">
-                    <p class="simple-text" style="margin-bottom: 20px;">«Будь добрее, чем принято, ибо у каждого своя война, бои и потери. Живи просто, люби щедро, вникай внутрь другого пристально, говори мягко...».</p>
-                    <p class="simple-text">«Всё теряет силу, если не будет основного – любви к человеку.».</p>
+                    <p class="simple-text">Прошедший год стал для фонда переломным. <br />Мы проанализировали и переосмыслили опыт предыдущих лет работы, скорректировали действующие программы и запустили новые проекты.</p>
+                
                 </div>
                 
-                <div class="fond-detailed flexblock1">
+                <div class="flexblock1 fond-detailed">
                 
+                    <div class="button report-button" style="margin-right: 65px;">Просмотреть отчет</div>
+                    
                     <a href="#" target="_blank" class="block-style">
                     
-                        <div class="flexblock1 fond-detailed-text">
+                       <div class="flexblock1 fond-detailed-text">
                         
-                            <span style="margin-right: 18px;">Подробнее о фонде</span>
-                            <img alt="" src="images/arrow.png" width="24" height="24" />
-                        
-                        </div>
-                    
-                    </a>
-                    
-                    <a href="#" target="_blank">
-                    
-                        <div class="button volonters">Стать волонтером</div>
-                    
-                    </a>
-                    
-                
-                </div>
-            
-            </aside>
-        
-        </section>
-      
-      </div>
-      
-      <div class="make-donut-wrapper">
-      
-        <section class="inner-block make-donuts" data-type="clickable">
-        
-            <div class="make-donuts-info">
-            
-                <h4 class="header-four" style="margin-bottom: 20px;">Пожертвовать</h4>
-                
-                <p class="simple-text">Отправить пожертвование легко<br />с помощью Сбербанк-Онлайн:</p>
-                
-                <ul class="info-list" style="margin-top: 16px;margin-bottom: 30px;">
-                
-                    <li>Подключите <a href="#" target="_blank">Автоплатеж</a>.</li>
-                    <li>Введите в поисковую строку ИНН фонда: <strong>6166070187</strong></li>
-                    <li>Кликните по названию фонда для заполнения данных.</li>
-                
-                </ul>
-                
-                <a href="#" target="_blank" class="block-style instruction">
-                    
-                        <div class="flexblock1 fond-detailed-text">
-                        
-                            <span style="margin-right: 18px;">Подробная инструкция</span>
-                            <img alt="" src="images/arrow.png" width="24" height="24" />
-                        
-                        </div>
-                    
-                 </a>
-                 
-                 <img alt="boy" src="images/Group247.png" width="373" height="280" class="illustration" style="margin-top: 15px;" />
-            
-            </div>
-            <div class="make-donuts-form">
-            
-                <div class="form-text-wrapper">
-                    <p class="simple-text">Или воспользуйтесь нашей формой для принятия платежей,
-указав любой удобный для вас способ из списка.</p>
-                </div>
-                
-                <div class="spacer"></div>
-                
-                <div>
-                
-                    <form id="send-donut-form" name="send-donut-form" action="" method="POST" class="donut-form">
-                    
-                        <div class="form-elems-wrapper">
-                        
-                            <div class="switch-period">
-                            
-                                <div class="custom-radio">
+                           <img alt="" src="../images/download.png" width="24" height="24">
+                           <span style="margin-left: 14px;">Скачать полный отчет pdf</span>
+                                                           
+                       </div>
                                 
-                                    <div class="custom-radio-variant">
-                                        <input type="radio" name="payperiod" id="period1" value="onetime" checked="checked" autocomplete="off" />
-                                        <label for="period1">Единоразово</label>
-                                    </div>
-                                    
-                                    <div class="switcher">
-                                    
-                                        <div class="switcher-ball"></div>
-                                    
-                                    </div>
-                                    
-                                    <div class="custom-radio-variant alter">
-                                        <input type="radio" name="payperiod" id="period2" value="monthly" autocomplete="off" />
-                                        <label for="period2">Ежемесячно</label>
-                                    </div>
-                                
-                                </div>
-                            
-                            </div>
-                            
-                            <div class="input-field">
-                            
-                                <input type="text" autocomplete="off" name="summa" required />
-                                
-                                <div class="custom-field custom-input">
-                                    
-                                    <div class="custom-input-inner">
-                                        
-                                        <p class="simple-text">Сумма в рублях<span>*</span></p>
-                                        <p class="input-value-text"></p>
-                                    </div>
-                                    
-                                    <div class="clear-field"></div>
-                                    
-                                </div>
-                            
-                            </div>
-                            
-                            <div class="select-field">
-                            
-                                <div class="custom-select">
-                                
-                                    <select name="paymode" id="paymode">
-                                
-                                        <option value="0">Банковская карта</option>
-                                        <option value="1">Платежная квитанция</option>
-                                        <option value="2">PayPal</option>
-                                
-                                    </select>
-                                    <p class="select-field-title">Способ оплаты</p>
-                                    <div class="select-selected"></div>    
-                                
-                                </div>
-                            
-                            </div>
-                            
-                            <div class="input-field">
-                            
-                                <input type="text" autocomplete="off" name="first-name" required />
-                                
-                                <div class="custom-field custom-input">
-                                    
-                                    <div class="custom-input-inner">
-                                        
-                                        <p class="simple-text">Имя<span>*</span></p>
-                                        <p class="input-value-text"></p>
-                                        
-                                    </div>
-                                    
-                                    <div class="clear-field"></div>
-                                    
-                                </div>
-                            
-                            </div>
-                            
-                            
-                            <div class="input-field">
-                            
-                                <input type="text" autocomplete="off" name="last-name" required />
-                                
-                                <div class="custom-field custom-input">
-                                    
-                                    <div class="custom-input-inner">
-                                        
-                                        <p class="simple-text">Фамилия<span>*</span></p>
-                                        <p class="input-value-text"></p>
-                                        
-                                    </div>
-                                    
-                                    <div class="clear-field"></div>
-                                    
-                                </div>
-                            
-                            </div>
-                            
-                            <div class="checkboxes-wrapper">
-                            
-                                <div class="flexblock1 fond-detailed-text" style="margin-bottom: 6px;">
-                                
-                                    <input type="checkbox" checked="checked" class="custom-checkbox" id="oferta" name="oferta" value="agree" />
-                                    <label for="oferta"><p class="simple-text">Я принимаю <a href="#" target="_blank" class="kontract">Договор оферты</a></p></label>
-                                    
-                        
-                                </div>
-                                
-                                <div class="flexblock1 fond-detailed-text">
-                        
-                                    <input type="checkbox" class="custom-checkbox" id="persData" name="persData" value="agree" />
-                                    <label for="persData"><p class="simple-text">Я согласен на обработку моих персональных данных</p></label>
-                        
-                                </div>
-                            
-                            </div>
-                            
-                            <div class="big-button-wrapper">
-                                <button type="submit" class="donuts-big">Пожертвовать</button>
-                            </div>
-                        
-                        </div>
-                    
-                    </form>
-                
-                </div>
-            
-            </div>
-        
-        </section>
-      
-      </div>
-      
-      <div class="from-blog-wrapper">
-      
-        <section class="inner-block from-blog" data-type="clickable">
-        
-            <header class="from-blog-title">
-            
-                <h4 class="header-four">Последнее из блога</h4>
-            
-            </header>
-            
-            <article class="blog-card slider-item">
-                  
-                  <div class="blog-photo" style="">
-                    <img alt="" src="images/rect32.png" />
-                  </div>
-                  
-                  <header class="blog-card-header">
-                    <h5 class="header-five">Прошло мероприятие крупного масштаба при поддержке наших спонсоров</h5>
-                  </header>
-                  
-                  <div class="blog-card-date">
-                    <p class="simple-text">01.10.2020</p>
-                  </div>
-                  
-                  <a href="#" target="_blank" class="prog-link"></a>
-                  
-              </article>
-                
-              <article class="blog-card slider-item">
-                  
-                   <div class="blog-photo">
-                     <img alt="" src="images/rect32_2.png" />
-                   </div>
-                   
-                   <header class="blog-card-header">
-                     <h5 class="header-five">Нам удалось помочь в сборе средств на лечение новорожденному</h5>
-                   </header>
-                   
-                   <div class="blog-card-date">
-                    <p class="simple-text">01.10.2020</p>
-                   </div>
-                   
-                   <a href="#" target="_blank" class="prog-link"></a>
-                   
-               </article>
-               
-               <article class="blog-card slider-item hide">
-                  
-                  <div class="blog-photo" style="">
-                    <img alt="" src="images/rect32.png" />
-                  </div>
-                  
-                  <header class="blog-card-header">
-                    <h5 class="header-five">Прошло третье мероприятие...</h5>
-                  </header>
-                  
-                  <div class="blog-card-date">
-                    <p class="simple-text">01.10.2020</p>
-                  </div>
-                  
-                  <a href="#" target="_blank" class="prog-link"></a>
-                  
-              </article>
-              
-              <article class="blog-card slider-item hide">
-                  
-                  <div class="blog-photo" style="">
-                    <img alt="" src="images/rect32.png" />
-                  </div>
-                  
-                  <header class="blog-card-header">
-                    <h5 class="header-five">Прошло четвертое мероприятие...</h5>
-                  </header>
-                  
-                  <div class="blog-card-date">
-                    <p class="simple-text">01.10.2020</p>
-                  </div>
-                  
-                  <a href="#" target="_blank" class="prog-link"></a>
-                  
-              </article>
-               
-               <footer class="flexblock1 from-blog-footer">
-               
-                 <div class="flexblock1 blog-slide">
-                 
-                    <p class="simple-text">Листать публикации</p>
-                 
-                   <div class="slider-arrows">
-                
-                    <div class="arrows" data-name="left"></div>
-                    <div class="arrows active" data-name="right"></div>
-                
-                   </div>
-                 
-                 </div>
-                 <div class="flexblock1 blog-line"></div>
-                 <div class="blog-link">
-                   <a href="#" target="_blank">
-                    <div class="flexblock1 fond-detailed-text">
-                        
-                            <span style="">Перейти в блог</span>
-                            <img alt="" src="images/arrow.png" width="24" height="24">
-                        
-                    </div>
                    </a>
-                 </div>
-               
-               </footer>
                 
-        
-        </section>
-      
-      </div>
-      
-      <div class="thanks-wrapper">
-      
-        <section class="inner-block thanks" data-type="clickable">
-        
-          <header class="from-blog-title">
-            
-                <h4 class="header-four">Выражаем благодарность</h4>
-            
-          </header>
-          
-          <article class="thanks-card slider-item">
-          
-            <div class="org-card">
-            
-              <div class="org-emb">
-              
-                <img alt="" src="images/pyaterka.png" />
-              
-              </div>
-              
-              <p class="org-name">"Пятерочка"</p>
-              <p class="org-data">Ростов-на-Дону</p>
-              <p class="org-data">26.12.2017</p>
+                </div>
             
             </div>
             
-            <div class="thanks-text">
-            
-                <div>
+            <div class="chartWrapper">
                 
-                  <p class="simple-text2">Благотворительный фонд «Возрождение нации» выражает глубокую признательность и искреннюю благодарность руководству ООО «Пятерочка» за участие в жизни и нуждах  подопечных фонда. Благодаря благотворительной  поддержке  ООО «Пятерочка» продуктовую помощь получили 30 семей подопечных фонда. Это многодетные , малоимущие семьи и семьи воспитывающие детей инвалидов.</p>
+                <canvas id="myChart" style="width: 373px;height: 373px" class="chartjs-render-monitor" aria-label="круговая диаграмма" role="img">
+                    <p>Активность по программам</p>
+                </canvas>
+                
+                <div class="innerInf" id="innerInfID">
+                    
+                    <div id="chartItemVal">
+                        <img alt="" src="../images/bar-chart-2.png" />
+                    </div>
+                
+                    <span id="chartItemLabel">Активность<br />по программам</span>
                 
                 </div>
                 
-                <div class="fulltext-link">Читать полностью</div>
-            
-            </div>
-          
-          </article>
-          
-          <article class="thanks-card slider-item">
-          
-            <div class="org-card">
-            
-              <div class="org-emb">
-              
-                <img alt="" src="images/lenta.png" />
-              
-              </div>
-              
-              <p class="org-name">"Лента"</p>
-              <p class="org-data">Ростов-на-Дону</p>
-              <p class="org-data">26.12.2017</p>
-            
-            </div>
-            <div class="thanks-text">
-            
-                <div>
-                
-                  <p class="simple-text2">Благотворительный фонд «Возрождение нации» выражает глубокую признательность и искреннюю благодарность руководству ООО «Пятерочка» за участие в жизни и нуждах  подопечных фонда. Благодаря благотворительной  поддержке  ООО «Пятерочка» продуктовую помощь получили 30 семей подопечных фонда. Это многодетные , малоимущие семьи и семьи воспитывающие детей инвалидов.</p>
-                
+                <div id="myLegend" style="display:none">
+                  <div class="legendItem">Читайка</div>
+	              <div class="legendItem">Мама - тоже человек</div>
+	              <div class="legendItem">Рука помощи</div>
+                  <div class="legendItem">Светлица</div>
                 </div>
                 
-                <div class="fulltext-link">Читать полностью</div>
-            
-            </div>
-          
-          </article>
-          
-          <article class="thanks-card slider-item hide">
-          
-            <div class="org-card">
-            
-              <div class="org-emb">
-              
-                <img alt="" src="images/pyaterka.png" />
-              
-              </div>
-              
-              <p class="org-name">"Пятерочка"</p>
-              <p class="org-data">Волгоград</p>
-              <p class="org-data">11.11.2020</p>
-            
             </div>
             
-            <div class="thanks-text">
             
-                <div>
-                
-                  <p class="simple-text2">Благотворительный фонд «Возрождение нации» выражает глубокую признательность и искреннюю благодарность руководству ООО «Пятерочка» за участие в жизни и нуждах  подопечных фонда. Благодаря благотворительной  поддержке  ООО «Пятерочка» продуктовую помощь получили 30 семей подопечных фонда. Это многодетные , малоимущие семьи и семьи воспитывающие детей инвалидов.</p>
-                
-                </div>
-                
-                <div class="fulltext-link">Читать полностью</div>
-            
-            </div>
-          
-          </article>
-          
-          <article class="thanks-card slider-item hide">
-          
-            <div class="org-card">
-            
-              <div class="org-emb">
-              
-                <img alt="" src="images/pyaterka.png" />
-              
-              </div>
-              
-              <p class="org-name">"Покупочка"</p>
-              <p class="org-data">Волгоград</p>
-              <p class="org-data">11.11.2020</p>
-            
-            </div>
-            
-            <div class="thanks-text">
-            
-                <div>
-                
-                  <p class="simple-text2">Благотворительный фонд «Возрождение нации» выражает глубокую признательность и искреннюю благодарность руководству ООО «Пятерочка» за участие в жизни и нуждах  подопечных фонда. Благодаря благотворительной  поддержке  ООО «Пятерочка» продуктовую помощь получили 30 семей подопечных фонда. Это многодетные , малоимущие семьи и семьи воспитывающие детей инвалидов.</p>
-                
-                </div>
-                
-                <div class="fulltext-link">Читать полностью</div>
-            
-            </div>
-          
-          </article>
-          
-          <article class="thanks-card slider-item hide">
-          
-            <div class="org-card">
-            
-              <div class="org-emb">
-              
-                <img alt="" src="images/pyaterka.png" />
-              
-              </div>
-              
-              <p class="org-name">"Магнит"</p>
-              <p class="org-data">Волгоград</p>
-              <p class="org-data">11.11.2020</p>
-            
-            </div>
-            
-            <div class="thanks-text">
-            
-                <div>
-                
-                  <p class="simple-text2">Благотворительный фонд «Возрождение нации» выражает глубокую признательность и искреннюю благодарность руководству ООО «Пятерочка» за участие в жизни и нуждах  подопечных фонда. Благодаря благотворительной  поддержке  ООО «Пятерочка» продуктовую помощь получили 30 семей подопечных фонда. Это многодетные , малоимущие семьи и семьи воспитывающие детей инвалидов.</p>
-                
-                </div>
-                
-                <div class="fulltext-link">Читать полностью</div>
-            
-            </div>
-          
-          </article>
-          
-          <footer class="flexblock1 from-blog-footer">
-               
-                 <div class="flexblock1 blog-slide">
-                 
-                    <p class="simple-text">Листать благодарности</p>
-                 
-                   <div class="slider-arrows">
-                
-                    <div class="arrows" data-name="left"></div>
-                    <div class="arrows active" data-name="right"></div>
-                
-                   </div>
-                 
-                 </div>
-                 <div class="flexblock1 blog-line"></div>
-                 
-               
-               </footer>
         
-        </section>
+        </div>
       
-      </div>
+      </div> 
       
-      <div class="inner-block support-wrapper">
-      
-        <section class="support" data-type="clickable">
-        
-          <div class="support-emb"></div>
-          
-          <div class="fulltext-link">Настроены на добро</div>
-          
-          <h4 class="header-four">Окажем поддержку</h4>
-          
-          <p class="simple-text">Следите за нашей деятельностью<br />в социальных сетях.</p>
-          
-          <div class="socnets-wrapper">
-          
-           <a href="#">
-            <div class="socnets-icon vk"></div>
-           </a><a href="#">
-            <div class="socnets-icon ok"></div>
-           </a><a href="#">
-            <div class="socnets-icon fb"></div>
-           </a>  
-          
-          </div>
-        
-        </section>
-      
-      </div>
-      
-    <footer class="footer-wrapper">
+      <footer class="footer-wrapper">
     
       <div class="footer-big">
       
-        <section class="inner-block footer-big-main" data-type="clickable">
+        <section class="inner-block footer-big-main">
         
-            <a href="pages/programs.htm" style="height: 49px;justify-self: start;" class="pict"><img alt="logotip" src="images/row-logo_inverted.png" width="170" height="49"></a>
+            <a href="programs.htm" style="height: 49px;justify-self: start;" class="pict"><img alt="logotip" src="../images/group26.png" width="170" height="49"></a>
             
             <div class="navbar" style="align-self:center;">
             
                 <ul class="flexblock1 navbar-items">
                     
-                        <li><a href="pages/reports.htm" target="_blank">Отчетность</a></li>
-                        <li><a href="pages/programs.htm" target="_blank">Программы</a></li>
-                        <li><a href="pages/fosterlings.htm" target="_blank">Подопечные</a></li>
-                        <li><a href="pages/volonters.htm" target="_blank">Волонтерам</a></li>
-                        <li><a href="pages/video.htm" target="_blank">Видео</a></li>
-                        <li><a href="pages/about.htm" target="_blank">О фонде</a></li>
-                        <li><a href="pages/blog.htm" target="_blank">Блог</a></li>
+                        <li><a href="#" target="_blank">Отчетность</a></li>
+                        <li><a href="programs.htm" target="_blank">Программы</a></li>
+                        <li><a href="fosterlings.htm" target="_blank">Подопечные</a></li>
+                        <li><a href="volonters.htm" target="_blank">Волонтерам</a></li>
+                        <li><a href="video.htm" target="_blank">Видео</a></li>
+                        <li><a href="about.htm" target="_blank">О фонде</a></li>
+                        <li><a href="blog.htm" target="_blank">Блог</a></li>
                     
               </ul>
             
@@ -1339,7 +844,7 @@
             
             </div>
             
-            <div class="recvisits"  style="padding-top: 9px;">
+            <div class="recvisits" style="padding-top: 9px;">
             
                 <h5 class="header-five">Реквизиты</h5>
                 
@@ -1347,25 +852,25 @@
                 
                     <div>
                     
-                        <p class="footer-text">Свидетельство Министерства юстиции РФ<br />о государственной регистрации<br />некоммерческой организации от 16.06.2009 г.</p>
+                        <p class="footer-text">Свидетельство Министерства юстиции РФ<br>о государственной регистрации<br>некоммерческой организации от 16.06.2009 г.</p>
                         
-                        <p class="footer-text" style="line-height: 28px;">ОГРН 1096100001843<br />ИНН/КПП 6166070187/616401001</p>
+                        <p class="footer-text" style="line-height: 28px;">ОГРН 1096100001843<br>ИНН/КПП 6166070187/616401001</p>
                         
                     </div>
                     
                     <div>
                     
-                        <p class="footer-text" style="line-height: 28px;">р/с 40703810852090001143<br />Юго-Западный банк ПАО Сбербанк<br />г. Ростов-на-Дону,<br />к/с 30101810600000000602,<br />БИК 046015602</p>
+                        <p class="footer-text" style="line-height: 28px;">р/с 40703810852090001143<br>Юго-Западный банк ПАО Сбербанк<br>г. Ростов-на-Дону,<br>к/с 30101810600000000602,<br>БИК 046015602</p>
                     
                     </div>
                     
                     <div>
                     
-                        <p class="footer-text" style="margin-bottom: 15px;">344002, Ростовская область,<br />г. Ростов-на-Дону,<br />ул. Серафимовича, д. 58 А, эт. 3, оф. 1</p>
+                        <p class="footer-text" style="margin-bottom: 15px;">344002, Ростовская область,<br>г. Ростов-на-Дону,<br>ул. Серафимовича, д. 58 А, эт. 3, оф. 1</p>
                         
                         <div class="flexblock1 contacts" style="margin-bottom: 15px;">
                         
-                            <img alt="phone-icon" src="images/smartphone.png" width="20" height="20" style="margin-right: 7px;">
+                            <img alt="phone-icon" src="../images/smartphone3.png" style="margin-right: 7px;" width="20" height="20">
                             
                             <p class="phone-number">+7(900)121-43-03</p>
                         
@@ -1373,7 +878,7 @@
                         
                         <div class="flexblock1 contacts">
                         
-                           <img alt="phone-icon" src="images/mail.png" width="20" height="20" style="margin-right: 13px;"> 
+                           <img alt="phone-icon" src="../images/mail2.png" style="margin-right: 13px;" width="20" height="20"> 
                            
                            <p class="phone-number">vnfond@mail.ru</p>
                         
@@ -1391,7 +896,7 @@
       
       <div class="footer-small">
       
-        <section class="inner-block flexblock1 footer-small-main" data-type="clickable">
+        <section class="inner-block flexblock1 footer-small-main">
         
             <div>
             
@@ -1412,20 +917,19 @@
       </div>
     
     </footer>
-    
-     </div>
-    
-     </div>
-    
-     </div>  
-    
-    </div>
-    
-    <script type="text/javascript" src="scripts/main.js"></script>
-    <!--<script type="text/javascript" src="scripts/scrollbox.function.js"></script>-->
+
+</div>
     
     
-  
+<script type="text/javascript" src="../scripts/main.js"></script>
+<script type="text/javascript" src="../scripts/years.js"></script>
+
+<script type="text/javascript">
+
+    
+
+</script>
+   
 </body>
 
 </html>

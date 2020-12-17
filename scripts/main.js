@@ -231,28 +231,51 @@ function scrollingMainPage(elem, myInterval) {
     }
     
 }
-
-( function() {
-    
+/*отмена всплытия кликов*/
+( function(){
     let clickableBlocks = document.querySelectorAll('[data-type="clickable"]');
+    if( clickableBlocks.length == 0 ){
+        return;
+    }
 
-for( let link of clickableBlocks ) {
-    link.addEventListener('click', function(event){
+    for( let link of clickableBlocks ) {
+      link.addEventListener('click', function(event){
         event.stopPropagation();
     });
 }
+} )();
 
 
-document.querySelector('div.title-page div.volume').addEventListener('click', function(event) {
+/*кнопка звука*/
+
+( function(){
+    
+    let volumeButton = document.querySelector('div.title-page-header div.volume');
+    
+    if( !volumeButton ){
+        return;
+    }
+    
+    volumeButton.addEventListener('click', function(event) {
     //event.stopPropagation();
+    //alert(event.target.className);
     this.classList.toggle('off');
 });
     
+} )();
+
+/*перемещение блоков главной страницы*/
+( function() {
+
     let titlePage = document.querySelector('div.title-page-main');
+    
+    if ( !titlePage ) {
+        return;
+    }
+    
     let titlePageHeader = document.querySelector('div.title-page-header');
     let titlePageContent = document.querySelector('div.title-page-content');
     let interval = titlePage.clientHeight - titlePageHeader.clientHeight;
-    
     
     titlePage.addEventListener('click', function(){
        scrollingMainPage(titlePageHeader, interval);
@@ -340,6 +363,10 @@ function changeRadioElemValue(event) {
 
 ( function(){
    let customInputFields = document.querySelectorAll('div.input-field');
+   
+   if ( customInputFields.length == 0 ){
+    return;
+   }
 
 for ( let field of customInputFields ) {
     field.addEventListener('click', function(){
@@ -383,6 +410,11 @@ function closeAllSelect(elmnt) {
   let x, y, arrNo = [];
   x = document.getElementsByClassName("select-items");
   y = document.getElementsByClassName("select-selected");
+  
+  if ( !x || !y ) {
+    return;
+  }
+  
   for (let i = 0; i < y.length; i++) {
     if (elmnt == y[i]) {
       arrNo.push(i)
@@ -401,8 +433,11 @@ then close all select boxes:*/
 document.addEventListener("click", closeAllSelect);
 
 let myForms = document.forms;
-for ( let form of myForms ) {
-    form.addEventListener("click", closeAllSelect);
+
+if ( myForms ) {
+    for ( let form of myForms ) {
+        form.addEventListener("click", closeAllSelect);
+    }
 }
 
 
@@ -411,6 +446,10 @@ for ( let form of myForms ) {
    
 /*look for any elements with the class "custom-select":*/
 let selectWrappers = document.getElementsByClassName("custom-select");
+
+if ( selectWrappers.length == 0 ){
+    return;
+}
 
 for (let i = 0; i < selectWrappers.length; i++) {
   
@@ -484,22 +523,33 @@ for (let i = 0; i < selectWrappers.length; i++) {
 
 /*Управление всплывающими блоками*/
 
-const popupWrapper = document.getElementById('popup-wrapper');
+(function(){
+   let popupWrapper = document.getElementById('popup-wrapper');
+   
+   if( !popupWrapper ) {
+    return;
+   }
 
-popupWrapper.addEventListener('click', function(){
-    this.classList.add('hide');
-});
+    popupWrapper.addEventListener('click', function(){
+      this.classList.add('hide');
+}); 
+})();
 
-let fixedBlocks = document.querySelectorAll('.fixedBlock');
 
-for ( let block of fixedBlocks ) {
+( function(){
+    let fixedBlocks = document.querySelectorAll('.fixedBlock');
     
-    block.addEventListener('click', function(e) {
-    e.stopPropagation();
+    if ( fixedBlocks.length == 0 ){
+        return;
+    }
+
+    for ( let block of fixedBlocks ) {
+    
+        block.addEventListener('click', function(e) {
+        e.stopPropagation();
 });
     
 }
-
 
 let closeButtons = document.querySelectorAll('.popup-close');
 
@@ -519,23 +569,40 @@ for ( let butt of closeButtons ) {
         
     });
 }
+} )();
 
+/*для всплывающей формы пожертвований*/
 function showPopup() {
+   
+   let myPopup = document.getElementById('popup-wrapper');
+   
+   if ( !myPopup ){
+    return;
+   }
     
-   popupWrapper.classList.remove('hide'); 
+   myPopup.classList.remove('hide'); 
    
 }
 
+(function(){
+    let donutButtons = document.querySelectorAll('.donuts');
+    
+    if ( donutButtons.length == 0 ){
+        return;
+    }
 
-let donutButtons = document.querySelectorAll('.donuts');
-
-for ( let button of donutButtons ) {
-    button.addEventListener('click', showPopup);
+    for ( let button of donutButtons ) {
+        button.addEventListener('click', showPopup);
 }
+})();
 
-const popup2 = document.getElementById('popup2');
 
-popup2.addEventListener('click', function(){
+
+/*для остальных всплывающих блоков*/
+let popup2 = document.getElementById('popup2');
+
+if (  popup2 ) {
+    popup2.addEventListener('click', function(){
     
     let blocks = this.querySelectorAll('.fixedBlock');
     for ( let block of blocks ) {
@@ -551,18 +618,31 @@ popup2.addEventListener('click', function(){
    this.classList.add('hide'); 
     
 });
+}
 
 function showPopup2(id) {
    
-   document.getElementById(id).classList.toggle('hide'); 
+   let elem = document.getElementById(id);
+   
+   if( !elem ){
+    return;
+   }
+   
+   elem.classList.toggle('hide'); 
    popup2.classList.toggle('hide');
 }
 
 /*всплывающая форма для пожертвований*/
-let myDonatForms = document.querySelectorAll('form.donut-form');
 
-for( let form of myDonatForms ) {
-    form.addEventListener('submit', function(event) {
+(function() {
+   let myDonatForms = document.querySelectorAll('form.donut-form');
+   
+   if ( myDonatForms.length == 0 ) {
+    return;
+   }
+
+    for( let form of myDonatForms ) {
+      form.addEventListener('submit', function(event) {
         event.preventDefault();
         
         showPopup2('popup2-block');
@@ -586,10 +666,12 @@ for( let form of myDonatForms ) {
         }, 2500);
         
       });
-}
+} 
+})();
+
+/*инструкция к пожертвованию*/
 
 let instructId = 'popup-instruct';
-
 
 function createScrollbar2(id){
     let container2 = document.getElementById(id).firstElementChild;
@@ -605,9 +687,14 @@ function showInstructions() {
     createScrollbar2(instructId);    
 }
 
-let instructions = document.querySelectorAll('a.instruction');
+(function() {
+   let instructions = document.querySelectorAll('a.instruction');
+   
+   if ( instructions.length == 0 ){
+    return;
+   }
 
-for ( let instr of instructions ) {
+   for ( let instr of instructions ) {
     
     instr.addEventListener('click', function(event) {
         
@@ -615,7 +702,9 @@ for ( let instr of instructions ) {
         showInstructions();
         
     });
-}
+} 
+})();
+
 
 /*Переключение вкладок*/
 function tabbing(elem, evt) {
@@ -652,38 +741,56 @@ function tabbing(elem, evt) {
             createScrollbar2(instructId);
         }      
         
-} 
+}
 
-let tabsMenu = document.querySelectorAll('.tabs-menu');
+(function(){
+    let tabsMenu = document.querySelectorAll('.tabs-menu');
+    
+    if( tabsMenu.length == 0 ){
+        return;
+    }
 
-for ( let tab of  tabsMenu ) {
-    tab.addEventListener('click', function(event){
+    for ( let tab of  tabsMenu ) {
+      tab.addEventListener('click', function(event){
         tabbing(this, event);
      });
 }
+})(); 
 
-let kontracts = document.querySelectorAll('.kontract');
 
-for ( let kontr of kontracts ) {
+
+(function(){
+   let kontracts = document.querySelectorAll('.kontract');
+   
+   if ( kontracts.length == 0 ){
+    return;
+   }
+
+   for ( let kontr of kontracts ) {
     kontr.addEventListener('click', function(event){
         event.preventDefault();
         showPopup2('dogovor');
         createScrollbar2('dogovor');
     });
-}
-
-function showFullThanks() {
-    
-    showPopup2('popup-thanks');
-       
-}
-
+} 
+})(); 
 
 /*Всплывающие благодарности*/
-let popupThanks = document.getElementById('popup-thanks');
-let popupThanksContent = popupThanks.firstElementChild;
 
-let thanksBlock = document.querySelector('.thanks-wrapper .thanks');
+function showFullThanks() {
+    showPopup2('popup-thanks');
+}
+
+(function(){
+    
+    let thanksBlock = document.querySelector('.thanks-wrapper .thanks');
+    
+    if ( !thanksBlock ){
+        return;
+    }
+    
+    let popupThanks = document.getElementById('popup-thanks');
+    let popupThanksContent = popupThanks.firstElementChild;
 
 thanksBlock.addEventListener('click', function(event){
     
@@ -709,14 +816,20 @@ thanksBlock.addEventListener('click', function(event){
     popupThanksContent.append(clone);
     
     showPopup2(popupThanks.id);
-    
-     
+  
     
 });
+})();
 
 
 /*управление карточками блога и благодарностей*/
-let sliderArrows = document.querySelectorAll('.slider-arrows');
+
+(function(){
+  let sliderArrows = document.querySelectorAll('.slider-arrows');
+    
+  if ( sliderArrows.length == 0 ) {
+    return;
+  }
 
 for ( let sliderArrow of sliderArrows ) {
     
@@ -794,12 +907,35 @@ for ( let sliderArrow of sliderArrows ) {
         
     });
 }
+})();
 
 
+/*скрытие отображение кнопки в меню*/
+
+(function(){
+    let pagesMenu = document.querySelector('.pages-main .menu');
+    
+    if ( !pagesMenu ) {
+        return;
+    }
+    
+    let menuPhone = pagesMenu.querySelector('.phone');
+    let button = pagesMenu.querySelector('.donuts');
+    
+    menuPhone.onmouseenter = function(){
+            button.style.display = 'none';
+        };
+    menuPhone.onmouseleave = function(){
+            button.style.display = 'block';
+        };
+    
+})();
 
 
-
-
+function changeChartData(chart, year) {
+        chart.data.datasets[0].data = chartData[year];
+        chart.update();
+}
 
 
 
