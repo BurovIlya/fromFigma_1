@@ -1349,12 +1349,8 @@ a.block-style {
     height: 400px;
 }
 
-.support-wrapper > .support {
-    /*width: 1170px;
-    height: 100%;
-    margin: 0 auto;
-    border: 1px solid yellow;*/
-    text-align:center;
+.support {
+   text-align:center;
 }
 
 .support > * {
@@ -1370,6 +1366,10 @@ a.block-style {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: auto auto;
+}
+
+#detailed-report .support-emb {
+    background-image: url(../images/help3.png);
 }
 
 .support > .support-emb {
@@ -1423,7 +1423,7 @@ a.block-style {
     
 }
 
-.vk:hover {
+.vk:hover, #detailed-report .vk:hover {
     background-image: url(../images/vk_color.png);
     
 }
@@ -1432,7 +1432,7 @@ a.block-style {
     background-image: url(../images/ok.png);
 }
 
-.ok:hover {
+.ok:hover, #detailed-report .ok:hover {
     background-image: url(../images/ok_color.png);
 }
 
@@ -1441,7 +1441,7 @@ a.block-style {
     background-image: url(../images/fb.png);
 }
 
-.fb:hover {
+.fb:hover, #detailed-report .fb:hover {
     background-image: url(../images/fb_color.png);
 }
 
@@ -2203,7 +2203,7 @@ div.step-title {
     opacity: 0.8;
 }
 
-#currentYear {
+.year-big {
     font-weight: 500;
     font-size: 74px;
     line-height: 92%;
@@ -2296,5 +2296,314 @@ div.step-title {
     background: var(--bluecolor);
 }
 
+#detailed-report {
+    margin-top: 160px;
+    margin-bottom: 110px;
+    
+}
+
+#detailed-report h4.header-four {
+    color: var(--blackcolor3);
+}
+
+#detailed-report p.simple-text {
+    color: var(--bluecolor3);
+}
+
+#detailed-report .vk {
+    background-image: url(../images/vk_gray.png);
+}
+
+#detailed-report .ok {
+    background-image: url(../images/ok_gray.png);
+}
+
+#detailed-report .fb {
+    background-image: url(../images/fb_gray.png);
+}
+
+.report-title {
+    background-image: url(../images/Group295.png);
+    background-origin: border-box;
+    background-position: 0% 0%;
+    background-repeat: no-repeat;
+    background-size: auto auto;
+    text-align: center;
+}
+
+#detailed-report h5.header-five {
+    line-height: 183%;
+    margin-top: 23px;
+    margin-bottom: 10px;
+}
+
+.flexblock6 {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.handhelp-top {
+    min-height: 420px;
+}
+
+.handhelp-left {
+    width: 290px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    text-align: left;
+}
+
+.handhelp-right {
+    flex-grow:1;
+    max-width: 770px;
+}
+
+.handhelp-left h1, .actions h1, #chitaika h1, #mummy h1, #svetlica h1 {
+    line-height: 112%;
+    font-weight: 500;
+}
+
+.handhelp-top .blog-line {
+    width: 100%;
+    height: 1px;
+    margin-top: 122px;
+}
+
+p.explain {
+    font-size: 14px;
+    line-height: 143%;
+    color: var(--bluecolor3);
+}
+
+.handhelp-right-ind {
+    display: grid;
+    /*grid-gap: 60px;*/
+    grid-template-columns: auto 1fr auto 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    text-align: left;
+    min-height: 220px;
+}
+
+.ind-number {
+    font-weight: 500;
+    font-size: 56px;
+    line-height: 129%;
+    color: var(--bluecolor);
+    margin-right: 30px;
+}
+
+.handhelp-bottom > .handhelp-left {
+    width: 370px;
+}
+
+.handhelp-left > .ind {
+    margin-bottom: 30px;
+} 
+
+.handhelp-left > .ind:last-child {
+    margin-bottom: 0;
+} 
+
+.handhelp-left > .ind > .ind-number {
+    min-width: 66px;
+}
+
+.flexblock7 {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.actions header {
+    text-align: center;
+}
+
+.actions-top {
+    height: 450px;
+}
+
+.actions-ind {
+    flex-wrap: wrap;
+}
+
+.indblock-title > h2 {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 117%;
+    color: var(--blackcolor2);
+}
+
+.vert {
+    margin-bottom: 10px;
+    margin-right: 0;
+}
+
+ .fl-child {
+    flex-grow: 1;
+    height: 33%;
+    max-width: 50%;
+ }
+ 
+ .break {
+    flex-basis: 100%;
+    height: 0;
+    margin: 0;
+ }
+ 
+ .actions-bottom {
+    height: 388px;
+ }
+ 
+ .actions-bottom .fl-child {
+    height: 50%;
+ }
+ 
+ section#svetlica, section.handhelp, section.actions, section#chitaika {
+    border-bottom: 1px solid var(--bordercolor);
+ }
+ 
+ section#svetlica {
+    padding-top: 164px;
+    padding-bottom: 195px;
+ }
+ 
+ .ind-column {
+    display: grid;
+    grid-row-gap:30px;
+    grid-template-columns: 1fr 1fr;
+ }
+ 
+.ind-column > .ind {
+    height: 130px;
+    
+}
 
 
+section#chitaika {
+    padding-top: 118px;
+    padding-bottom: 82px;
+}
+
+.chit-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: stretch;
+    height: 559px;
+}
+
+section#chitaika header {
+    text-align: center;
+    height: 140px;
+}
+
+.chit-wrapper > .flexblock6 {
+    flex-grow: 1;
+    align-items: center;
+}
+
+.huge-ind {
+    width: 270px;
+    text-align: center;
+}
+
+.huge-number {
+    font-weight: 500;
+    font-size: 96px;
+    line-height: 72px;
+    color: var(--bluecolor);
+    margin-bottom: 43px;
+}
+
+#mummy {
+    padding-top: 102px;
+    padding-bottom: 213px;
+}
+
+.mummy-wrapper {
+    height: 250px;
+    padding-bottom: 16px;
+}
+
+#mummy header {
+    max-width: 330px;
+}
+
+#mummy .flexblock6 {
+    align-items: flex-end;
+}
+
+.mummy-content {
+    position: relative;
+    width: 700px;
+    height: 239px;
+}
+
+.mummy-data {
+    position: absolute;
+    left: 0;
+    right:0;
+    bottom: 0;
+    height: 181px;
+    background: var(--lightbgcolor);
+    border-radius: 15px;
+}
+
+.mummy-pic {
+    position: absolute;
+    top: 0;
+    right: 98px;
+    width: 173px;
+    height: 100%;
+    background-image: url(../images/Group370.png);
+    background-origin: border-box;
+    background-position: 0% 0%;
+    background-repeat: no-repeat;
+    background-size: auto auto;
+}
+
+.mummy-data > div {
+    max-width: 280px;
+    height: 100%; 
+}
+
+.great-number {
+    font-weight: 600;
+    font-size: 120px;
+    line-height: 100%;
+    color: var(--bluecolor);
+}
+
+#mummy .flexblock1 {
+    align-items: flex-start;
+    position: absolute;
+    left: 44px;
+    top: 30px;
+}
+
+.scrollup {
+            display: none;
+            position: fixed;
+            right: 63px;
+            bottom: 80px;
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background-color: var(--bluecolor);
+            background-image: url(../images/chevron-down.png);
+            background-origin: border-box;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: 24px 24px;
+            opacity: 1;
+            cursor:pointer;
+            
+}
+
+.scrollup:hover {
+    opacity: 0.7;
+}
