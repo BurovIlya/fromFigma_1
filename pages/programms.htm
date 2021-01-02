@@ -8,139 +8,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="../styles/style.css">
     
-    <script type="text/javascript">
-
-        let currentChart;
-
-    </script>
-    
-    <script src="../scripts/chartData.js"></script>
-    
-    <script src="../scripts/Chart.min.js"></script>
-    
-    <script src="../scripts/reportchart.js"></script>
-    
-<style type="text/css">
-    
-/*диаграмма*/
-.chartWrapper {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 10;
-    /*width: 700px;
-    height: 100%;*/
-    
-}
-
-@keyframes chartEffect1 {
-    from {width:0;opacity:0;}
-    to {width:100%;opacity:1;}
-}
-
-@keyframes chartEffect2 {
-    from {font-size:0;}
-    to {font-size:50%;}
-}
-
-div.chartWrapper div.innerInf {
-    position: absolute;
-    display: none;
-    top: 42%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    width: 114px;
-    height: 101px;
-    text-align: center;
-    z-index: -1;
-    transition: all 0.2s linear;
-    animation: chartEffect1 0.3s ease-in-out;
-}
-
-#chartItemVal {
-   font-style: normal;
-   font-weight: 600;
-   font-size: 48px;
-   line-height: 100%;
-   text-align: center;
-   margin: 0 auto 10px auto; 
-}
-
-#chartItemVal > img {
-   display: block;
-   width: 48px;
-   height: 48px;
-   margin: 0 auto; 
-}
-
-#chartItemLabel {
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 16px;
-    text-align: center;
-    color: var(--bluecolor3);
-    display: none;
-    animation: chartEffect2 0.2s linear;
-}
-
-#myLegend {
-	position: absolute;
-	left: 50%;
-    bottom: 20px;
-	transform: translate(-40%,0);
-    width: 270px;
-    height: 65px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-    align-content: space-between;
-	margin: 0;
-	padding: 0;
-}
-
-#myLegend div.legendItem {
-	position:relative;
-	width:50%;
-    margin: 0;
-	padding:0 0 0 20px;
-	flex-basis: 50%;
-    flex-grow: 0;
-    flex-shrink: 0;
-    font-size: 10px;
-    line-height: 24px;
-    color: black;
- }
-
-#myLegend div.legendItem::before {
-	content:'';
-	position:absolute;
-	top:4px;
-	left:0;
-	width:14px;
-	height:14px;
-	border-radius:4px;
-	
-}
-
-#myLegend div.legendItem:nth-child(1)::before {
-	background-color:rgba(63, 210, 193, 1);
-}
-
-#myLegend div.legendItem:nth-child(2)::before {
-	background-color:rgba(250, 144, 84, 1);
-}
-
-#myLegend div.legendItem:nth-child(3)::before {
-	background-color:rgba(17, 131, 180, 1);
-}
-
-#myLegend div.legendItem:nth-child(4)::before {
-	background-color:rgba(69, 205, 235, 1);
-}    
-    
-    </style>
+        
+<style type="text/css"></style>
     
 </head>
 <body>
@@ -441,8 +310,8 @@ div.chartWrapper div.innerInf {
                 
                     <ul class="navbar-items">
                     
-                        <li><a href="#" class="current-page">Отчетность</a></li>
-                        <li><a href="programms.htm">Программы</a></li>
+                        <li><a href="reports.htm">Отчетность</a></li>
+                        <li><a href="#" class="current-page">Программы</a></li>
                         <li><a href="fosterlings.htm">Подопечные</a></li>
                         <li><a href="volonters.htm">Волонтерам</a></li>
                         <li><a href="video.htm">Видео</a></li>
@@ -475,580 +344,373 @@ div.chartWrapper div.innerInf {
       
       <div class="pages-content">
       
-        <div id="vitrina" class="inner-block vitrine">
+        <div id="progsBlock" class="hide">
         
-            <div class="years">
+            <div id="progs-container" class="inner-block">
             
-                <h1 style="margin-bottom: 65px;">Годовая отчетность</h1>
+                <div class="prog-logo-wrapper">
                 
-                <div class="years-slider-wrapper">
-                
-                    <div id="currentYear" class="year-big">2019</div>
-                    
-                    <div id="years-slider-block">
-                    
-                        <div class="years-slider">
-                        
-                          <div class="years-slider-data">
-                          
-                            <div class="years-slider-data-content">
-                            
-                                <p>2019</p>
-                                <p>2018</p>
-                                <p>2017</p>
-                                <p>2016</p>
-                                <p>2015</p>
-                            
-                            </div>
-                          
-                          </div>
-                          
-                          <div class="flexblock5 years-slider-arrows">
-                          
-                            <div class="arrows" data-name="up"></div>
-                            <div class="arrows" data-name="down"></div>
-                          
-                          </div>  
-                        
-                        </div>
-                    
+                    <div class="prog-logo">
+                        <img alt="" src="" class="illustration" />
                     </div>
                 
                 </div>
-                
-                <div class="years-text">
-                
-                    <p class="simple-text">Прошедший год стал для фонда переломным. <br />Мы проанализировали и переосмыслили опыт предыдущих лет работы, скорректировали действующие программы и запустили новые проекты.</p>
-                
-                </div>
-                
-                <div class="flexblock1 fond-detailed">
-                
-                    <div id="watch-report" class="button report-button" style="margin-right: 65px;">Просмотреть отчет</div>
-                    
-                    <a href="#" target="_blank" class="block-style">
-                    
-                       <div class="flexblock1 fond-detailed-text">
-                        
-                           <img alt="" src="../images/download.png" width="24" height="24">
-                           <span style="margin-left: 14px;">Скачать полный отчет pdf</span>
-                                                           
-                       </div>
-                                
-                   </a>
-                
-                </div>
-            
-            </div>
-            
-            <div class="chartWrapper">
-                
-                <canvas id="myChart" style="width: 373px;height: 373px" class="chartjs-render-monitor" aria-label="круговая диаграмма" role="img">
-                    <p>Активность по программам</p>
-                </canvas>
-                
-                <div class="innerInf" id="innerInfID">
-                    
-                    <div id="chartItemVal">
-                        <img alt="" src="../images/bar-chart-2.png" />
-                    </div>
-                
-                    <span id="chartItemLabel">Активность<br />по программам</span>
-                
-                </div>
-                
-                <div id="myLegend" style="display:none">
-                  <div class="legendItem">Читайка</div>
-	              <div class="legendItem">Мама - тоже человек</div>
-	              <div class="legendItem">Рука помощи</div>
-                  <div class="legendItem">Светлица</div>
-                </div>
-                
-            </div>
-            
-            
-        
-        </div>
-        
-        <div id="detailed-report" class="inner-block hide">
-        
-            <section class="report-title" style="margin-bottom: 46px;padding-top: 169px;">
-            
-                <div class="report-title-block">
-                
-                    <div class="year-big"></div>
-                    
-                    <h5 class="header-five">Отчетность за год</h5>
-                    
-                    <p class="simple-text">Прошедший год стал для фонда переломным. <br />Мы проанализировали и переосмыслили опыт предыдущих лет работы, <br />скорректировали действующие программы и запустили новые проекты.</p>
-                
-                    <a href="#" target="_blank" class="block-style" style="margin-top: 40px;">
-                    
-                       <div class="flexblock1 fond-detailed-text">
-                        
-                           <img alt="" src="../images/download.png" width="24" height="24">
-                           <span style="margin-left: 14px;">Скачать полный отчет pdf</span>
-                                                           
-                       </div>
-                                
-                   </a>
-                
-                </div>
-            
-            </section>
-            
-            <section class="handhelp" style="padding-bottom: 113px;margin-bottom: 118px;">
-            
-                <div class="flexblock6 handhelp-top" style="margin-bottom: 168px;">
-                
-                    <div class="handhelp-left">
-                    
-                        <img alt="" src="../images/handhelp.png" style="width: 270px;height: 164px;margin-bottom: 24px;" />
-                        
-                        <h1 style="margin-bottom: 44px;">Рука помощи</h1>
-                        
-                        <p class="explain">Была оказана комплексная материальная, психологическая и юридическая помощь нуждающимся людям.</p>
-                    
-                    </div>
-                    
-                    <div class="handhelp-right">
-                    
-                        <div class="blog-line" style="margin-bottom: 77px;"></div>
-                        
-                        <div class="handhelp-right-ind">
-                        
-                            <div class="ind-number" data-report='{"vals": [1101, 1046, 1341, 1222, 1346]}'></div>
-                            
-                            <div class="ind-text">
-                               <p class="simple-text">Выдано продуктовых наборов</p> 
-                            </div>
-                            
-                            <div class="ind-number" data-report='{"vals": [11, 46, 51, 82, 70]}'></div>
-                            
-                            <div class="ind-text">
-                               <p class="simple-text">Оказана психологическая помощь</p> 
-                            </div>
-                            
-                            <div class="ind-number" data-report='{"vals": [77, 67, 61, 52, 95]}'></div>
-                            
-                            <div class="ind-text">
-                               <p class="simple-text">Подарено школьных наборов</p> 
-                            </div>
-                            
-                            <div class="ind-number" data-report='{"vals": [29, 17, 21, 22, 27]}'></div>
-                            
-                            <div class="ind-text">
-                               <p class="simple-text">Оказана юридическая помощь</p> 
-                            </div>
-                        
-                        </div>
-                    
-                    </div>
-                
-                </div>
-                
-                <div class="flexblock6 handhelp-bottom">
-                
-                   <div class="handhelp-left">
-                   
-                    <div class="flexblock1 ind">
-                    
-                       <div class="ind-number" data-report='{"vals": [22, 27, 28, 32, 23]}'></div>
-                            
-                            <div class="ind-text">
-                               <p class="simple-text">Закуплено лекарств</p> 
-                            </div> 
-                    
-                    </div>
-                    
-                    <div class="flexblock1 ind">
-                    
-                       <div class="ind-number" data-report='{"vals": [4, 7, 8, 2, 3]}'></div>
-                            
-                            <div class="ind-text">
-                               <p class="simple-text">Закуплено средств реабилитации для инвалидов</p> 
-                            </div> 
-                    
-                    </div>
-                    
-                    <div class="flexblock1 ind">
-                    
-                       <div class="ind-number" data-report='{"vals": [1, 6, 7, 9, 5]}'></div>
-                            
-                            <div class="ind-text">
-                               <p class="simple-text">Оплачена дорогостоящая реабилитация</p> 
-                            </div> 
-                    
-                    </div>
-                    
-                    <div class="flexblock1 ind">
-                    
-                       <div class="ind-number" data-report='{"vals": [4, 3, 6, 4, 2]}'></div>
-                            
-                            <div class="ind-text">
-                               <p class="simple-text">Социально-психологическая адаптация трудных подростков</p> 
-                            </div> 
-                    
-                    </div>
-                   
-                   </div> 
-                   
-                   <div class="flexblock7 handhelp-right">
-                   
-                    <img alt="" src="../images/Group305.png" style="width: 302px;height: 346px;margin-left: 35px;margin-bottom: 28px" />
-                    <img alt="" src="../images/Group307.png" style="width: 290px;height: 237px;margin-right: 27px;margin-bottom: 40px" />
-                   
-                   </div>
-                
-                </div>
-            
-            </section>
-            
-            <section class="actions" style="padding-bottom: 150px;">
-            
-                <header style="margin-bottom: 176px;">
-                
-                    <h1 style="margin-bottom: 30px;">Мероприятия</h1>
-                    
-                    <p class="explain">Наш фонд проводит разнообразные мероприятия <br />как для детей, так и для взрослых.</p>
-                
-                </header>
-                
-                <div class="flexblock6 actions-top" style="margin-bottom: 230px;">
-                
-                    <img alt="" src="../images/Group327.png" style="width: 401px;height: 442px;align-self:flex-end" />
-                    
-                    <div class="flexblock6 actions-ind" style="width: 570px;">
-                    
-                        <div class="indblock-title fl-child">
-                            <h2>Для <br />детей</h2>
-                        </div>
-                        
-                        <div class="ind fl-child">
-                    
-                            <div class="ind-number vert" data-report='{"vals": [14, 13, 16, 14, 13]}'></div>
-                            
-                            <div class="ind-text">
-                               <p class="simple-text">Посетили театров</p> 
-                            </div> 
-                    
-                       </div>
-                       
-                       <div class="break"></div>
-                       
-                       <div class="ind fl-child">
-                    
-                            <div class="ind-number vert" data-report='{"vals": [4, 3, 6, 4, 3]}'></div>
-                            
-                            <div class="ind-text">
-                               <p class="simple-text">Мастер-класс в кондитерской</p> 
-                            </div> 
-                    
-                       </div>
-                       
-                       <div class="ind fl-child">
-                    
-                            <div class="ind-number vert" data-report='{"vals": [9, 4, 7, 2, 5]}'></div>
-                            
-                            <div class="ind-text">
-                               <p class="simple-text">Посетили парков</p> 
-                            </div> 
-                    
-                       </div>
-                       
-                       <div class="break"></div>
-                       
-                       <div class="ind fl-child">
-                    
-                            <div class="ind-number vert" data-report='{"vals": [5, 8, 6, 3, 5]}'></div>
-                            
-                            <div class="ind-text">
-                               <p class="simple-text">Праздники в фонде</p> 
-                            </div> 
-                    
-                       </div>
-                       
-                       <div class="ind fl-child">
-                    
-                            <div class="ind-number vert" data-report='{"vals": [7, 2, 5, 5, 2]}'></div>
-                            
-                            <div class="ind-text">
-                               <p class="simple-text">Праздники в Азовском психоневрологическом интернате</p> 
-                            </div> 
-                    
-                       </div>
-                    
-                    </div>
-                
-                </div>
-                
-                <div class="flexblock6 actions-bottom">
-                
-                    <div style="width: 552px;">
-                    
-                        <div class="indblock-title" style="margin-bottom: 56px;">
-                            <h2>Для взрослых</h2>
-                        </div>
-                        
-                        <div class="flexblock6 actions-ind" style="height: 290px;">
-                    
-                           <div class="ind fl-child">
-                    
-                                <div class="ind-number vert" data-report='{"vals": [19, 14, 17, 12, 19]}'></div>
-                            
-                                <div class="ind-text">
-                                    <p class="simple-text">Лекций <br />психологов</p> 
-                                </div> 
-                    
-                           </div>
-                       
-                           
-                       
-                           <div class="ind fl-child">
-                    
-                            <div class="ind-number vert" data-report='{"vals": [16, 11, 14, 10, 11]}'></div>
-                            
-                            <div class="ind-text">
-                               <p class="simple-text">Бесед с духовником фонда Иереем Иоанном Золотовиным</p> 
-                            </div> 
-                    
-                           </div>
-                           
-                           <div class="break"></div>
-                       
-                         <div class="ind fl-child">
-                    
-                            <div class="ind-number vert" data-report='{"vals": [21, 16, 19, 14, 17]}'></div>
-                            
-                            <div class="ind-text">
-                               <p class="simple-text">Семинаров <br />с обменом опыта</p> 
-                            </div> 
-                    
-                         </div>
-                       
-                                               
-                         <div class="ind fl-child">
-                    
-                            <div class="ind-number vert" data-report='{"vals": [15, 11, 13, 8, 10]}'></div>
-                            
-                            <div class="ind-text">
-                               <p class="simple-text">Просмотров <br />кинофильмов</p> 
-                            </div> 
-                    
-                         </div>
-                       
-                         
-                    
-                    </div>
-                    
-                    </div>
-                    
-                    <img alt="" src="../images/Group343.png" style="width: 508px;height: 386px;" />
-                
-                </div>
-            
-            </section>
-            
-            <section id="svetlica">
-            
-               <div class="flexblock6" style="height: 610px;">
-               
-                <div style="width: 380px;">
-                
-                    <header style="margin-bottom: 80px;">
-                
-                    <h1 style="margin-bottom: 30px;">Светлица</h1>
-                    
-                    <p class="explain">Программа клубного типа, направленная на реабилитацию семей, воспитывающих детей с отставанием в развитии.</p>
-                
-                </header>
-                
-                <img alt="" src="../images/Group347.png" style="width: 380px;height: 367px;" />
-                
-                </div>
-                
-                <div class="ind-column" style="width: 570px;">
-                
-                    <div class="ind">
-                    
-                                <div class="ind-number vert" data-report='{"vals": [29, 24, 27, 22, 29]}'></div>
-                            
-                                <div class="ind-text">
-                                    <p class="simple-text">Занятий с логопедом</p> 
-                                </div> 
-                    
-                    </div>
-                    
-                    <div class="ind">
-                    
-                                <div class="ind-number vert" data-report='{"vals": [18, 13, 16, 11, 11]}'></div>
-                            
-                                <div class="ind-text">
-                                    <p class="simple-text">Занятий нейрогимнастики</p> 
-                                </div> 
-                    
-                    </div>
-                    
-                    <div class="ind">
-                    
-                                <div class="ind-number vert" data-report='{"vals": [29, 24, 27, 22, 25]}'></div>
-                            
-                                <div class="ind-text">
-                                    <p class="simple-text">Творческих уроков ИЗО</p> 
-                                </div> 
-                    
-                    </div>
-                    
-                    <div class="ind">
-                    
-                                <div class="ind-number vert" data-report='{"vals": [29, 24, 27, 31, 32]}'></div>
-                            
-                                <div class="ind-text">
-                                    <p class="simple-text">Личных консультаций с психологом</p> 
-                                </div> 
-                    
-                    </div>
-                    
-                     <div class="ind">
-                    
-                                <div class="ind-number vert" data-report='{"vals": [8, 11, 13, 9, 10]}'></div>
-                            
-                                <div class="ind-text">
-                                    <p class="simple-text">Обучающих вебинаров</p> 
-                                </div> 
-                    
-                    </div>
-                    
-                    <div class="ind">
-                    
-                                <div class="ind-number vert" data-report='{"vals": [1, 1, 1, 2, 2]}'></div>
-                            
-                                <div class="ind-text">
-                                    <p class="simple-text">Тренинга с психологом</p> 
-                                </div> 
-                    
-                    </div>
-                    
-                    <div class="ind">
-                    
-                                <div class="ind-number vert" data-report='{"vals": [1, 4, 7, 2, 3]}'></div>
-                            
-                                <div class="ind-text">
-                                    <p class="simple-text">Консультации профессионального юриста</p> 
-                                </div> 
-                    
-                    </div>
-                    
-                    
-                </div>
-               
-               </div> 
-            
-            </section>
-            
-            <section id="chitaika">
-            
-              <div class="chit-wrapper">
             
                 <header>
                 
-                    <h1 style="margin-bottom: 30px;">Читайка</h1>
+                    <div id="progs-panel" class="flexblock7">
                     
-                    <p class="explain">Программа клубного типа с целью привить <br />деткам любовь к чтению.</p>
-                
-                </header>
-                
-                <div class="flexblock6">
-                
-                    <div class="huge-ind">
-                    
-                        <div class="huge-number" data-report='{"vals": [139, 154, 147, 122, 182]}'></div>
+                        <div id="prog-prev" class="flexblock1 fond-detailed-text">
                         
-                        <div class="ind-text">
-                                    <p class="simple-text">Книги закуплено для нашей библиотеки</p> 
-                        </div> 
-                    
-                    </div>
-                    
-                    <div style="width: 400px;text-align: center">
-                    
-                        <img alt="" src="../images/Group366.png" style="display: block;width: 255px;height: 260px;margin: 0 auto 30px auto;" />
+                            <img alt="" src="../images/arrow_left.png" width="24" height="24">
+                            <span style="margin-left: 18px;"></span>
+                                                    
+                        </div>
                         
-                        <p class="simple-text">В рамках клуба работает библиотека с красивыми специально подобранными изданиями</p>
-                    
-                    </div>
-                    
-                    <div class="huge-ind">
-                    
-                        <div class="huge-number" data-report='{"vals": [129, 150, 157, 142, 160]}'>160</div>
+                        <div class="prog-title">
                         
-                        <div class="ind-text">
-                             <p class="simple-text">Проведено встреч клуба</p> 
-                        </div> 
-                    
-                    </div>
-                
-                </div>      
-                
-              </div>
-            
-            </section>
-            
-            <section id="mummy">
-            
-                <div class="flexblock6 mummy-wrapper">
-                
-                  <header>
-                
-                    <h1 style="margin-bottom: 30px;">Мама тоже человек</h1>
-                    
-                    <p class="explain">Программа для совместных встреч многодетных мам в развлекательно-познавательном формате.</p>
-                
-                  </header>
-                  
-                  <div class="mummy-content">
-                  
-                    <div class="mummy-data">
-                    
-                        <div class="flexblock1">
+                            <div class="org-name">Программа</div>
+                            <h4 class="header-four"></h4>
                         
-                            <div class="great-number" style="margin-right: 30px;" data-report='{"vals": [39, 15, 47, 22, 54]}'></div>
-                            
-                            <p class="simple-text" style="margin-top: 7px;">Раза провели мероприятия для мам</p>
+                        </div>
+                        
+                        <div id="prog-next" class="flexblock1 fond-detailed-text">
+                        
+                            <span style="margin-right: 18px;"></span>
+                            <img alt="" src="../images/arrow.png" width="24" height="24">
                         
                         </div>
                     
                     </div>
+                
+                </header>
+                
+                <div class="progs-slider-container">
+                
+                 <div id="container-inner">
+                 
+                   <div class="flexblock3">
+                
+                    <section class="progs-slider-item">
                     
-                    <div class="mummy-pic"></div>
-                  
-                  </div>
+                        <article class="flexblock3 progs-slider-item-content">
+                        
+                            <div class="progs-item-img">
+                                <img alt="Светлица" class="illustration" src="../images/svetl.png" />
+                            </div>
+                            
+                            <div class="progs-item-text">
+                            
+                                <p class="simple-text">Программа осуществляется при поддержке Фонда президентских грантов.</p>
+                                
+                                <p class="simple-text">Это удивительная программа клубного типа, многие семьи участвующие в ней стали нашими друзьями. Название программы не случайно, она действительно очень позитивная, теплая и душевная.</p>
+                                
+                                <p class="simple-text">Деятельность клуба направлена на помощь семьям, воспитывающим детей с ОВЗ. Уникальность программы в том, что она одновременно нацелена на оказание помощи детям и родителям. Насколько нужна помощь родителям вы можете осознать, представив ситуацию, когда заболевает ваш ребенок, только в случае с родителями данного клуба их дети будут «болеть» всегда. Детей нужно адаптировать к жизни и развивать, но кто-то должен не дать сломаться и родителям. В большинстве случаев гнуться под тяготами, но не ломаются одинокие мамы, которые не побоялись и отказались от возможности сдать собственного ребенка в интернат. Все они удивительные, огромное им спасибо! Встречи с родителями проводят профессиональные практикующие психологи в формате групповой и индивидуальной терапии. В это же время с детьми работает логопед-дефектолог, педагог-психолог, педагог по ИЗО и нейрогимнастики. Работа проводится в группах. У каждого ребенка на занятиях имеется личный волонтер-тьютор, который всегда получает позитивные эмоции от общения с детьми.</p>
+                                
+                                <p class="simple-text">Также в рамках проекта запланированы совместные мероприятия для родителей и их детей, благодаря которым формируется крепкий и здоровый союз родитель-ребенок, происходит приобщение детей к культурным семейным ценностям. В трудных жизненных ситуациях подопечных фонд оказывает индивидуальную юридическую и психологическую помощь.</p>
+                                
+                                <p class="simple-text">Для семей, не имеющих возможность посещать очные мероприятия в рамках проекта создана интернет-версия занятий в виде вебинаров, прямых эфиров и занятий онлайн-формат.</p>
+                            
+                            </div>
+                        
+                        </article>
+                        
+                        <aside class="flexblock3 forVolonters">
+                        
+                            <div class="progs-item-img">
+                                <img alt="" class="illustration" src="../images/volunteer1.png" />
+                            </div>
+                            
+                            <div class="progs-item-text">
+                            
+                                <h6 class="note">Заметка для волонтеров</h6>
+                                
+                                <p class="simple-text">«Если вы хотите стать волонтером, советую обратить внимание на деятельность волонтеров-тьюторов этой программы. Волонтеры становятся счастливыми как дети, потому что все занятия игровые и позитивные. Взрослый человек получает заряд позитивных эмоций от ребенка, его собственные проблемы растворяются во время занятий. Лично у меня было ощущение счастья».</p>
+                                
+                                <div class="flexblock8 subscript">
+                                
+                                    <div class="subline"></div>
+                                    
+                                    <p>Попечитель фонда, Ольга</p>
+                                
+                                </div>
+                                
+                                <a href="#">
+                    
+                                    <div class="button volonters">Стать волонтером</div>
+                    
+                                </a>
+                            
+                            </div>
+                        
+                        </aside>
+                    
+                    </section>
+                    
+                    <section class="progs-slider-item">
+                    
+                        <article class="flexblock3 progs-slider-item-content">
+                        
+                            <div class="progs-item-img">
+                                <img alt="Рука помощи" class="illustration" src="../images/handhelp2.png" />
+                            </div>
+                            
+                            <div class="progs-item-text">
+                            
+                                <p class="simple-text">Это наша сама объемная программа, так как в рамках данной программы мы можем оказать помощь любому нуждающемуся.</p>
+                                
+                                <p class="simple-text">С точки зрения благотворительности это, несомненно, плюс, но в отношении работы фонда минус (большой объем работы, отсутствие четких критериев и логистики). Эта программа вызвала много обсуждений и споров в фонде, но в итоге мы сошлись на том, что не можем отказывать в помощи обратившемуся человеку в зависимости от его возраста, степени болезни или местонахождения. Превращаем минус в плюс и получается, что обратившийся за помощью человек не может получить отказ из-за несоответствия критериям программы.</p>
+                                
+                                <p class="simple-text">Принципиальным в этой программе является отсутствие любой дискриминации обратившегося за помощью человека. В этом, как оказалось, и уникальность данной программы. Единственным критерием для оказания помощи нашим фондом является наличие документов, подтверждающих нуждаемость конкретного человека.</p>
+                                
+                                <p class="simple-text">В обязанности сотрудников фонда входит проверка обращений и формирование конкретных предложений по оказанию помощи фондом.</p>
+                                
+                                <p class="simple-text">Наш фонд формировался с участием команды психологов и юристов, что дало нам возможность пользоваться их услугами на благо других людей. Как правило, обращающийся в фонд человек имеет целый комплекс проблем, всегда на поверхности материальная нужда, но, если копать глубже проявляются психологические проблемы и неразрешенные юридические. Психолог, увидев неразрешенные юридические проблемы человека, которые его тяготят, договаривается о консультации с юристом, соответственно юрист, работая с тяжелым подростком, либо с фактами насилия просто вынужден направить подопечного к психологу. Можно сказать, что деятельность фонда сформировала эту программу.</p>
+                                
+                                <p class="simple-text">Мы не просто выдаем пакетик с продуктами, а в каком-то смысле выясняем причину, по которой человек попал в тиски нужды и при помощи психологов и юристов пытаемся вытащить его из этого состояния. Это становится возможным, когда человек готов принимать такую необычную помощь. Многие ограничиваются пакетиком с продуктами. Вы сможете увидеть, как программа работает и какие дает результаты читая истории реальных людей в блоге фонда. Действия всегда громче слов.</p>
+                            
+                            </div>
+                        
+                        </article>
+                        
+                        <aside class="flexblock3 forVolonters">
+                        
+                            <div class="progs-item-img">
+                                <img alt="" class="illustration" src="../images/volunteer1.png" />
+                            </div>
+                            
+                            <div class="progs-item-text">
+                            
+                                <h6 class="note">Заметка для волонтеров</h6>
+                                
+                                <p class="simple-text">«Если вы хотите стать волонтером, советую обратить внимание на деятельность волонтеров-тьюторов этой программы. Волонтеры становятся счастливыми как дети, потому что все занятия игровые и позитивные. Взрослый человек получает заряд позитивных эмоций от ребенка, его собственные проблемы растворяются во время занятий. Лично у меня было ощущение счастья».</p>
+                                
+                                <div class="flexblock8 subscript">
+                                
+                                    <div class="subline"></div>
+                                    
+                                    <p>Попечитель фонда, Ольга</p>
+                                
+                                </div>
+                                
+                                <a href="#">
+                    
+                                    <div class="button volonters">Стать волонтером</div>
+                    
+                                </a>
+                            
+                            </div>
+                        
+                        </aside>
+                    
+                    </section>
+                    
+                    <section class="progs-slider-item">
+                    
+                        <article class="flexblock3 progs-slider-item-content">
+                        
+                            <div class="progs-item-img">
+                                <img alt="Читайка" class="illustration" src="../images/chitaika.png" />
+                            </div>
+                            
+                            <div class="progs-item-text">
+                            
+                                <p class="simple-text">Это детский клуб, который мы придумали чтобы продвигать и популяризировать чтение. Когда-то россияне были самой читающей нацией, сейчас мы на седьмом месте после Индии, Тайланда, Китая, Филиппин, Египта и Чехии. Нам грустно наблюдать эту статистику, и мы решили действовать. Пытаемся хоть кого-то вырвать из кокона социальных сетей. Очевидно, что чтение это всесторонние развитие человека, а его отсутствие – деградация, часто наблюдаем эту разницу, работая с подопечными фонда. Такова была наша мотивация.</p>
+                                
+                                <p class="simple-text">Читайка работает следующим образом: наши удивительные волонтеры, неравнодушные к чтению люди, собираются с детьми в библиотеке фонда и читают интересную книгу. Для детей создана соответствующая атмосфера: камин, ковер, мягкие подушки и печеньки с чаем, за которым обсуждается прочитанная книга.</p>
+                                
+                                <p class="simple-text">Иногда мы втягиваем в это и взрослых. Совместно проводим литературные посиделки. Психологи проводят лекции о том, как читать с детьми дома и зачем это нужно, когда еле притащился с работы. Иногда презентуем уникальные книги, обмениваемся литературой.</p>
+                                
+                                <p class="simple-text">У нас есть книжный аналитик и критик - Маша. Она читает все сама, поэтому ей можно доверять. Благодаря ее трудам в распоряжении фонда тщательно подобранная библиотека и анонсы с книжными новинками.</p>
+                                
+                                
+                            
+                            </div>
+                        
+                        </article>
+                        
+                        <aside class="flexblock3 forVolonters">
+                        
+                            <div class="progs-item-img">
+                                <img alt="" class="illustration" src="../images/volunteer1.png" />
+                            </div>
+                            
+                            <div class="progs-item-text">
+                            
+                                <h6 class="note">Заметка для волонтеров</h6>
+                                
+                                <p class="simple-text">Если вы получаете тактильное и визуальное удовольствие от взятой в руки книги, наслаждаетесь запахом и шорохом страниц, любите детей и у вас приятный голос – записывайтесь волонтером клуба Читайка.</p>
+                                
+                                <a href="#">
+                    
+                                    <div class="button volonters">Стать волонтером</div>
+                    
+                                </a>
+                            
+                            </div>
+                        
+                        </aside>
+                    
+                    </section>
+                    
+                    <section class="progs-slider-item">
+                    
+                        <article class="flexblock3 progs-slider-item-content">
+                        
+                            <div class="progs-item-img">
+                                <img alt="Мама тоже человек" class="illustration" src="../images/mother.png" />
+                            </div>
+                            
+                            <div class="progs-item-text">
+                            
+                                <p class="simple-text">Это программа очень интересного формата, направлена на оказание психологической разгрузки многодетных мам. Работая с многодетными семьями, мы видим, что мамы в таких семьях мало что могут себе позволить, очень часто не хватает времени даже на сон. Большинство семей стеснены в средствах. Ежедневно находиться в цейтноте семейных забот эмоционально и физически тяжело.</p>
+                                
+                                <p class="simple-text">В рамках клубных встреч мы стараемся дать возможность мамам расслабиться без детей, при этом встречи стараемся сделать максимально полезными. К нам приходят специалисты по питанию, фитнес-тренеры, косметологи, визажисты, бесплатно проводят лекции и мастер-классы. Встречи проходят душевно и непринужденно, иногда наши мамочки уходят счастливые с макияжем или прической. Нам всем нужно чуточку тепла и внимания, и мы стараемся в наших встречах его передать.</p>
+                                
+                            </div>
+                        
+                        </article>
+                        
+                        <aside class="flexblock3 forVolonters">
+                        
+                            <div class="progs-item-img">
+                                <img alt="" class="illustration" src="../images/volunteer1.png" />
+                            </div>
+                            
+                            <div class="progs-item-text">
+                            
+                                <h6 class="note">Заметка для волонтеров</h6>
+                                
+                                <p class="simple-text">В рамках этого клуба требуются волонтеры, которые присматривают и развлекают детей, пока мамы отдыхают, а также различные специалисты в области красоты и здоровья женщин.</p>
+                                
+                                <a href="#">
+                    
+                                    <div class="button volonters">Стать волонтером</div>
+                    
+                                </a>
+                            
+                            </div>
+                        
+                        </aside>
+                    
+                    </section>
                 
                 </div>
-            
-            </section>
-        
-            <section class="support">
-        
-                <div class="support-emb"></div>
-          
-                <div class="fulltext-link">Настроены на добро</div>
-          
-                <h4 class="header-four">Окажем поддержку</h4>
-          
-                <p class="simple-text">Следите за нашей деятельностью<br>в социальных сетях</p>
-          
-                <div class="socnets-wrapper">
-          
-                    <a href="#"><div class="socnets-icon vk"></div></a><a href="#"><div class="socnets-icon ok"></div></a><a href="#"><div class="socnets-icon fb"></div></a>  
-          
+                
                 </div>
-        
-            </section>        
+                
+              </div>
+            
+            </div>
         
         </div>
       
-      </div> 
+        <div id="programms" class="inner-block">
+        
+            <section class="programms">
+        
+              <div class="programms-title">
+            
+                <h4 class="header-four" style="margin-top: 0;">Наши программы</h4>
+            
+              </div>
+            <div class="programms-slider flexblock3">
+            
+                <div class="slider-text" style="padding-top: 8px;">
+                
+                    <p>Программы фонда нуждаются в вашей поддержке.</p>
+                    <p>Мы очень признательны всем, кто ее оказывает. Спасибо Вам!</p>
+                    
+                
+                </div>
+                <div class="slider-arrows">
+                
+                    <div class="arrows" data-name="left"></div>
+                    <div class="arrows" data-name="right"></div>
+                
+                </div>
+            
+            </div>
+            <div class="prog">
+            
+                <header class="prog-header">Светлица</header>
+                
+                <article class="prog-description">
+                    <p>Программа осуществляется при поддержке Фонда Президентских грантов. Направлена на реабилитацию семей, воспитывающих детей с синдромом Дауна, аутизмом, отставанием в развитии.</p>                    
+                </article>
+                
+                <aside class="prog-icon">
+                    <img alt="" src="../images/sun.png">
+                </aside>
+            
+                <a href="#" class="prog-link"></a>
+            
+            </div>
+            
+            <div class="prog">
+            
+               <header class="prog-header">Рука помощи</header>
+                
+               <article class="prog-description">
+                    <p>Программа направленна на оказание
+ комплексных мер поддержки нуждающихся.
+ В рамках программы фонд оказывает
+ психологическую, юридическую и
+ материальную поддержку.</p>
+               </article>
+                
+               <aside class="prog-icon">
+                    <img alt="" src="../images/heart 1.png">
+               </aside>
+               
+               <a href="#" class="prog-link"></a>
+            
+            </div>
+            
+            <div class="prog">
+            
+                <header class="prog-header">Читайка</header>
+                
+                <article class="prog-description">
+                    <p>Программа направленна на развитие у
+ ребенка любви к чтению. В уютной атмосфере
+ библиотеки фонда, у камина с часами, читаем
+ с детьми интересные книги и обсуждаем
+ прочитанное.</p>
+                </article>
+                
+                <aside class="prog-icon">
+                    <img alt="" src="../images/book-open.png">
+                </aside>
+                
+                <a href="#" class="prog-link"></a>
+            
+            </div>
+            
+            <div class="prog">
+            
+                <header class="prog-header">Мама <br />тоже человек</header>
+                
+                <article class="prog-description">
+                    <p>Программа призвана снять напряжение с
+ многодетных мам, позволяет развеяться и
+ ощутить атмосферу праздника, любви и
+ заботы.</p>
+                </article>
+                
+                <aside class="prog-icon">
+                    <img alt="" src="../images/mother 2.png">
+                </aside>
+                
+                <a href="#" class="prog-link"></a>
+            
+            </div>
+        
+        </section>
+        
+        </div>      
+      
+      </div>
       
       <footer class="footer-wrapper">
     
@@ -1062,8 +724,8 @@ div.chartWrapper div.innerInf {
             
                 <ul class="flexblock1 navbar-items">
                     
-                        <li><a href="#">Отчетность</a></li>
-                        <li><a href="programms.htm">Программы</a></li>
+                        <li><a href="reports.htm">Отчетность</a></li>
+                        <li><a href="#">Программы</a></li>
                         <li><a href="fosterlings.htm">Подопечные</a></li>
                         <li><a href="volonters.htm">Волонтерам</a></li>
                         <li><a href="video.htm">Видео</a></li>
@@ -1163,8 +825,8 @@ div.chartWrapper div.innerInf {
     
 <script type="text/javascript" src="../scripts/main.js"></script>
 <script type="text/javascript" src="../scripts/scrollup.js"></script>
-<script type="text/javascript" src="../scripts/years.js"></script>
-<script type="text/javascript" src="../scripts/reportData.js"></script>
+<script type="text/javascript" src="../scripts/progs.js"></script>
+
    
 </body>
 

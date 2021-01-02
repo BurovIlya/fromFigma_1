@@ -1832,10 +1832,6 @@ div#popup-instruct .tabs-menu {
     font-weight: bold;
     font-size: 16px;
     line-height: 24px;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 24px;
     text-align: center;
     letter-spacing: 0.05em;
     text-transform: uppercase;
@@ -2606,4 +2602,200 @@ section#chitaika header {
 
 .scrollup:hover {
     opacity: 0.7;
+}
+
+#programms {
+    padding-top: 150px;
+    padding-bottom: 70px;
+}
+
+#programms h4.header-four {
+    color: var(--blackcolor3);
+}
+
+#programms .slider-text p {
+   color: var(--bluecolor3); 
+}
+
+#programms .prog {
+    background-color: var(--lightbgcolor);
+}
+
+#programms .prog > .prog-header {
+    color: var(--bluecolor);
+}
+
+#programms .prog-description > p {
+    color: var(--bluecolor3);
+}
+
+#programms .prog-link {
+    transition: none;
+}
+
+#progsBlock {
+    box-sizing:border-box;
+    background-image: url(../images/progs_bg_2_2.png), url(../images/progs_bg.png);
+    background-position: top left, top left;
+    background-repeat: no-repeat, no-repeat;
+    background-size: auto auto, auto auto;
+}
+
+#progs-container {
+    padding: 0 0 100px 0;
+    background-color: rgba(0,0,0,0);
+}
+
+#progs-container > header {
+    height: 81px;
+    margin-bottom: 47px;
+    padding: 0 70px;
+}
+
+#prog-prev, #prog-next {
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.prog-logo-wrapper {
+    position: relative;
+    height: 347px;
+}
+
+.prog-logo {
+    position: absolute;
+    left: 50%;
+    bottom: 34px;
+    transform: translateX(-50%);
+    height: auto;
+}
+
+.prog-title {
+    height: 100%;
+}
+
+.prog-title > .org-name {
+    letter-spacing: 1em;
+    text-transform: uppercase;
+    color: var(--bluecolor);
+    margin-bottom: 10px;
+    padding-left: 0.5em;
+}
+
+.prog-title > h4.header-four {
+    line-height: 54px;
+    margin-top: 0;
+    color: var(--blackcolor3);
+}
+
+.progs-slider-container {
+    background: var(--whitecolor);
+    border-radius: 15px;
+    padding: 70px;
+    
+}
+
+#container-inner {
+   position: relative;
+   overflow: hidden; 
+}
+
+#container-inner > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: left 0.2s linear;
+}
+
+.progs-item-img {
+    flex-shrink: 0;
+    flex-grow:0;
+    width: 230px;
+    height: 292px;
+    margin-right: 100px;
+}
+
+.progs-item-img > img {
+    width: 100%;
+    height: 100%;
+}
+
+.progs-item-text {
+    flex-grow: 1;
+}
+
+.progs-slider-container p.simple-text {
+    text-align: justify;
+    color: var(--bluecolor3);
+    margin-bottom: 0.9rem;
+}
+
+.progs-slider-item-content {
+    padding-bottom: 60px;
+}
+
+.forVolonters {
+    border-top: 1px solid var(--bluecolor);
+    border-bottom: 1px solid var(--bluecolor);
+    padding: 70px 0;
+}
+
+.forVolonters .progs-item-img > img {
+    width: 120px;
+    height: 120px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h6.note {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 24px;
+    color: var(--blackcolor3);
+}
+
+.progs-item-text > h6.note {
+    margin-bottom: 1.5rem;
+}
+
+.subscript {
+    height: 24px;
+    margin-top: 14px;
+    margin-bottom: 22px;
+}
+
+.flexblock8 {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.subline {
+    height: 1px;
+    background: var(--bordercolor);
+}
+
+.subscript > .subline {
+    width: 68px;
+    margin-right: 30px;
+}
+
+.subscript > p {
+    font-size: 14px;
+    line-height: 24px;
+    text-align: right;
+    color: #7E90A5;
+}
+
+.forVolonters > .progs-item-img {
+    height: auto;
+}
+
+.progs-item-text a {
+    display: block;
+}
+
+.progs-item-text > p.simple-text + a {
+    margin-top: 60px;
 }
