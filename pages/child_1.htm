@@ -8,139 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="../styles/style.css">
     
-    <script type="text/javascript">
-
-        var currentChart;
-
-    </script>
-    
-    <script src="../scripts/chartData.js"></script>
-    
-    <script src="../scripts/Chart.min.js"></script>
-    
-    <script src="../scripts/reportchart.js"></script>
-    
-<style type="text/css">
-    
-/*диаграмма*/
-.chartWrapper {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 10;
-    /*width: 700px;
-    height: 100%;*/
-    
-}
-
-@keyframes chartEffect1 {
-    from {width:0;opacity:0;}
-    to {width:100%;opacity:1;}
-}
-
-@keyframes chartEffect2 {
-    from {font-size:0;}
-    to {font-size:50%;}
-}
-
-div.chartWrapper div.innerInf {
-    position: absolute;
-    display: none;
-    top: 42%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    width: 114px;
-    height: 101px;
-    text-align: center;
-    z-index: -1;
-    transition: all 0.2s linear;
-    animation: chartEffect1 0.3s ease-in-out;
-}
-
-#chartItemVal {
-   font-style: normal;
-   font-weight: 600;
-   font-size: 48px;
-   line-height: 100%;
-   text-align: center;
-   margin: 0 auto 10px auto; 
-}
-
-#chartItemVal > img {
-   display: block;
-   width: 48px;
-   height: 48px;
-   margin: 0 auto; 
-}
-
-#chartItemLabel {
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 16px;
-    text-align: center;
-    color: var(--bluecolor3);
-    display: none;
-    animation: chartEffect2 0.2s linear;
-}
-
-#myLegend {
-	position: absolute;
-	left: 50%;
-    bottom: 20px;
-	transform: translate(-40%,0);
-    width: 270px;
-    height: 65px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-    align-content: space-between;
-	margin: 0;
-	padding: 0;
-}
-
-#myLegend div.legendItem {
-	position:relative;
-	width:50%;
-    margin: 0;
-	padding:0 0 0 20px;
-	flex-basis: 50%;
-    flex-grow: 0;
-    flex-shrink: 0;
-    font-size: 10px;
-    line-height: 24px;
-    color: black;
- }
-
-#myLegend div.legendItem::before {
-	content:'';
-	position:absolute;
-	top:4px;
-	left:0;
-	width:14px;
-	height:14px;
-	border-radius:4px;
-	
-}
-
-#myLegend div.legendItem:nth-child(1)::before {
-	background-color:rgba(63, 210, 193, 1);
-}
-
-#myLegend div.legendItem:nth-child(2)::before {
-	background-color:rgba(250, 144, 84, 1);
-}
-
-#myLegend div.legendItem:nth-child(3)::before {
-	background-color:rgba(17, 131, 180, 1);
-}
-
-#myLegend div.legendItem:nth-child(4)::before {
-	background-color:rgba(69, 205, 235, 1);
-}    
-    
-    </style>
+<style type="text/css"></style>
     
 </head>
 <body>
@@ -317,6 +185,247 @@ div.chartWrapper div.innerInf {
         
         </div>
         
+        <div id="popup-thanks" class="fixedBlock hide">
+        
+            <div class="popup2-content"></div>
+            
+            <div class="popup-close"></div> 
+        
+        </div>
+        
+        <div id="popup-instruct" class="fixedBlock hide">
+        
+            <!--<div class="popup2-content container" data-control="wheel">-->
+            <div class="popup2-content container">
+            
+                <div class="viewport-wrapper">
+                
+                    <div class="viewport">
+                    
+                        <div class="content">
+                        
+                            <h5>Инструкция к пожертвованию</h5>
+                            
+                            <p>Выберите вкладку удобного способа</p>
+                            
+                            <div class="flexblock1 tabs-menu">
+                            
+                                <div class="tabs-menu-item active-tab" data-tab="tab1">приложение</div>
+                                
+                                <div class="tabs-menu-item" data-tab="tab2">Веб-портал</div>
+                                
+                            </div>
+                            
+                            <div class="tab" id="tab1">
+                            
+                                <div class="api-steps-wrapper">
+                                
+                                    <div class="api-step">
+                                    
+                                        <div class="api-step-pic">
+                                        
+                                            <img alt="" src="../images/api_step1.png">
+                                        
+                                        </div>
+                                        
+                                        <div class="step-descript">
+                                
+                                            <header class="step-title">Шаг 1</header>
+                                    
+                                            <p>Выберите раздел <strong>Платежи &gt; Автоплатежи и автопереводы</strong></p>
+                                
+                                        </div>
+                                    
+                                    </div>
+                                    
+                                    <div class="api-step">
+                                    
+                                        <div class="api-step-pic">
+                                        
+                                            <img alt="" src="../images/api_step2.png">
+                                        
+                                        </div>
+                                        
+                                        <div class="step-descript">
+                                
+                                            <header class="step-title">Шаг 2</header>
+                                    
+                                            <p>Выберите <strong>Подключить &gt; Автоплатеж</strong></p>
+                                
+                                        </div>
+                                    
+                                    </div>
+                                    
+                                    <div class="api-step">
+                                    
+                                        <div class="api-step-pic">
+                                        
+                                            <img alt="" src="../images/api_step3.png">
+                                        
+                                        </div>
+                                        
+                                        <div class="step-descript">
+                                
+                                            <header class="step-title">Шаг 3</header>
+                                    
+                                            <p>В панели навигации выберите иконку поиска и введите ИНН фонда <strong>1100113477100</strong></p>
+                                
+                                        </div>
+                                    
+                                    </div>
+                                    
+                                    <div class="api-step">
+                                    
+                                        <div class="api-step-pic">
+                                        
+                                            <img alt="" src="../images/api_step4.png">
+                                        
+                                        </div>
+                                        
+                                        <div class="step-descript">
+                                
+                                            <header class="step-title">Шаг 4</header>
+                                    
+                                            <p>Нажмите на название фонда</p>
+                                
+                                        </div>
+                                    
+                                    </div>
+                                    
+                                    <div class="api-step">
+                                    
+                                        <div class="api-step-pic">
+                                        
+                                            <img alt="" src="../images/api_step5.png">
+                                        
+                                        </div>
+                                        
+                                        <div class="step-descript">
+                                
+                                            <header class="step-title">Шаг 5</header>
+                                    
+                                            <p>Введите свои <strong>ФИО и карту</strong>, с которой планируете перевод</p>
+                                
+                                        </div>
+                                    
+                                    </div>
+                                    
+                                    <div class="api-step">
+                                    
+                                        <div class="api-step-pic">
+                                        
+                                            <img alt="" src="../images/api_step6.png">
+                                        
+                                        </div>
+                                        
+                                        <div class="step-descript">
+                                
+                                            <header class="step-title">Шаг 6</header>
+                                    
+                                            <p>Введите назначение платежа, например: <strong>Пожертвование</strong></p>
+                                
+                                        </div>
+                                    
+                                    </div>
+                                
+                                </div>
+                            
+                            </div>
+                            
+                            <div class="tab hide" id="tab2">
+                            
+                                <div class="web-steps-wrapper">
+                                
+                                  <div class="number"></div>
+                                  
+                                  <div class="web-step-pic" style="align-self: end">
+                                    <img alt="" src="../images/web_step_1_1.png">
+                                  </div>
+                                  
+                                  <div class="web-step-pic" style="margin-left: 40px;align-self: end">
+                                    <img alt="" src="../images/web_step_1_2.png">
+                                  </div> 
+                                  
+                                 <div class="step-descript step1">
+                                
+                                            <header class="step-title">Шаг 1</header>
+                                    
+                                            <p>Войдите в личный кабинет Сбербанк Онлайн. <br>В верхней навгиационной панели найдите вкладку <strong>Переводы и платежи</strong>. <br>Ниже справа обратитесь к разделу <strong>Личное меню &gt; Мои автоплатежи &gt; Подключить автоплатеж</strong>.</p>
+                                
+                                 </div>
+                                 
+                                 <div class="empty"></div>
+                                 
+                                  <div class="number"></div>
+                                  
+                                  <div class="web-step-pic pic2">
+                                    <img alt="" src="../images/web_step_2.png">
+                                  </div>
+                                  
+                                  <div class="step-descript" style="margin-left: 40px;margin-bottom:26px;">
+                                
+                                            <header class="step-title">Шаг 2</header>
+                                    
+                                            <p>Ниже по центру вы найдете поисковое поле. Введите в него ИНН фонда: <strong>6166070187</strong> и нажмите <strong>Найти</strong>.</p>
+                                
+                                  </div>
+                                  
+                                   <div class="number"></div>
+                                   
+                                   <div class="step-descript" style="margin-left: 40px;">
+                                
+                                            <header class="step-title">Шаг 3</header>
+                                    
+                                            <p>Убедитесь, что для вас показаны результаты <strong>без учета региона</strong>. Нажмите на название фонда.</p>
+                                
+                                  </div>
+                                  
+                                  <div class="empty"></div>
+                                  
+                                  <div class="number"></div>
+                                  
+                                  <div class="web-step-pic">
+                                    <img alt="" src="../images/web_step_4.png">
+                                  </div>
+                                  
+                                  <div class="step-descript" style="margin-left: 40px;">
+                                
+                                            <header class="step-title">Шаг 4</header>
+                                    
+                                            <p>Заполните ваши ФИО и нажмите кнопку <strong>Продолжить</strong>.</p>
+                                
+                                  </div>
+                                
+                                </div>
+                            
+                            </div>
+                            
+                            <div class="step7">
+                            
+                                <div class="step-descript">
+                                
+                                    <header class="step-title">Шаг 7</header>
+                                    
+                                    <p>В следующем экране введите значение<br>суммы платежа и подтвердите ваше<br>подключение автоплатежа.</p>
+                                
+                                </div>
+                                
+                                <div class="step-title">Готово</div>
+                            
+                            </div>
+                        
+                        </div>
+                        
+                    </div>
+                
+                </div>
+            
+            </div>
+            
+            <div class="popup-close"></div>
+        
+        </div>
+        
         <div id="dogovor" class="fixedBlock hide">
         
             <div class="popup2-content container">
@@ -441,9 +550,9 @@ div.chartWrapper div.innerInf {
                 
                     <ul class="navbar-items">
                     
-                        <li><a href="#" class="current-page">Отчетность</a></li>
+                        <li><a href="reports.htm">Отчетность</a></li>
                         <li><a href="programms.htm">Программы</a></li>
-                        <li><a href="fosterlings.htm">Подопечные</a></li>
+                        <li><a href="#" class="current-page">Подопечные</a></li>
                         <li><a href="volonters.htm">Волонтерам</a></li>
                         <li><a href="video.htm">Видео</a></li>
                         <li><a href="about.htm">О фонде</a></li>
@@ -475,580 +584,133 @@ div.chartWrapper div.innerInf {
       
       <div class="pages-content">
       
-        <div id="vitrina" class="inner-block vitrine">
+        <div class="inner-block pages child-inner">
         
-            <div class="years">
+            <div class="flexblock3">
             
-                <h1 style="margin-bottom: 65px;">Годовая отчетность</h1>
+                <section class="child-panel">
                 
-                <div class="years-slider-wrapper">
-                
-                    <div id="currentYear" class="year-big">2019</div>
+                    <div class="child-avatar">
                     
-                    <div id="years-slider-block">
-                    
-                        <div class="years-slider">
+                      <div class="flexblock1 child-avatar-inner">
+                        <img alt="" class="illustration" src="../images/image20_2.png" title="Кристиан после реабилитации" />
+                        <img alt="" class="illustration" src="../images/image20_2_2.png" title="Кристиан после реабилитации_2" />
+                        <img alt="" class="illustration" src="../images/image20_3.png" title="Кристиан после реабилитации_3" />
+                      </div>  
                         
-                          <div class="years-slider-data">
-                          
-                            <div class="years-slider-data-content">
+                    </div>
+                    
+                    <div class="flexblock6 child-avatar-slider" style="margin-bottom: 27px;">
+                    
+                        <div class="arrows" data-name="left"></div>
+                        
+                        <p class="explain"></p>                        
+                        
+                        <div class="arrows" data-name="right"></div>
+                    
+                    </div>
+                    
+                    <div class="flexblock6 summa" style="margin-bottom: 30px;">
+                        
+                            <div class="flexblock5 summa-item">
                             
-                                <p>2019</p>
-                                <p>2018</p>
-                                <p>2017</p>
-                                <p>2016</p>
-                                <p>2015</p>
+                                <span>Общая сумма / руб.</span>
+                                <div class="ruble">85 600</div>
                             
                             </div>
-                          
-                          </div>
-                          
-                          <div class="flexblock5 years-slider-arrows">
-                          
-                            <div class="arrows" data-name="up"></div>
-                            <div class="arrows" data-name="down"></div>
-                          
-                          </div>  
+                            <div class="flexblock5 summa-item">
+                            
+                                <span>Собрано</span>
+                                <div class="ruble">71</div>
+                            
+                            </div>
                         
+                    </div>
+                    
+                    <div class="button donuts" style="margin-bottom: 15px;">Поддержать</div>
+                    
+                    <a href="#" class="autopay instruction">как подключить сбербанк автоплатеж</a>
+                
+                </section>
+                
+                <section class="child-descript">
+                
+                    <a href="fosterlings.htm" class="block-style">
+                    
+                        <div class="flexblock1 fond-detailed-text">
+                        
+                            <img alt="" src="../images/arrow_left.png" width="24" height="24">
+                            <span style="margin-left: 20px;">Вернуться назад</span>
+                         
                         </div>
                     
-                    </div>
-                
-                </div>
-                
-                <div class="years-text">
-                
-                    <p class="simple-text">Прошедший год стал для фонда переломным. <br />Мы проанализировали и переосмыслили опыт предыдущих лет работы, скорректировали действующие программы и запустили новые проекты.</p>
-                
-                </div>
-                
-                <div class="flexblock1 fond-detailed">
-                
-                    <div id="watch-report" class="button report-button" style="margin-right: 65px;">Просмотреть отчет</div>
-                    
-                    <a href="#" target="_blank" class="block-style">
-                    
-                       <div class="flexblock1 fond-detailed-text">
-                        
-                           <img alt="" src="../images/download.png" width="24" height="24">
-                           <span style="margin-left: 14px;">Скачать полный отчет pdf</span>
-                                                           
-                       </div>
-                                
                    </a>
-                
-                </div>
-            
-            </div>
-            
-            <div class="chartWrapper">
-                
-                <canvas id="myChart" style="width: 373px;height: 373px" class="chartjs-render-monitor" aria-label="круговая диаграмма" role="img">
-                    <p>Активность по программам</p>
-                </canvas>
-                
-                <div class="innerInf" id="innerInfID">
+                   
+                   <div class="child-descript-inner" style="margin-top: 24px;">
+                   
+                     <h1>Кристиан Лир</h1>
                     
-                    <div id="chartItemVal">
-                        <img alt="" src="../images/bar-chart-2.png" />
-                    </div>
-                
-                    <span id="chartItemLabel">Активность<br />по программам</span>
-                
-                </div>
-                
-                <div id="myLegend" style="display:none">
-                  <div class="legendItem">Читайка</div>
-	              <div class="legendItem">Мама - тоже человек</div>
-	              <div class="legendItem">Рука помощи</div>
-                  <div class="legendItem">Светлица</div>
-                </div>
-                
-            </div>
-            
-            
-        
-        </div>
-        
-        <div id="detailed-report" class="inner-block pages hide">
-        
-            <section class="report-title" style="margin-bottom: 46px;padding-top: 169px;">
-            
-                <div class="report-title-block">
-                
-                    <div class="year-big"></div>
-                    
-                    <h5 class="header-five">Отчетность за год</h5>
-                    
-                    <p class="simple-text">Прошедший год стал для фонда переломным. <br />Мы проанализировали и переосмыслили опыт предыдущих лет работы, <br />скорректировали действующие программы и запустили новые проекты.</p>
-                
-                    <a href="#" target="_blank" class="block-style" style="margin-top: 40px;">
-                    
-                       <div class="flexblock1 fond-detailed-text">
-                        
-                           <img alt="" src="../images/download.png" width="24" height="24">
-                           <span style="margin-left: 14px;">Скачать полный отчет pdf</span>
-                                                           
-                       </div>
+                     <div class="flexblock1 tabs-menu">
+                            
+                        <div class="tabs-menu-item active-tab" data-tab="tab3">Описание</div>
                                 
-                   </a>
-                
-                </div>
-            
-            </section>
-            
-            <section class="handhelp" style="padding-bottom: 113px;margin-bottom: 118px;">
-            
-                <div class="flexblock6 handhelp-top" style="margin-bottom: 168px;">
-                
-                    <div class="handhelp-left">
+                        <div class="tabs-menu-item" data-tab="tab4">Отчетность</div>
+                                
+                    </div>
                     
-                        <img alt="" src="../images/handhelp.png" style="width: 270px;height: 164px;margin-bottom: 24px;" />
+                    <div id="tab3" class="tab">
+                    
+                        <p class="simple-text">У Кристиана с рождения тяжелейшее поражение позвоночника: часть позвонков не сошлись друг с другом, порок называется сложно - «менингомиелорадикулоцеле грудо-поясничного отдела». Такое поражение не позволяет человеку ни ходить, ни даже сидеть.</p>
+                        <p class="simple-text">Благодаря участию и отзывчивости многих людей, вопреки прогнозам врачей, Кристиан может сидеть. Однако в июле, на очередной консультации в НИИ нейрохирургии им. Поленова, рекомендовали приобрести прогулочную коляску, позволяющую фиксировать спину.</p>
+                        <p class="simple-text">Стоимость специализированной, подобранной ортопедами, коляски 170 600 рублей. Сумму 85 000 рублей выделит фонд Святителя Николая Чудотворца. Необходимо собрать еще 85 600 рублей.</p>
+                        <p class="simple-text">Подарите Кристиану возможность передвижения!</p>
+                        <p class="simple-text">Из рассказа мамы Веры Лир: "После УЗИ на 5-м месяце беременности мне сказали страшное: у плода — тяжелейшие пороки развития. В том числе поражение позвоночника, изменение формы головы и прочее. Врачи рекомендовали аборт. Это стало для нас потрясением: моя беременность была первой и долгожданной. Мы глубоко верующие люди и на убийство ребёнка пойти не могли.</p>
+                        <p class="simple-text">Надеясь, что диагноз ошибочный, мы пошли в несколько других клиник, мне сделали повторные УЗИ. К нашему счастью, их результаты опровергли первоначальный вердикт. Мы были на седьмом небе! С радостью ждали рождения малыша, 14 июля 2010 г. сын Кристиан появился на свет.</p>
+                        <p class="simple-text">К нашему горю, большинство первоначальных диагнозов оказалось верным… У сына менингоэнцефалит, гидроцефалия, а самое страшное — спинномозговая грыжа, то есть несформированность позвоночника: часть позвонков не сошлась друг с другом, само это место не было покрыто кожей, было открытой раной.</p>
+                        <p class="simple-text">На медицинском языке порок называется «менингомиелорадикулоцеле грудо-поясничного отдела». Сына положили в Ростовскую областную детскую больницу, где он перенёс несколько операций, в том числе рану закрыли кожей.</p>
+                        <p class="simple-text">Но в остальном, прогнозы врачей неутешительны: из-за такого поражения позвоночника сын не сможет ни ходить, ни даже сидеть. Операций по исправлению настолько тяжёлого дефекта в России пока не делается.</p>
+                        <p class="simple-text">В 2011 году область добилась направления Кристиана в Москву - в НИИ нейрохирургии им. Бурденко, где ребёнка более полно обследовали. Потом из областной казны были выделены деньги на 3-недельную реабилитацию Кристиана в специализированном санатории «Ромашка» в Кисловодске. Малыш начал сидеть, но ходить пока не может.</p>
+                        <p class="simple-text">Сейчас Кристиану 9 лет. Постоянные занятия, регулярные курсы реабилитации и прогулки для Кристиана невозможны без средства передвижения. Специалисты подобрали ему специализированную коляску, но без помощи неравнодушных людей не обойтись."</p>
                         
-                        <h1 style="margin-bottom: 44px;">Рука помощи</h1>
+                        <p class="simple-text"><strong>Поддержите Кристиана!</strong></p>
                         
-                        <p class="explain">Была оказана комплексная материальная, психологическая и юридическая помощь нуждающимся людям.</p>
                     
                     </div>
                     
-                    <div class="handhelp-right">
+                    <div id="tab4" class="flexblock6 tab gallery">
                     
-                        <div class="blog-line" style="margin-bottom: 77px;"></div>
+                        <figure>
                         
-                        <div class="handhelp-right-ind">
+                            <img alt="счет" src="../images/schet.png" />
+                            <figcaption>Счет на оплату <span>№ 1234</span> от 2 июля <span>2019 г.</span></figcaption>
+                                                
+                        </figure>
                         
-                            <div class="ind-number" data-report='{"vals": [1101, 1046, 1341, 1222, 1346]}'></div>
-                            
-                            <div class="ind-text">
-                               <p class="simple-text">Выдано продуктовых наборов</p> 
-                            </div>
-                            
-                            <div class="ind-number" data-report='{"vals": [11, 46, 51, 82, 70]}'></div>
-                            
-                            <div class="ind-text">
-                               <p class="simple-text">Оказана психологическая помощь</p> 
-                            </div>
-                            
-                            <div class="ind-number" data-report='{"vals": [77, 67, 61, 52, 95]}'></div>
-                            
-                            <div class="ind-text">
-                               <p class="simple-text">Подарено школьных наборов</p> 
-                            </div>
-                            
-                            <div class="ind-number" data-report='{"vals": [29, 17, 21, 22, 27]}'></div>
-                            
-                            <div class="ind-text">
-                               <p class="simple-text">Оказана юридическая помощь</p> 
-                            </div>
+                        <figure>
                         
-                        </div>
+                            <img alt="счет" src="../images/schet.png" />
+                            <figcaption>Счет на оплату <span>№ 1202</span> от 2 июня <span>2019 г.</span></figcaption>
+                                                
+                        </figure>
+                        
+                        <figure>
+                        
+                            <img alt="счет" src="../images/schet.png" />
+                            <figcaption>Счет на оплату <span>№ 1520</span> от 22 августа <span>2019 г.</span></figcaption>
+                                                
+                        </figure>
                     
                     </div>
-                
-                </div>
-                
-                <div class="flexblock6 handhelp-bottom">
-                
-                   <div class="handhelp-left">
-                   
-                    <div class="flexblock1 ind">
-                    
-                       <div class="ind-number" data-report='{"vals": [22, 27, 28, 32, 23]}'></div>
-                            
-                            <div class="ind-text">
-                               <p class="simple-text">Закуплено лекарств</p> 
-                            </div> 
-                    
-                    </div>
-                    
-                    <div class="flexblock1 ind">
-                    
-                       <div class="ind-number" data-report='{"vals": [4, 7, 8, 2, 3]}'></div>
-                            
-                            <div class="ind-text">
-                               <p class="simple-text">Закуплено средств реабилитации для инвалидов</p> 
-                            </div> 
-                    
-                    </div>
-                    
-                    <div class="flexblock1 ind">
-                    
-                       <div class="ind-number" data-report='{"vals": [1, 6, 7, 9, 5]}'></div>
-                            
-                            <div class="ind-text">
-                               <p class="simple-text">Оплачена дорогостоящая реабилитация</p> 
-                            </div> 
-                    
-                    </div>
-                    
-                    <div class="flexblock1 ind">
-                    
-                       <div class="ind-number" data-report='{"vals": [4, 3, 6, 4, 2]}'></div>
-                            
-                            <div class="ind-text">
-                               <p class="simple-text">Социально-психологическая адаптация трудных подростков</p> 
-                            </div> 
-                    
-                    </div>
-                   
-                   </div> 
-                   
-                   <div class="flexblock7 handhelp-right">
-                   
-                    <img alt="" src="../images/Group305.png" style="width: 302px;height: 346px;margin-left: 35px;margin-bottom: 28px" />
-                    <img alt="" src="../images/Group307.png" style="width: 290px;height: 237px;margin-right: 27px;margin-bottom: 40px" />
                    
                    </div>
                 
-                </div>
+                </section>
             
-            </section>
-            
-            <section class="actions" style="padding-bottom: 150px;">
-            
-                <header style="margin-bottom: 176px;">
-                
-                    <h1 style="margin-bottom: 30px;">Мероприятия</h1>
-                    
-                    <p class="explain">Наш фонд проводит разнообразные мероприятия <br />как для детей, так и для взрослых.</p>
-                
-                </header>
-                
-                <div class="flexblock6 actions-top" style="margin-bottom: 230px;">
-                
-                    <img alt="" src="../images/Group327.png" style="width: 401px;height: 442px;align-self:flex-end" />
-                    
-                    <div class="flexblock6 actions-ind" style="width: 570px;">
-                    
-                        <div class="indblock-title fl-child">
-                            <h2>Для <br />детей</h2>
-                        </div>
-                        
-                        <div class="ind fl-child">
-                    
-                            <div class="ind-number vert" data-report='{"vals": [14, 13, 16, 14, 13]}'></div>
-                            
-                            <div class="ind-text">
-                               <p class="simple-text">Посетили театров</p> 
-                            </div> 
-                    
-                       </div>
-                       
-                       <div class="break"></div>
-                       
-                       <div class="ind fl-child">
-                    
-                            <div class="ind-number vert" data-report='{"vals": [4, 3, 6, 4, 3]}'></div>
-                            
-                            <div class="ind-text">
-                               <p class="simple-text">Мастер-класс в кондитерской</p> 
-                            </div> 
-                    
-                       </div>
-                       
-                       <div class="ind fl-child">
-                    
-                            <div class="ind-number vert" data-report='{"vals": [9, 4, 7, 2, 5]}'></div>
-                            
-                            <div class="ind-text">
-                               <p class="simple-text">Посетили парков</p> 
-                            </div> 
-                    
-                       </div>
-                       
-                       <div class="break"></div>
-                       
-                       <div class="ind fl-child">
-                    
-                            <div class="ind-number vert" data-report='{"vals": [5, 8, 6, 3, 5]}'></div>
-                            
-                            <div class="ind-text">
-                               <p class="simple-text">Праздники в фонде</p> 
-                            </div> 
-                    
-                       </div>
-                       
-                       <div class="ind fl-child">
-                    
-                            <div class="ind-number vert" data-report='{"vals": [7, 2, 5, 5, 2]}'></div>
-                            
-                            <div class="ind-text">
-                               <p class="simple-text">Праздники в Азовском психоневрологическом интернате</p> 
-                            </div> 
-                    
-                       </div>
-                    
-                    </div>
-                
-                </div>
-                
-                <div class="flexblock6 actions-bottom">
-                
-                    <div style="width: 552px;">
-                    
-                        <div class="indblock-title" style="margin-bottom: 56px;">
-                            <h2>Для взрослых</h2>
-                        </div>
-                        
-                        <div class="flexblock6 actions-ind" style="height: 290px;">
-                    
-                           <div class="ind fl-child">
-                    
-                                <div class="ind-number vert" data-report='{"vals": [19, 14, 17, 12, 19]}'></div>
-                            
-                                <div class="ind-text">
-                                    <p class="simple-text">Лекций <br />психологов</p> 
-                                </div> 
-                    
-                           </div>
-                       
-                           
-                       
-                           <div class="ind fl-child">
-                    
-                            <div class="ind-number vert" data-report='{"vals": [16, 11, 14, 10, 11]}'></div>
-                            
-                            <div class="ind-text">
-                               <p class="simple-text">Бесед с духовником фонда Иереем Иоанном Золотовиным</p> 
-                            </div> 
-                    
-                           </div>
-                           
-                           <div class="break"></div>
-                       
-                         <div class="ind fl-child">
-                    
-                            <div class="ind-number vert" data-report='{"vals": [21, 16, 19, 14, 17]}'></div>
-                            
-                            <div class="ind-text">
-                               <p class="simple-text">Семинаров <br />с обменом опыта</p> 
-                            </div> 
-                    
-                         </div>
-                       
-                                               
-                         <div class="ind fl-child">
-                    
-                            <div class="ind-number vert" data-report='{"vals": [15, 11, 13, 8, 10]}'></div>
-                            
-                            <div class="ind-text">
-                               <p class="simple-text">Просмотров <br />кинофильмов</p> 
-                            </div> 
-                    
-                         </div>
-                       
-                         
-                    
-                    </div>
-                    
-                    </div>
-                    
-                    <img alt="" src="../images/Group343.png" style="width: 508px;height: 386px;" />
-                
-                </div>
-            
-            </section>
-            
-            <section id="svetlica">
-            
-               <div class="flexblock6" style="height: 610px;">
-               
-                <div style="width: 380px;">
-                
-                    <header style="margin-bottom: 80px;">
-                
-                    <h1 style="margin-bottom: 30px;">Светлица</h1>
-                    
-                    <p class="explain">Программа клубного типа, направленная на реабилитацию семей, воспитывающих детей с отставанием в развитии.</p>
-                
-                </header>
-                
-                <img alt="" src="../images/Group347.png" style="width: 380px;height: 367px;" />
-                
-                </div>
-                
-                <div class="ind-column" style="width: 570px;">
-                
-                    <div class="ind">
-                    
-                                <div class="ind-number vert" data-report='{"vals": [29, 24, 27, 22, 29]}'></div>
-                            
-                                <div class="ind-text">
-                                    <p class="simple-text">Занятий с логопедом</p> 
-                                </div> 
-                    
-                    </div>
-                    
-                    <div class="ind">
-                    
-                                <div class="ind-number vert" data-report='{"vals": [18, 13, 16, 11, 11]}'></div>
-                            
-                                <div class="ind-text">
-                                    <p class="simple-text">Занятий нейрогимнастики</p> 
-                                </div> 
-                    
-                    </div>
-                    
-                    <div class="ind">
-                    
-                                <div class="ind-number vert" data-report='{"vals": [29, 24, 27, 22, 25]}'></div>
-                            
-                                <div class="ind-text">
-                                    <p class="simple-text">Творческих уроков ИЗО</p> 
-                                </div> 
-                    
-                    </div>
-                    
-                    <div class="ind">
-                    
-                                <div class="ind-number vert" data-report='{"vals": [29, 24, 27, 31, 32]}'></div>
-                            
-                                <div class="ind-text">
-                                    <p class="simple-text">Личных консультаций с психологом</p> 
-                                </div> 
-                    
-                    </div>
-                    
-                     <div class="ind">
-                    
-                                <div class="ind-number vert" data-report='{"vals": [8, 11, 13, 9, 10]}'></div>
-                            
-                                <div class="ind-text">
-                                    <p class="simple-text">Обучающих вебинаров</p> 
-                                </div> 
-                    
-                    </div>
-                    
-                    <div class="ind">
-                    
-                                <div class="ind-number vert" data-report='{"vals": [1, 1, 1, 2, 2]}'></div>
-                            
-                                <div class="ind-text">
-                                    <p class="simple-text">Тренинга с психологом</p> 
-                                </div> 
-                    
-                    </div>
-                    
-                    <div class="ind">
-                    
-                                <div class="ind-number vert" data-report='{"vals": [1, 4, 7, 2, 3]}'></div>
-                            
-                                <div class="ind-text">
-                                    <p class="simple-text">Консультации профессионального юриста</p> 
-                                </div> 
-                    
-                    </div>
-                    
-                    
-                </div>
-               
-               </div> 
-            
-            </section>
-            
-            <section id="chitaika">
-            
-              <div class="chit-wrapper">
-            
-                <header>
-                
-                    <h1 style="margin-bottom: 30px;">Читайка</h1>
-                    
-                    <p class="explain">Программа клубного типа с целью привить <br />деткам любовь к чтению.</p>
-                
-                </header>
-                
-                <div class="flexblock6">
-                
-                    <div class="huge-ind">
-                    
-                        <div class="huge-number" data-report='{"vals": [139, 154, 147, 122, 182]}'></div>
-                        
-                        <div class="ind-text">
-                                    <p class="simple-text">Книги закуплено для нашей библиотеки</p> 
-                        </div> 
-                    
-                    </div>
-                    
-                    <div style="width: 400px;text-align: center">
-                    
-                        <img alt="" src="../images/Group366.png" style="display: block;width: 255px;height: 260px;margin: 0 auto 30px auto;" />
-                        
-                        <p class="simple-text">В рамках клуба работает библиотека с красивыми специально подобранными изданиями</p>
-                    
-                    </div>
-                    
-                    <div class="huge-ind">
-                    
-                        <div class="huge-number" data-report='{"vals": [129, 150, 157, 142, 160]}'>160</div>
-                        
-                        <div class="ind-text">
-                             <p class="simple-text">Проведено встреч клуба</p> 
-                        </div> 
-                    
-                    </div>
-                
-                </div>      
-                
-              </div>
-            
-            </section>
-            
-            <section id="mummy">
-            
-                <div class="flexblock6 mummy-wrapper">
-                
-                  <header>
-                
-                    <h1 style="margin-bottom: 30px;">Мама тоже человек</h1>
-                    
-                    <p class="explain">Программа для совместных встреч многодетных мам в развлекательно-познавательном формате.</p>
-                
-                  </header>
-                  
-                  <div class="mummy-content">
-                  
-                    <div class="mummy-data">
-                    
-                        <div class="flexblock1">
-                        
-                            <div class="great-number" style="margin-right: 30px;" data-report='{"vals": [39, 15, 47, 22, 54]}'></div>
-                            
-                            <p class="simple-text" style="margin-top: 7px;">Раза провели мероприятия для мам</p>
-                        
-                        </div>
-                    
-                    </div>
-                    
-                    <div class="mummy-pic"></div>
-                  
-                  </div>
-                
-                </div>
-            
-            </section>
-        
-            <section class="support">
-        
-                <div class="support-emb"></div>
-          
-                <div class="fulltext-link">Настроены на добро</div>
-          
-                <h4 class="header-four">Окажем поддержку</h4>
-          
-                <p class="simple-text">Следите за нашей деятельностью<br>в социальных сетях</p>
-          
-                <div class="socnets-wrapper">
-          
-                    <a href="#"><div class="socnets-icon vk"></div></a><a href="#"><div class="socnets-icon ok"></div></a><a href="#"><div class="socnets-icon fb"></div></a>  
-          
-                </div>
-        
-            </section>        
+            </div>
         
         </div>
-      
-      </div> 
+        
+     </div> 
       
       <footer class="footer-wrapper">
     
@@ -1062,9 +724,9 @@ div.chartWrapper div.innerInf {
             
                 <ul class="flexblock1 navbar-items">
                     
-                        <li><a href="#">Отчетность</a></li>
+                        <li><a href="reports.htm">Отчетность</a></li>
                         <li><a href="programms.htm">Программы</a></li>
-                        <li><a href="fosterlings.htm">Подопечные</a></li>
+                        <li><a href="#">Подопечные</a></li>
                         <li><a href="volonters.htm">Волонтерам</a></li>
                         <li><a href="video.htm">Видео</a></li>
                         <li><a href="about.htm">О фонде</a></li>
@@ -1163,8 +825,7 @@ div.chartWrapper div.innerInf {
     
 <script type="text/javascript" src="../scripts/main.js"></script>
 <script type="text/javascript" src="../scripts/scrollup.js"></script>
-<script type="text/javascript" src="../scripts/years.js"></script>
-<script type="text/javascript" src="../scripts/reportData.js"></script>
+<script type="text/javascript" src="../scripts/childs.js"></script>
    
 </body>
 

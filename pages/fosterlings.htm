@@ -8,139 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="../styles/style.css">
     
-    <script type="text/javascript">
-
-        var currentChart;
-
-    </script>
-    
-    <script src="../scripts/chartData.js"></script>
-    
-    <script src="../scripts/Chart.min.js"></script>
-    
-    <script src="../scripts/reportchart.js"></script>
-    
-<style type="text/css">
-    
-/*диаграмма*/
-.chartWrapper {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 10;
-    /*width: 700px;
-    height: 100%;*/
-    
-}
-
-@keyframes chartEffect1 {
-    from {width:0;opacity:0;}
-    to {width:100%;opacity:1;}
-}
-
-@keyframes chartEffect2 {
-    from {font-size:0;}
-    to {font-size:50%;}
-}
-
-div.chartWrapper div.innerInf {
-    position: absolute;
-    display: none;
-    top: 42%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    width: 114px;
-    height: 101px;
-    text-align: center;
-    z-index: -1;
-    transition: all 0.2s linear;
-    animation: chartEffect1 0.3s ease-in-out;
-}
-
-#chartItemVal {
-   font-style: normal;
-   font-weight: 600;
-   font-size: 48px;
-   line-height: 100%;
-   text-align: center;
-   margin: 0 auto 10px auto; 
-}
-
-#chartItemVal > img {
-   display: block;
-   width: 48px;
-   height: 48px;
-   margin: 0 auto; 
-}
-
-#chartItemLabel {
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 16px;
-    text-align: center;
-    color: var(--bluecolor3);
-    display: none;
-    animation: chartEffect2 0.2s linear;
-}
-
-#myLegend {
-	position: absolute;
-	left: 50%;
-    bottom: 20px;
-	transform: translate(-40%,0);
-    width: 270px;
-    height: 65px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-    align-content: space-between;
-	margin: 0;
-	padding: 0;
-}
-
-#myLegend div.legendItem {
-	position:relative;
-	width:50%;
-    margin: 0;
-	padding:0 0 0 20px;
-	flex-basis: 50%;
-    flex-grow: 0;
-    flex-shrink: 0;
-    font-size: 10px;
-    line-height: 24px;
-    color: black;
- }
-
-#myLegend div.legendItem::before {
-	content:'';
-	position:absolute;
-	top:4px;
-	left:0;
-	width:14px;
-	height:14px;
-	border-radius:4px;
-	
-}
-
-#myLegend div.legendItem:nth-child(1)::before {
-	background-color:rgba(63, 210, 193, 1);
-}
-
-#myLegend div.legendItem:nth-child(2)::before {
-	background-color:rgba(250, 144, 84, 1);
-}
-
-#myLegend div.legendItem:nth-child(3)::before {
-	background-color:rgba(17, 131, 180, 1);
-}
-
-#myLegend div.legendItem:nth-child(4)::before {
-	background-color:rgba(69, 205, 235, 1);
-}    
-    
-    </style>
+<style type="text/css"></style>
     
 </head>
 <body>
@@ -441,9 +309,9 @@ div.chartWrapper div.innerInf {
                 
                     <ul class="navbar-items">
                     
-                        <li><a href="#" class="current-page">Отчетность</a></li>
+                        <li><a href="reports.htm">Отчетность</a></li>
                         <li><a href="programms.htm">Программы</a></li>
-                        <li><a href="fosterlings.htm">Подопечные</a></li>
+                        <li><a href="#" class="current-page">Подопечные</a></li>
                         <li><a href="volonters.htm">Волонтерам</a></li>
                         <li><a href="video.htm">Видео</a></li>
                         <li><a href="about.htm">О фонде</a></li>
@@ -475,560 +343,382 @@ div.chartWrapper div.innerInf {
       
       <div class="pages-content">
       
-        <div id="vitrina" class="inner-block vitrine">
+        <div id="foster-main" class="inner-block pages">
         
-            <div class="years">
+            <header class="flexblock6" style="margin-bottom: 77px;">
             
-                <h1 style="margin-bottom: 65px;">Годовая отчетность</h1>
+                <div class="header-content" style="margin-right: 45px;padding-top: 25px;">
                 
-                <div class="years-slider-wrapper">
-                
-                    <div id="currentYear" class="year-big">2019</div>
+                    <h4 class="header-four">Наши подопечные</h4>
                     
-                    <div id="years-slider-block">
-                    
-                        <div class="years-slider">
-                        
-                          <div class="years-slider-data">
-                          
-                            <div class="years-slider-data-content">
-                            
-                                <p>2019</p>
-                                <p>2018</p>
-                                <p>2017</p>
-                                <p>2016</p>
-                                <p>2015</p>
-                            
-                            </div>
-                          
-                          </div>
-                          
-                          <div class="flexblock5 years-slider-arrows">
-                          
-                            <div class="arrows" data-name="up"></div>
-                            <div class="arrows" data-name="down"></div>
-                          
-                          </div>  
-                        
-                        </div>
-                    
-                    </div>
-                
-                </div>
-                
-                <div class="years-text">
-                
-                    <p class="simple-text">Прошедший год стал для фонда переломным. <br />Мы проанализировали и переосмыслили опыт предыдущих лет работы, скорректировали действующие программы и запустили новые проекты.</p>
-                
-                </div>
-                
-                <div class="flexblock1 fond-detailed">
-                
-                    <div id="watch-report" class="button report-button" style="margin-right: 65px;">Просмотреть отчет</div>
+                    <p class="simple-text" style="margin-bottom: 34px;">Самое простое что мы можем сделать кликнуть на сайте кнопку «Поддержать» и перевести деньги, но для этих ребят от этого простого действия зависит жизнь.</p>
                     
                     <a href="#" target="_blank" class="block-style">
                     
-                       <div class="flexblock1 fond-detailed-text">
+                        <div class="flexblock1 fond-detailed-text">
                         
-                           <img alt="" src="../images/download.png" width="24" height="24">
-                           <span style="margin-left: 14px;">Скачать полный отчет pdf</span>
-                                                           
-                       </div>
-                                
-                   </a>
-                
-                </div>
-            
-            </div>
-            
-            <div class="chartWrapper">
-                
-                <canvas id="myChart" style="width: 373px;height: 373px" class="chartjs-render-monitor" aria-label="круговая диаграмма" role="img">
-                    <p>Активность по программам</p>
-                </canvas>
-                
-                <div class="innerInf" id="innerInfID">
+                            <span style="margin-right: 24px;">Стать волонтером</span>
+                            <img alt="" src="../images/arrow.png" width="24" height="24">
+                        
+                        </div>
                     
-                    <div id="chartItemVal">
-                        <img alt="" src="../images/bar-chart-2.png" />
-                    </div>
-                
-                    <span id="chartItemLabel">Активность<br />по программам</span>
+                    </a>
                 
                 </div>
                 
-                <div id="myLegend" style="display:none">
-                  <div class="legendItem">Читайка</div>
-	              <div class="legendItem">Мама - тоже человек</div>
-	              <div class="legendItem">Рука помощи</div>
-                  <div class="legendItem">Светлица</div>
+                <img alt="картинка" src="../images/Group387.png" />
+            
+            </header>
+            
+            <section class="flexblock3 child">
+            
+                <div class="child-photo">
+                    <img alt="child photo" src="../images/image20.png" class="illustration" />
                 </div>
                 
-            </div>
-            
-            
-        
-        </div>
-        
-        <div id="detailed-report" class="inner-block pages hide">
-        
-            <section class="report-title" style="margin-bottom: 46px;padding-top: 169px;">
-            
-                <div class="report-title-block">
+                <div class="flexblock5 child-info">
                 
-                    <div class="year-big"></div>
+                    <header>
                     
-                    <h5 class="header-five">Отчетность за год</h5>
-                    
-                    <p class="simple-text">Прошедший год стал для фонда переломным. <br />Мы проанализировали и переосмыслили опыт предыдущих лет работы, <br />скорректировали действующие программы и запустили новые проекты.</p>
-                
-                    <a href="#" target="_blank" class="block-style" style="margin-top: 40px;">
-                    
-                       <div class="flexblock1 fond-detailed-text">
+                        <h6 class="note">Кристиан Лир</h6>
                         
-                           <img alt="" src="../images/download.png" width="24" height="24">
-                           <span style="margin-left: 14px;">Скачать полный отчет pdf</span>
-                                                           
-                       </div>
-                                
-                   </a>
-                
-                </div>
-            
-            </section>
-            
-            <section class="handhelp" style="padding-bottom: 113px;margin-bottom: 118px;">
-            
-                <div class="flexblock6 handhelp-top" style="margin-bottom: 168px;">
-                
-                    <div class="handhelp-left">
+                        <p class="simple-text">У Кристиана с рождения тяжелейшее поражение позвоночника: часть позвонков не сошлись друг с другом, порок называется сложно - «менингомиелорадикулоцеле грудо-поясничного отдела». Такое поражение не позволяет человеку ни ходить, ни даже сидеть.</p>
                     
-                        <img alt="" src="../images/handhelp.png" style="width: 270px;height: 164px;margin-bottom: 24px;" />
-                        
-                        <h1 style="margin-bottom: 44px;">Рука помощи</h1>
-                        
-                        <p class="explain">Была оказана комплексная материальная, психологическая и юридическая помощь нуждающимся людям.</p>
+                    </header>
                     
-                    </div>
+                    <div class="flexblock8 donut-statistic">
                     
-                    <div class="handhelp-right">
-                    
-                        <div class="blog-line" style="margin-bottom: 77px;"></div>
+                        <div class="flexblock6 summa">
                         
-                        <div class="handhelp-right-ind">
-                        
-                            <div class="ind-number" data-report='{"vals": [1101, 1046, 1341, 1222, 1346]}'></div>
+                            <div class="flexblock5 summa-item">
                             
-                            <div class="ind-text">
-                               <p class="simple-text">Выдано продуктовых наборов</p> 
+                                <span>Общая сумма / руб.</span>
+                                <div class="ruble">85 600</div>
+                            
                             </div>
+                            <div class="flexblock5 summa-item">
                             
-                            <div class="ind-number" data-report='{"vals": [11, 46, 51, 82, 70]}'></div>
+                                <span>Собрано</span>
+                                <div class="ruble">71</div>
                             
-                            <div class="ind-text">
-                               <p class="simple-text">Оказана психологическая помощь</p> 
                             </div>
+                        
+                        </div>
+                        
+                        <div class="flexblock8 buttons-block">
+                        
+                            <a href="child_1.htm" class="block-style">
+                    
+                                <div class="flexblock1 fond-detailed-text">
+                        
+                                    <span>Читать подробнее</span>
+                                    <img alt="" src="../images/arrow.png" width="24" height="24">
+                        
+                                </div>
+                    
+                            </a>
                             
-                            <div class="ind-number" data-report='{"vals": [77, 67, 61, 52, 95]}'></div>
-                            
-                            <div class="ind-text">
-                               <p class="simple-text">Подарено школьных наборов</p> 
-                            </div>
-                            
-                            <div class="ind-number" data-report='{"vals": [29, 17, 21, 22, 27]}'></div>
-                            
-                            <div class="ind-text">
-                               <p class="simple-text">Оказана юридическая помощь</p> 
-                            </div>
+                            <div class="button donuts">Поддержать</div>
                         
                         </div>
                     
                     </div>
                 
                 </div>
-                
-                <div class="flexblock6 handhelp-bottom">
-                
-                   <div class="handhelp-left">
-                   
-                    <div class="flexblock1 ind">
-                    
-                       <div class="ind-number" data-report='{"vals": [22, 27, 28, 32, 23]}'></div>
-                            
-                            <div class="ind-text">
-                               <p class="simple-text">Закуплено лекарств</p> 
-                            </div> 
-                    
-                    </div>
-                    
-                    <div class="flexblock1 ind">
-                    
-                       <div class="ind-number" data-report='{"vals": [4, 7, 8, 2, 3]}'></div>
-                            
-                            <div class="ind-text">
-                               <p class="simple-text">Закуплено средств реабилитации для инвалидов</p> 
-                            </div> 
-                    
-                    </div>
-                    
-                    <div class="flexblock1 ind">
-                    
-                       <div class="ind-number" data-report='{"vals": [1, 6, 7, 9, 5]}'></div>
-                            
-                            <div class="ind-text">
-                               <p class="simple-text">Оплачена дорогостоящая реабилитация</p> 
-                            </div> 
-                    
-                    </div>
-                    
-                    <div class="flexblock1 ind">
-                    
-                       <div class="ind-number" data-report='{"vals": [4, 3, 6, 4, 2]}'></div>
-                            
-                            <div class="ind-text">
-                               <p class="simple-text">Социально-психологическая адаптация трудных подростков</p> 
-                            </div> 
-                    
-                    </div>
-                   
-                   </div> 
-                   
-                   <div class="flexblock7 handhelp-right">
-                   
-                    <img alt="" src="../images/Group305.png" style="width: 302px;height: 346px;margin-left: 35px;margin-bottom: 28px" />
-                    <img alt="" src="../images/Group307.png" style="width: 290px;height: 237px;margin-right: 27px;margin-bottom: 40px" />
-                   
-                   </div>
-                
-                </div>
             
             </section>
             
-            <section class="actions" style="padding-bottom: 150px;">
+            <section class="flexblock3 child">
             
-                <header style="margin-bottom: 176px;">
+                <div class="child-photo">
+                    <img alt="child photo" src="../images/image2.png" class="illustration" />
+                </div>
                 
-                    <h1 style="margin-bottom: 30px;">Мероприятия</h1>
+                <div class="flexblock5 child-info">
+                
+                    <header>
                     
-                    <p class="explain">Наш фонд проводит разнообразные мероприятия <br />как для детей, так и для взрослых.</p>
-                
-                </header>
-                
-                <div class="flexblock6 actions-top" style="margin-bottom: 230px;">
-                
-                    <img alt="" src="../images/Group327.png" style="width: 401px;height: 442px;align-self:flex-end" />
+                        <h6 class="note">Сережа Дьяченко</h6>
+                        
+                        <p class="simple-text">У Сережи в 9 лет несколько диагнозов: резидуально-органическое поражение центральной нервной системы сложного генезиса, симптоматическая эпилепсия, сенсорно-моторная алалия, двухсторонняя нейросенсорная тугоухость 1-2 степени, системное недоразвитие речи тяжёлой степени, плоско-вальгусные стопы.</p>
                     
-                    <div class="flexblock6 actions-ind" style="width: 570px;">
+                    </header>
                     
-                        <div class="indblock-title fl-child">
-                            <h2>Для <br />детей</h2>
+                    <div class="flexblock8 donut-statistic">
+                    
+                        <div class="flexblock6 summa">
+                        
+                            <div class="flexblock5 summa-item">
+                            
+                                <span>Общая сумма / руб.</span>
+                                <div class="ruble">182 850</div>
+                            
+                            </div>
+                            <div class="flexblock5 summa-item">
+                            
+                                <span>Собрано</span>
+                                <div class="ruble">74</div>
+                            
+                            </div>
+                        
                         </div>
                         
-                        <div class="ind fl-child">
-                    
-                            <div class="ind-number vert" data-report='{"vals": [14, 13, 16, 14, 13]}'></div>
-                            
-                            <div class="ind-text">
-                               <p class="simple-text">Посетили театров</p> 
-                            </div> 
-                    
-                       </div>
-                       
-                       <div class="break"></div>
-                       
-                       <div class="ind fl-child">
-                    
-                            <div class="ind-number vert" data-report='{"vals": [4, 3, 6, 4, 3]}'></div>
-                            
-                            <div class="ind-text">
-                               <p class="simple-text">Мастер-класс в кондитерской</p> 
-                            </div> 
-                    
-                       </div>
-                       
-                       <div class="ind fl-child">
-                    
-                            <div class="ind-number vert" data-report='{"vals": [9, 4, 7, 2, 5]}'></div>
-                            
-                            <div class="ind-text">
-                               <p class="simple-text">Посетили парков</p> 
-                            </div> 
-                    
-                       </div>
-                       
-                       <div class="break"></div>
-                       
-                       <div class="ind fl-child">
-                    
-                            <div class="ind-number vert" data-report='{"vals": [5, 8, 6, 3, 5]}'></div>
-                            
-                            <div class="ind-text">
-                               <p class="simple-text">Праздники в фонде</p> 
-                            </div> 
-                    
-                       </div>
-                       
-                       <div class="ind fl-child">
-                    
-                            <div class="ind-number vert" data-report='{"vals": [7, 2, 5, 5, 2]}'></div>
-                            
-                            <div class="ind-text">
-                               <p class="simple-text">Праздники в Азовском психоневрологическом интернате</p> 
-                            </div> 
-                    
-                       </div>
-                    
-                    </div>
-                
-                </div>
-                
-                <div class="flexblock6 actions-bottom">
-                
-                    <div style="width: 552px;">
-                    
-                        <div class="indblock-title" style="margin-bottom: 56px;">
-                            <h2>Для взрослых</h2>
-                        </div>
+                        <div class="flexblock8 buttons-block">
                         
-                        <div class="flexblock6 actions-ind" style="height: 290px;">
+                            <a href="#" class="block-style">
                     
-                           <div class="ind fl-child">
-                    
-                                <div class="ind-number vert" data-report='{"vals": [19, 14, 17, 12, 19]}'></div>
-                            
-                                <div class="ind-text">
-                                    <p class="simple-text">Лекций <br />психологов</p> 
-                                </div> 
-                    
-                           </div>
-                       
-                           
-                       
-                           <div class="ind fl-child">
-                    
-                            <div class="ind-number vert" data-report='{"vals": [16, 11, 14, 10, 11]}'></div>
-                            
-                            <div class="ind-text">
-                               <p class="simple-text">Бесед с духовником фонда Иереем Иоанном Золотовиным</p> 
-                            </div> 
-                    
-                           </div>
-                           
-                           <div class="break"></div>
-                       
-                         <div class="ind fl-child">
-                    
-                            <div class="ind-number vert" data-report='{"vals": [21, 16, 19, 14, 17]}'></div>
-                            
-                            <div class="ind-text">
-                               <p class="simple-text">Семинаров <br />с обменом опыта</p> 
-                            </div> 
-                    
-                         </div>
-                       
-                                               
-                         <div class="ind fl-child">
-                    
-                            <div class="ind-number vert" data-report='{"vals": [15, 11, 13, 8, 10]}'></div>
-                            
-                            <div class="ind-text">
-                               <p class="simple-text">Просмотров <br />кинофильмов</p> 
-                            </div> 
-                    
-                         </div>
-                       
-                         
-                    
-                    </div>
-                    
-                    </div>
-                    
-                    <img alt="" src="../images/Group343.png" style="width: 508px;height: 386px;" />
-                
-                </div>
-            
-            </section>
-            
-            <section id="svetlica">
-            
-               <div class="flexblock6" style="height: 610px;">
-               
-                <div style="width: 380px;">
-                
-                    <header style="margin-bottom: 80px;">
-                
-                    <h1 style="margin-bottom: 30px;">Светлица</h1>
-                    
-                    <p class="explain">Программа клубного типа, направленная на реабилитацию семей, воспитывающих детей с отставанием в развитии.</p>
-                
-                </header>
-                
-                <img alt="" src="../images/Group347.png" style="width: 380px;height: 367px;" />
-                
-                </div>
-                
-                <div class="ind-column" style="width: 570px;">
-                
-                    <div class="ind">
-                    
-                                <div class="ind-number vert" data-report='{"vals": [29, 24, 27, 22, 29]}'></div>
-                            
-                                <div class="ind-text">
-                                    <p class="simple-text">Занятий с логопедом</p> 
-                                </div> 
-                    
-                    </div>
-                    
-                    <div class="ind">
-                    
-                                <div class="ind-number vert" data-report='{"vals": [18, 13, 16, 11, 11]}'></div>
-                            
-                                <div class="ind-text">
-                                    <p class="simple-text">Занятий нейрогимнастики</p> 
-                                </div> 
-                    
-                    </div>
-                    
-                    <div class="ind">
-                    
-                                <div class="ind-number vert" data-report='{"vals": [29, 24, 27, 22, 25]}'></div>
-                            
-                                <div class="ind-text">
-                                    <p class="simple-text">Творческих уроков ИЗО</p> 
-                                </div> 
-                    
-                    </div>
-                    
-                    <div class="ind">
-                    
-                                <div class="ind-number vert" data-report='{"vals": [29, 24, 27, 31, 32]}'></div>
-                            
-                                <div class="ind-text">
-                                    <p class="simple-text">Личных консультаций с психологом</p> 
-                                </div> 
-                    
-                    </div>
-                    
-                     <div class="ind">
-                    
-                                <div class="ind-number vert" data-report='{"vals": [8, 11, 13, 9, 10]}'></div>
-                            
-                                <div class="ind-text">
-                                    <p class="simple-text">Обучающих вебинаров</p> 
-                                </div> 
-                    
-                    </div>
-                    
-                    <div class="ind">
-                    
-                                <div class="ind-number vert" data-report='{"vals": [1, 1, 1, 2, 2]}'></div>
-                            
-                                <div class="ind-text">
-                                    <p class="simple-text">Тренинга с психологом</p> 
-                                </div> 
-                    
-                    </div>
-                    
-                    <div class="ind">
-                    
-                                <div class="ind-number vert" data-report='{"vals": [1, 4, 7, 2, 3]}'></div>
-                            
-                                <div class="ind-text">
-                                    <p class="simple-text">Консультации профессионального юриста</p> 
-                                </div> 
-                    
-                    </div>
-                    
-                    
-                </div>
-               
-               </div> 
-            
-            </section>
-            
-            <section id="chitaika">
-            
-              <div class="chit-wrapper">
-            
-                <header>
-                
-                    <h1 style="margin-bottom: 30px;">Читайка</h1>
-                    
-                    <p class="explain">Программа клубного типа с целью привить <br />деткам любовь к чтению.</p>
-                
-                </header>
-                
-                <div class="flexblock6">
-                
-                    <div class="huge-ind">
-                    
-                        <div class="huge-number" data-report='{"vals": [139, 154, 147, 122, 182]}'></div>
+                                <div class="flexblock1 fond-detailed-text">
                         
-                        <div class="ind-text">
-                                    <p class="simple-text">Книги закуплено для нашей библиотеки</p> 
-                        </div> 
-                    
-                    </div>
-                    
-                    <div style="width: 400px;text-align: center">
-                    
-                        <img alt="" src="../images/Group366.png" style="display: block;width: 255px;height: 260px;margin: 0 auto 30px auto;" />
+                                    <span>Читать подробнее</span>
+                                    <img alt="" src="../images/arrow.png" width="24" height="24">
                         
-                        <p class="simple-text">В рамках клуба работает библиотека с красивыми специально подобранными изданиями</p>
+                                </div>
                     
-                    </div>
-                    
-                    <div class="huge-ind">
-                    
-                        <div class="huge-number" data-report='{"vals": [129, 150, 157, 142, 160]}'>160</div>
-                        
-                        <div class="ind-text">
-                             <p class="simple-text">Проведено встреч клуба</p> 
-                        </div> 
-                    
-                    </div>
-                
-                </div>      
-                
-              </div>
-            
-            </section>
-            
-            <section id="mummy">
-            
-                <div class="flexblock6 mummy-wrapper">
-                
-                  <header>
-                
-                    <h1 style="margin-bottom: 30px;">Мама тоже человек</h1>
-                    
-                    <p class="explain">Программа для совместных встреч многодетных мам в развлекательно-познавательном формате.</p>
-                
-                  </header>
-                  
-                  <div class="mummy-content">
-                  
-                    <div class="mummy-data">
-                    
-                        <div class="flexblock1">
-                        
-                            <div class="great-number" style="margin-right: 30px;" data-report='{"vals": [39, 15, 47, 22, 54]}'></div>
+                            </a>
                             
-                            <p class="simple-text" style="margin-top: 7px;">Раза провели мероприятия для мам</p>
+                            <div class="button donuts">Поддержать</div>
                         
                         </div>
                     
                     </div>
+                
+                </div>
+            
+            </section>
+            
+            <section class="flexblock3 child">
+            
+                <div class="child-photo">
+                    <img alt="child photo" src="../images/image3.png" class="illustration" />
+                </div>
+                
+                <div class="flexblock5 child-info">
+                
+                    <header>
                     
-                    <div class="mummy-pic"></div>
-                  
-                  </div>
+                        <h6 class="note">Ибрагимов Александр</h6>
+                        
+                        <p class="simple-text">В ноябре Саше исполнится 6 лет. Больше двух с половиной лет назад ему поставили диагноз детский аутизм с выраженной задержкой психоречевого развития и эмоционально-волевыми нарушениями. А в апреле этого года он получил закрытую черепно-мозговую травму и был экстренно госпитализирован в реанимационное отделение.</p>
+                    
+                    </header>
+                    
+                    <div class="flexblock8 donut-statistic">
+                    
+                        <div class="flexblock6 summa">
+                        
+                            <div class="flexblock5 summa-item">
+                            
+                                <span>Общая сумма / руб.</span>
+                                <div class="ruble">80 000</div>
+                            
+                            </div>
+                            <div class="flexblock5 summa-item">
+                            
+                                <span>Собрано</span>
+                                <div class="ruble">0</div>
+                            
+                            </div>
+                        
+                        </div>
+                        
+                        <div class="flexblock8 buttons-block">
+                        
+                            <a href="#" class="block-style">
+                    
+                                <div class="flexblock1 fond-detailed-text">
+                        
+                                    <span>Читать подробнее</span>
+                                    <img alt="" src="../images/arrow.png" width="24" height="24">
+                        
+                                </div>
+                    
+                            </a>
+                            
+                            <div class="button donuts">Поддержать</div>
+                        
+                        </div>
+                    
+                    </div>
+                
+                </div>
+            
+            </section>
+            
+            <section class="flexblock3 child">
+            
+                <div class="child-photo">
+                    <img alt="child photo" src="../images/image4.png" class="illustration" />
+                </div>
+                
+                <div class="flexblock5 child-info">
+                
+                    <header>
+                    
+                        <h6 class="note">Артем Ипполитов</h6>
+                        
+                        <p class="simple-text">У 9-летнего Артема Ипполитова ментальные нарушения, а точнее атипичный аутизм с недоразвитием когнитивных функций до уровня лёгкой умственной отсталости, с выраженными эмоционально-волевыми нарушениями, расстройством формирования навыков адаптации, коммуникации и самообслуживания. Расстройство экспрессивной речи, дизартрия.</p>
+                    
+                    </header>
+                    
+                    <div class="flexblock8 donut-statistic">
+                    
+                        <div class="flexblock6 summa">
+                        
+                            <div class="flexblock5 summa-item">
+                            
+                                <span>Общая сумма / руб.</span>
+                                <div class="ruble">80 000</div>
+                            
+                            </div>
+                            <div class="flexblock5 summa-item">
+                            
+                                <span>Собрано</span>
+                                <div class="ruble">2 627</div>
+                            
+                            </div>
+                        
+                        </div>
+                        
+                        <div class="flexblock8 buttons-block">
+                        
+                            <a href="#" class="block-style">
+                    
+                                <div class="flexblock1 fond-detailed-text">
+                        
+                                    <span>Читать подробнее</span>
+                                    <img alt="" src="../images/arrow.png" width="24" height="24">
+                        
+                                </div>
+                    
+                            </a>
+                            
+                            <div class="button donuts">Поддержать</div>
+                        
+                        </div>
+                    
+                    </div>
+                
+                </div>
+            
+            </section>
+            
+            <section class="flexblock3 child">
+            
+                <div class="child-photo">
+                    <img alt="child photo" src="../images/image5.png" class="illustration" />
+                </div>
+                
+                <div class="flexblock5 child-info">
+                
+                    <header>
+                    
+                        <h6 class="note">Мозговой Артем</h6>
+                        
+                        <p class="simple-text">Артему 14 лет. Родовая травма повлекла за собой неизлечимую болезнь - гидроцефалию. Болезнь обнаружили не сразу. До четырех месяцев Артем был обычным жизнерадостным ребенком. После постановки диагноза последовала операция за операцией.</p>
+                    
+                    </header>
+                    
+                    <div class="flexblock8 donut-statistic">
+                    
+                        <div class="flexblock6 summa">
+                        
+                            <div class="flexblock5 summa-item">
+                            
+                                <span>Общая сумма / руб.</span>
+                                <div class="ruble">60 000</div>
+                            
+                            </div>
+                            <div class="flexblock5 summa-item">
+                            
+                                <span>Собрано</span>
+                                <div class="ruble">1 000</div>
+                            
+                            </div>
+                        
+                        </div>
+                        
+                        <div class="flexblock8 buttons-block">
+                        
+                            <a href="#" class="block-style">
+                    
+                                <div class="flexblock1 fond-detailed-text">
+                        
+                                    <span>Читать подробнее</span>
+                                    <img alt="" src="../images/arrow.png" width="24" height="24">
+                        
+                                </div>
+                    
+                            </a>
+                            
+                            <div class="button donuts">Поддержать</div>
+                        
+                        </div>
+                    
+                    </div>
+                
+                </div>
+            
+            </section>
+            
+            <section class="flexblock3 child" style="border-bottom: 1px solid var(--bordercolor);">
+            
+                <div class="child-photo">
+                    <img alt="child photo" src="../images/image6.png" class="illustration" />
+                </div>
+                
+                <div class="flexblock5 child-info">
+                
+                    <header>
+                    
+                        <h6 class="note">Семья Денисовых</h6>
+                        
+                        <p class="simple-text">В семье Денисовых восемь человек: отец Игорь, мать Галина и дети – Мария, Эмилия, Елизавета, Николай, Елена, Илия. Самому младшему ребенку – 9 месяцев. Это малышка Мария. Старший ребенок в семье – Илия, ему сейчас 15 лет.</p>
+                    
+                    </header>
+                    
+                    <div class="flexblock8 donut-statistic">
+                    
+                        <div class="flexblock6 summa">
+                        
+                            <div class="flexblock5 summa-item">
+                            
+                                <span>Общая сумма / руб.</span>
+                                <div class="ruble">85 600</div>
+                            
+                            </div>
+                            <div class="flexblock5 summa-item">
+                            
+                                <span>Собрано</span>
+                                <div class="ruble">71</div>
+                            
+                            </div>
+                        
+                        </div>
+                        
+                        <div class="flexblock8 buttons-block">
+                        
+                            <a href="#" class="block-style">
+                    
+                                <div class="flexblock1 fond-detailed-text">
+                        
+                                    <span>Читать подробнее</span>
+                                    <img alt="" src="../images/arrow.png" width="24" height="24">
+                        
+                                </div>
+                    
+                            </a>
+                            
+                            <div class="button donuts">Поддержать</div>
+                        
+                        </div>
+                    
+                    </div>
                 
                 </div>
             
             </section>
         
-            <section class="support">
+            <section class="support" style="padding-bottom: 14px;margin-top: 130px;">
         
                 <div class="support-emb"></div>
           
@@ -1062,9 +752,9 @@ div.chartWrapper div.innerInf {
             
                 <ul class="flexblock1 navbar-items">
                     
-                        <li><a href="#">Отчетность</a></li>
+                        <li><a href="reports.htm">Отчетность</a></li>
                         <li><a href="programms.htm">Программы</a></li>
-                        <li><a href="fosterlings.htm">Подопечные</a></li>
+                        <li><a href="#">Подопечные</a></li>
                         <li><a href="volonters.htm">Волонтерам</a></li>
                         <li><a href="video.htm">Видео</a></li>
                         <li><a href="about.htm">О фонде</a></li>
@@ -1163,8 +853,6 @@ div.chartWrapper div.innerInf {
     
 <script type="text/javascript" src="../scripts/main.js"></script>
 <script type="text/javascript" src="../scripts/scrollup.js"></script>
-<script type="text/javascript" src="../scripts/years.js"></script>
-<script type="text/javascript" src="../scripts/reportData.js"></script>
    
 </body>
 

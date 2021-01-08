@@ -424,7 +424,7 @@ section.programms {
 .flexblock3 {
     display: flex;
     flex-wrap: nowrap;
-    justfy-content: stretch;
+    justify-content: stretch;
     align-items:flex-start;
 }
 
@@ -1368,7 +1368,7 @@ a.block-style {
     background-size: auto auto;
 }
 
-#detailed-report .support-emb {
+div.pages .support-emb {
     background-image: url(../images/help3.png);
 }
 
@@ -1423,7 +1423,7 @@ a.block-style {
     
 }
 
-.vk:hover, #detailed-report .vk:hover {
+.vk:hover, div.pages .vk:hover {
     background-image: url(../images/vk_color.png);
     
 }
@@ -1432,7 +1432,7 @@ a.block-style {
     background-image: url(../images/ok.png);
 }
 
-.ok:hover, #detailed-report .ok:hover {
+.ok:hover, div.pages .ok:hover {
     background-image: url(../images/ok_color.png);
 }
 
@@ -1441,7 +1441,7 @@ a.block-style {
     background-image: url(../images/fb.png);
 }
 
-.fb:hover, #detailed-report .fb:hover {
+.fb:hover, div.pages .fb:hover {
     background-image: url(../images/fb_color.png);
 }
 
@@ -2298,23 +2298,23 @@ div.step-title {
     
 }
 
-#detailed-report h4.header-four {
+div.pages h4.header-four {
     color: var(--blackcolor3);
 }
 
-#detailed-report p.simple-text {
+div.pages p.simple-text {
     color: var(--bluecolor3);
 }
 
-#detailed-report .vk {
+div.pages .vk {
     background-image: url(../images/vk_gray.png);
 }
 
-#detailed-report .ok {
+div.pages .ok {
     background-image: url(../images/ok_gray.png);
 }
 
-#detailed-report .fb {
+div.pages .fb {
     background-image: url(../images/fb_gray.png);
 }
 
@@ -2798,4 +2798,266 @@ h6.note {
 
 .progs-item-text > p.simple-text + a {
     margin-top: 60px;
+}
+
+#foster-main {
+    padding-top: 155px;
+    padding-bottom: 110px;
+}
+
+.header-content > h4.header-four {
+    line-height: 54px;
+    margin-top: 0;
+    margin-bottom: 28px;
+}
+
+.child {
+    height: 362px;
+    box-sizing: border-box;
+    border-top: 1px solid var(--bordercolor);
+    padding: 45px 0;
+    
+}
+
+.child-photo {
+    width: 270px;
+    height: 270px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    margin-right: 60px;
+}
+
+.child-info {
+    flex-grow: 1;
+    height: 100%;
+}
+
+.child .flexblock5 {
+    align-items: stretch;
+}
+
+.child h6.note {
+    margin-bottom: 17px;
+}
+
+.donut-statistic {
+    width: 100%;
+    height: 100px;
+}
+
+.child-info .flexblock8 {
+    justify-content: space-between;
+}
+
+.buttons-block {
+    width: 384px;
+    height: 54px;
+}
+
+.summa {
+    position: relative;
+    width: 370px;
+    height: 100px;
+    background-color: var(--lightbgcolor);
+    border-radius: 10px;
+}
+
+.summa::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translatex(-50%);
+    width: 3px;
+    background-color: var(--whitecolor);
+}
+
+.summa-item {
+    width: 50%;
+    flex-shrink: 0;
+    flex-grow: 0;
+    padding: 18px 25px;
+}
+
+.summa-item > span {
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--blackcolor3);
+}
+
+.ruble {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 100%;
+    color: var(--bluecolor);
+}
+
+.buttons-block .fond-detailed-text > span {
+    font-size: 16px;
+    text-transform: none;
+    margin-right: 14px;
+}
+
+.child-inner {
+    padding: 130px 0 160px 0;
+}
+
+.child-panel {
+    width: 370px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    margin-right: 100px;
+}
+
+.child-descript {
+    flex-grow: 1;
+}
+
+.child-panel > .child-avatar {
+    position: relative;
+    width: 370px;
+    height: 370px;
+    margin-bottom: 18px;
+    overflow: hidden;
+}
+
+.child-avatar-inner {
+    position: absolute;
+    top: 0;
+}
+
+.child-avatar img {
+    width: 370px;
+    height: 370px;
+}
+
+.child-avatar-slider {
+    width: 100%;
+    height: 24px;
+}
+
+.child-avatar-slider > p.explain {
+    line-height: 24px;
+}
+
+.child-avatar-slider > .arrows[data-name="right"] {
+    transform: rotate(-180deg);
+}
+
+.child-avatar-slider > .arrows[data-name="right"].active {
+    transform: none;
+}
+
+.child-avatar-slider > .arrows[data-name="left"].active {
+    transform: rotate(-180deg);
+}
+
+.child-panel .summa > .flexblock5 {
+    align-items: stretch;
+}
+
+.child-panel > .donuts {
+    width: 100%;
+}
+
+a.autopay {
+    display: block;
+    height: 55px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 55px;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--bluecolor);
+}
+
+.child-descript-inner > h1 {
+    line-height:  54px;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+
+.child-descript-inner > .tabs-menu {
+    width: auto;
+    height: 45px;
+    margin: 0 0 36px 0;
+    background-color: inherit;
+    font-size: 14px;
+    line-height: 17px;
+    border-bottom: 1px solid #E9F3F7;
+    color: #7E90A5;
+}
+
+.child-descript-inner > .tabs-menu > .tabs-menu-item {
+    width: 150px;
+}
+
+.child-descript-inner > .tabs-menu > .active-tab {
+    position: relative;
+    color: var(--bluecolor);
+    background-color: inherit;
+}
+
+.child-descript-inner > .tabs-menu > .active-tab::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 3px;
+    background-color: var(--bluecolor2);
+}
+
+#tab3 > p {
+    text-align: justify;
+    margin-bottom: 0.9rem;
+}
+
+#tab4 {
+    height: 346px;
+}
+
+#tab4 > figure {
+    position: relative;
+    width: 212px;
+    border-radius: 10px;
+    overflow: hidden;
+    
+}
+
+#tab4 > figure:hover::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 301px;
+    top: 0;
+    left: 0;
+    background-color: rgba(27, 164, 206, 0.9);
+    background-image: url(../images/Group73.png);
+    background-origin: border-box;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 56px 56px;
+    border-radius: 10px;
+    cursor: pointer; 
+}
+
+#tab4 > figure > img {
+    display: block;
+    width: 100%;
+    height: 301px;
+    margin-bottom: 9px;
+}
+
+#tab4 > figure > figcaption {
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+    color: #7E90A5;
+    padding: 0 30px;
+}
+
+#tab4 > figure > figcaption > span {
+    white-space: nowrap;
 }
