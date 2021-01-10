@@ -2953,7 +2953,7 @@ h6.note {
     transform: rotate(-180deg);
 }
 
-.child-panel .summa > .flexblock5 {
+.child-panel .summa > .flexblock5, .anons-wrapper .flexblock5 {
     align-items: stretch;
 }
 
@@ -3018,7 +3018,7 @@ a.autopay {
     height: 346px;
 }
 
-#tab4 > figure {
+#tab4 figure {
     position: relative;
     width: 212px;
     border-radius: 10px;
@@ -3026,7 +3026,7 @@ a.autopay {
     
 }
 
-#tab4 > figure:hover::before {
+#tab4 figure:hover::before {
     content: '';
     position: absolute;
     width: 100%;
@@ -3043,14 +3043,14 @@ a.autopay {
     cursor: pointer; 
 }
 
-#tab4 > figure > img {
+#tab4 figure > img {
     display: block;
     width: 100%;
     height: 301px;
     margin-bottom: 9px;
 }
 
-#tab4 > figure > figcaption {
+#tab4 figure > figcaption {
     font-size: 12px;
     line-height: 18px;
     text-align: center;
@@ -3058,6 +3058,216 @@ a.autopay {
     padding: 0 30px;
 }
 
-#tab4 > figure > figcaption > span {
+#tab4 figure > figcaption > span {
     white-space: nowrap;
+}
+
+#video-inner {
+    padding-top: 110px;
+    padding-bottom: 80px;
+}
+
+#video-inner > .left-block {
+    position: fixed;
+    width: 300px;
+    padding-right: 30px;
+}
+
+.video-category h6.note {
+    line-height: 32px;
+    margin-bottom: 24px;
+}
+
+#video-inner > .right-block {
+    margin-left: 300px;
+}
+
+.category-item {
+    height: 24px;
+    text-align: left;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #7E90A5;
+    margin-bottom: 20px;
+}
+
+.category-item:last-child {
+    margin-bottom: 0;
+}
+
+.category-item > svg {
+    width: 24px;
+    height: 24px;
+    margin: 0 20px 0 0;
+}
+
+.category-item > svg > * {
+    stroke: #7E90A5;
+}
+
+.category-item a {
+    color: inherit;
+}
+
+.category-item.selected {
+    color: var(--bluecolor);
+}
+
+.category-item.selected > svg > * {
+    stroke: var(--bluecolor);
+}
+
+.video-category > .blog-line {
+    width: 168px;
+    height: 1px;
+}
+
+.minihelp {
+    padding: 28px 0 43px 0;
+}
+
+div.minihelp > p.simple-text {
+    line-height: 30px;
+    color: var(--blackcolor3);
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+div.minihelp > p.explain {
+    line-height: 22px;
+    margin-bottom: 30px;
+}
+
+.anons-wrapper {
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(213,226,231,1);
+}
+
+.anons-pict {
+    width: 100%;
+    height: 446px;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.anons-pict > img {
+    width: 100%;
+    height: 100%;
+}
+
+.anons-wrapper > header {
+    height: 108px;
+}
+
+.anons-banner {
+    width: 270px;
+    height: 105px;
+    flex-shrink:0;
+    flex-grow:0;
+    background-color: var(--lightbgcolor);
+    border: 3px solid var(--bluecolor);
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.anons-title {
+    flex-grow: 1;
+}
+
+.anons-title > h4 {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 36px;
+    color: var(--blackcolor3);
+}
+
+.anons-banner > h6 {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: var(--bluecolor3);
+}
+
+.media-gallery {
+    display: grid;
+    grid-column-gap: 30px;
+    grid-row-gap: 60px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.video {
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.video > video {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    min-height: 160px; 
+}
+
+.video-title {
+    height: 40px;
+    overflow: hidden;
+    margin-top: 15px;
+    margin-bottom: 9px;
+}
+
+.video-title > p.simple-text2 {
+   line-height: 20px;
+   color: var(--blackcolor3); 
+   -webkit-line-clamp: 2;
+   
+}
+
+.video-item > span.footer-text {
+    line-height: 24px;
+}
+
+.video-play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: rgba(35, 50, 60, 0.5);
+    background-image: url(../images/play.png);
+    background-origin: border-box;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: auto auto;
+    cursor: pointer;
+}
+
+.show-more {
+    width: 100%;
+    height: 64px;
+    background-color: var(--lightbgcolor);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.flexblock1.show-more {
+    justify-content: center;
+}
+
+.show-more > p {
+    font-weight: 600;
+    font-size: 12px;
+    color: var(--bluecolor);
+    line-height: 100%;
+    text-transform: uppercase;
+    margin-left: 14px;
 }
