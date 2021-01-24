@@ -833,29 +833,28 @@ thanksBlock.addEventListener('click', function(event){
 
 for ( let sliderArrow of sliderArrows ) {
     
+    let parentSection = sliderArrow.closest('section');
+    let slides = parentSection.querySelectorAll('.slider-item');
+    let allSlidesLength = slides.length;
+    let hiddenSlidesLength = 0;
+        
+    for ( let i =0; i < slides.length; i++ ) {
+            if ( slides[i].classList.contains('hide') ) {
+                hiddenSlidesLength++;
+            }
+    }
+        
+    let visibleSlides = allSlidesLength - hiddenSlidesLength;
+    
     let count = 0;
     
     sliderArrow.addEventListener('click', function(event){
+        
         let target = event.target;
         
         if( !target.classList.contains('arrows') ) {
             return;
         }
-        
-        let parentSection = target.closest('section');
-        
-        let slides = parentSection.querySelectorAll('.slider-item');
-        let allSlidesLength = slides.length;
-               
-        let hiddenSlidesLength = 0;
-        
-        for ( let i =0; i < slides.length; i++ ) {
-            if ( slides[i].classList.contains('hide') ) {
-                hiddenSlidesLength++;
-            }
-        }
-        
-        let visibleSlides = allSlidesLength - hiddenSlidesLength;
         
         let direction = target.getAttribute('data-name');
         
@@ -874,8 +873,9 @@ for ( let sliderArrow of sliderArrows ) {
                     target.nextElementSibling.classList.add('active');
                 }
                 
-                slides[count + 1].classList.add('hide');
                 slides[count - 1].classList.remove('hide');
+                slides[count + visibleSlides - 1].classList.add('hide');
+                
                 count--;
                             
             break;
