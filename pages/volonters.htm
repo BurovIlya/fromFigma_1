@@ -380,11 +380,11 @@
                 
                   <form id="volonters-form" name="volonters-form" class="become-volonter" action="" method="POST">
                 
-                    <div class="volonters-form-wrapper" style="height: 2000px;">
+                    <div class="volonters-form-wrapper">
                     
                       <div class="flexblock3 form-parts-wrapper">
                       
-                        <div id="form-part1" class="form-grid" style="display: none;">
+                        <div id="form-part1" class="form-grid form-part">
                         
                             <div class="flexblock6 form-stages-wrapper">
                             
@@ -475,7 +475,7 @@
                             
                             <div class="input-field">
                             
-                                <input type="text" autocomplete="off" name="last-name" required />
+                                <input type="text" autocomplete="off" name="patronymic" required />
                                 
                                 <div class="custom-field custom-input">
                                     
@@ -494,7 +494,7 @@
                             
                             <div class="input-field">
                             
-                                <input type="text" autocomplete="off" name="last-name" required />
+                                <input type="text" autocomplete="off" name="birthdate" required />
                                 
                                 <div class="custom-field custom-input">
                                     
@@ -513,7 +513,7 @@
                             
                             <div class="input-field wide-field">
                             
-                                <input type="text" autocomplete="off" name="last-name" required />
+                                <input type="text" autocomplete="off" name="health" />
                                 
                                 <div class="custom-field custom-input">
                                     
@@ -538,7 +538,7 @@
                             
                             <div class="input-field wide-field">
                             
-                                <input type="text" autocomplete="off" name="last-name" required />
+                                <input type="text" autocomplete="off" name="address" />
                                 
                                 <div class="custom-field custom-input">
                                     
@@ -557,7 +557,7 @@
                             
                             <div class="input-field">
                             
-                                <input type="text" autocomplete="off" name="last-name" required />
+                                <input type="text" autocomplete="off" name="profession" />
                                 
                                 <div class="custom-field custom-input">
                                     
@@ -576,7 +576,7 @@
                             
                             <div class="input-field">
                             
-                                <input type="text" autocomplete="off" name="last-name" required />
+                                <input type="text" autocomplete="off" name="district" required />
                                 
                                 <div class="custom-field custom-input">
                                     
@@ -601,7 +601,7 @@
                             
                             <div class="input-field">
                             
-                                <input type="text" autocomplete="off" name="last-name" required />
+                                <input type="text" autocomplete="off" name="telnumber" required />
                                 
                                 <div class="custom-field custom-input">
                                     
@@ -620,7 +620,7 @@
                             
                             <div class="input-field">
                             
-                                <input type="text" autocomplete="off" name="last-name" required />
+                                <input type="text" autocomplete="off" name="email" required />
                                 
                                 <div class="custom-field custom-input">
                                     
@@ -639,13 +639,13 @@
                             
                            <div class="wide-field" style="padding-top: 30px;justify-self: end">
                            
-                            <div id="next1" class="button next-button">Продолжить</div>
+                            <div class="button next-button" data-direct="forward">Продолжить</div>
                            
                            </div> 
                         
                         </div>
                         
-                        <div id="form-part2" class="form-grid" style="margin-bottom: 100px;display: none;">
+                        <div id="form-part2" class="form-grid form-part" style="margin-bottom: 100px;">
                         
                             <div class="flexblock6 form-stages-wrapper">
                             
@@ -951,7 +951,7 @@
                            
                            <div class="wide-field flexblock8" style="padding-top: 30px;">
                            
-                            <a href="fosterlings.htm" class="block-style" style="margin-right: 64px;">
+                            <a href="#" class="block-style" style="margin-right: 64px;" data-direct="back">
                     
                                 <div class="flexblock1 fond-detailed-text">
                         
@@ -962,13 +962,13 @@
                     
                             </a>
                             
-                            <div id="next2" class="button next-button">Продолжить</div>
+                            <div class="button next-button" data-direct="forward">Продолжить</div>
                            
                            </div>
                         
                         </div>
                         
-                        <div id="form-part3" style="margin-bottom: 100px;display: none;">
+                        <div id="form-part3" class="form-part" style="margin-bottom: 100px;">
                         
                             <div class="flexblock6 form-stages-wrapper">
                             
@@ -1343,7 +1343,7 @@
                           
                           <div class="flexblock8" style="margin-top: 60px;">
                            
-                            <a href="fosterlings.htm" class="block-style" style="margin-right: 64px;">
+                            <a href="#" class="block-style" style="margin-right: 64px;" data-direct="back">
                     
                                 <div class="flexblock1 fond-detailed-text">
                         
@@ -1354,13 +1354,13 @@
                     
                             </a>
                             
-                            <div id="next2" class="button next-button">Продолжить</div>
+                            <div class="button next-button" data-direct="forward">Продолжить</div>
                            
                            </div>
                         
                         </div>
                         
-                        <div id="form-part4" style="margin-bottom: 100px;">
+                        <div id="form-part4" class="form-part" style="margin-bottom: 100px;">
                         
                             <div class="flexblock6 form-stages-wrapper">
                             
@@ -1554,7 +1554,7 @@
                             
                             <div class="flexblock8">
                            
-                            <a href="fosterlings.htm" class="block-style" style="margin-right: 64px;">
+                            <a href="#" class="block-style" style="margin-right: 64px;" data-direct="back">
                     
                                 <div class="flexblock1 fond-detailed-text">
                         
@@ -1566,7 +1566,7 @@
                             </a>
                             
                             <a href="volonters_submit.htm">
-                                <div id="next2" class="button next-button">Отправить заявку</div>
+                                <div id="subm" class="button next-button">Отправить заявку</div>
                             </a>
                            
                            </div>
