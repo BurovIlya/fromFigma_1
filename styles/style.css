@@ -656,7 +656,7 @@ p.simple-text {
     background: var(--bluecolor);
 }
 
-.volonters:hover, .report-button:hover, .kontract-button:hover {
+.volonters:hover, .report-button:hover, .kontract-button:hover, .next-button:hover {
   background: var(--bluecolor2);
   transition: background-color 0.4s linear;  
 }
@@ -1670,16 +1670,16 @@ div.popup-close {
     color: var(--bluecolor2);
 }
 
-#popup-content .custom-input, #popup-content .custom-select {
+#popup-content .custom-input, #popup-content .custom-select, #volonters-form .custom-input, #volonters-form .custom-select {
     background-color: var(--whitecolor);
     border: 2px solid var(--bordercolor);
 }
 
-#popup-content .custom-input:hover, #popup-content .custom-input:focus, #popup-content .edited, #popup-content .custom-select:hover {
+#popup-content .custom-input:hover, #popup-content .custom-input:focus, #popup-content .edited, #popup-content .custom-select:hover, #volonters-form .custom-input:hover, #volonters-form .custom-select:hover {
     border: 2px solid var(--bluecolor);
 }
 
-#popup-content .custom-input p.simple-text, #popup-content .custom-select p.select-field-title {
+#popup-content .custom-input p.simple-text, #popup-content .custom-select p.select-field-title, #volonters-form .custom-input p.simple-text, #volonters-form .custom-select p.select-field-title {
     color: #7E90A5;
 }
 
@@ -2287,7 +2287,7 @@ div.step-title {
     color: var(--bluecolor3);
 }
 
-.report-button, .kontract-button {
+.report-button, .kontract-button, .next-button {
     width: 170px;
     background: var(--bluecolor);
 }
@@ -3757,7 +3757,218 @@ div.post-share > p.simple-text {
     left: 0;
 }
 
+.form-parts-wrapper > div {
+    width: 670px;
+}
+
 form#volonters-form {
     display: block;
     width: 100%;
+}
+
+.form-grid {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 1fr 1fr;
+    
+}
+
+.form-stages-wrapper {
+    grid-column: 1 / 3;
+    height: 63px;
+}
+
+.form-stage {
+    position: relative;
+    width: 25%;
+    flex: none;
+}
+
+.stage-number {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 24px;
+    height: 24px;
+    margin-left: -12px;
+    border-radius: 50%;
+    background-color: var(--bordercolor);
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 24px;
+    text-align: center;
+    color:var(--whitecolor);
+    z-index: 22;
+}
+
+.done {
+   background-image: url('../images/check-square.png');
+   background-position: center center;
+   background-repeat: no-repeat;
+   background-size: auto auto; 
+}
+
+form#volonters-form .fulltext-link {
+    text-align: center;
+    color: #7E90A5;
+    cursor: auto;
+}
+
+.stage-line {
+    position: absolute;
+    left: 50%;
+    bottom: 11px;
+    width: 100%;
+    height: 3px;
+    background-color: #E9F3F7;
+    
+}
+
+.complete {
+    background-color: var(--bluecolor);
+}
+
+form#volonters-form .complete-text {
+    color: var(--bluecolor);
+}
+
+.field-label {
+    /*align-self: center;*/
+    padding-top: 10px;
+    height: 29px;
+    
+}
+
+form#volonters-form .field-label > p.fulltext-link {
+    text-align: left;
+}
+
+.wide-field {
+   grid-column: 1 / 3; 
+}
+
+.wide-field > h6.note {
+    padding-top: 10px;
+    line-height: 54px;
+}
+
+form#volonters-form .checkboxes-group p.fulltext-link {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+form#volonters-form .checkboxes-group p.simple-text {
+    color: var(--blackcolor3);
+}
+
+form#volonters-form p.footer-text {
+    padding-left: 30px;
+    line-height: 200%;
+    margin-top: -4px;
+    white-space: normal;
+}
+
+.boxes {
+    margin-bottom: 20px;
+}
+
+.custom-checkbox + label#partlabel::before {
+    margin-top: 4px;
+}
+
+.other-input {
+    width: 100%;
+    height: 64px;
+    padding-left: 32px;
+}
+
+.other-input > input {
+    width: 100%;
+    height: 100%;
+    background: var(--lightbgcolor);
+    border: 2px solid var(--bordercolor);
+    border-radius: 6px;
+    padding: 24px;
+}
+
+.other-input > input::placeholder {
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--textcolor);
+}
+
+.other-input > input:focus::placeholder {
+    color: var(--lightbgcolor);
+}
+
+#form-part3 h6.note {
+    line-height: 54px;
+    margin-top: 39px;
+    margin-bottom:  27px;
+}
+
+#form-part3 div.input-field {
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+
+.boxes-wrapper {
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+
+#form-part3 .boxes-wrapper > div.input-field{
+    flex: none;
+    width: 305px;
+    margin: 0;
+}
+
+#form-part4 h6.note {
+    line-height: 54px;
+    margin-top: 39px;
+    margin-bottom: 39px;
+}
+
+#time-group {
+    height: 158px;
+    padding-right: 40px;
+    margin-bottom: 60px;
+}
+
+#time-group > div {
+    flex: none;
+}
+
+#time-group > div:first-child {
+    width: 220px;
+}
+
+#time-group > div:first-child > div {
+    width: 100%;
+}
+
+#time-group .flexblock5 {
+    align-items: flex-start;
+}
+
+#request-submitted {
+    display: flex;
+    flex-wrap:nowrap;
+    justify-content:center;
+    align-items:center; 
+    padding-top: 200px;
+    padding-bottom: 120px;
+}
+
+#request-submitted > div {
+    width: 440px;
+    height: 390px;
+}
+
+#request-submitted p.simple-text {
+    text-align: center;
+}
+
+#request-submitted .next-button {
+    width: 206px;
 }

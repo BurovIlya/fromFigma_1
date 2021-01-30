@@ -299,6 +299,7 @@ function editStart(elem) {
     let customInputInner = customInput.querySelector('div.custom-input-inner');
     let par1 = customInputInner.querySelector('p.simple-text');
     let par2 = customInputInner.querySelector('p.input-value-text');
+    let fieldIcon = customInputInner.querySelector('img');
     let clearButton = customInput.querySelector('div.clear-field');
         
     if ( !inputField ) {
@@ -321,6 +322,9 @@ function editStart(elem) {
         
         if( this.value ) {
             par2.innerHTML = this.value;
+            if(fieldIcon) {
+                fieldIcon.classList.add('hide');
+            }
         }
         else {
             return;
@@ -348,6 +352,9 @@ function editStart(elem) {
          par2.style.display = 'none';
          customInputInner.classList.remove('flexblock4');
          customInput.classList.remove('edited');
+         if(fieldIcon) {
+                fieldIcon.classList.remove('hide');
+         }
          this.style.display = 'none';
        };
     

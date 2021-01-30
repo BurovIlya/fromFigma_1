@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Благотворительный фонд "Возрождение нации". Отчетность</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="../styles/style.css">
+    
+<style type="text/css">
+
+.pages-main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    min-height: 100vh;
+}
+
+.pages-main > * {
+    flex: none;
+}
+
+.pages-content {
+    flex-grow: 1;
+}
+
+</style>
+    
+</head>
+<body>
+
+<div class="scrollup"></div>
+
+<div id="popup-wrapper" class="popup hide">
+    
+    <div id="popup-block" class="fixedBlock">
+        
+        <div id="popup-content">
+        
+            <header>Пожертвовать</header>
+            
+            <p class="simple-text">Вы можете стать частью нашей команды,<br /> помогая спасать судьбы людей.</p>
+        
+            <div class="popup-form">
+            
+                <form id="popup-donut-form" name="popup-donut-form" action="" method="POST" class="donut-form">
+                    
+                        <div class="form-elems-wrapper">
+                        
+                            <div class="switch-period">
+                            
+                                <div class="custom-radio">
+                                
+                                    <div class="custom-radio-variant">
+                                        <input type="radio" name="payperiod" id="period11" value="onetime" checked="checked" autocomplete="off" />
+                                        <label for="period11">Единоразово</label>
+                                    </div>
+                                    
+                                    <div class="switcher">
+                                    
+                                        <div class="switcher-ball"></div>
+                                    
+                                    </div>
+                                    
+                                    <div class="custom-radio-variant alter">
+                                        <input type="radio" name="payperiod" id="period22" value="monthly" autocomplete="off" />
+                                        <label for="period22">Ежемесячно</label>
+                                    </div>
+                                
+                                </div>
+                            
+                            </div>
+                            
+                            <div class="input-field">
+                            
+                                <input type="text" autocomplete="off" name="summa" required />
+                                
+                                <div class="custom-field custom-input">
+                                    
+                                    <div class="custom-input-inner">
+                                        
+                                        <p class="simple-text">Сумма в рублях<span>*</span></p>
+                                        <p class="input-value-text"></p>
+                                    </div>
+                                    
+                                    <div class="clear-field"></div>
+                                    
+                                </div>
+                            
+                            </div>
+                            
+                            <div class="select-field">
+                            
+                                <div class="custom-select">
+                                
+                                    <select name="paymode" id="paymode2">
+                                
+                                        <option value="0">Банковская карта</option>
+                                        <option value="1">Платежная квитанция</option>
+                                        <option value="2">PayPal</option>
+                                
+                                    </select>
+                                    <p class="select-field-title">Способ оплаты</p>
+                                    <div class="select-selected"></div>    
+                                
+                                </div>
+                            
+                            </div>
+                            
+                            <div class="input-field">
+                            
+                                <input type="text" autocomplete="off" name="first-name" required />
+                                
+                                <div class="custom-field custom-input">
+                                    
+                                    <div class="custom-input-inner">
+                                        
+                                        <p class="simple-text">Имя<span>*</span></p>
+                                        <p class="input-value-text"></p>
+                                        
+                                    </div>
+                                    
+                                    <div class="clear-field"></div>
+                                    
+                                </div>
+                            
+                            </div>
+                            
+                            
+                            <div class="input-field">
+                            
+                                <input type="text" autocomplete="off" name="last-name" required />
+                                
+                                <div class="custom-field custom-input">
+                                    
+                                    <div class="custom-input-inner">
+                                        
+                                        <p class="simple-text">Фамилия<span>*</span></p>
+                                        <p class="input-value-text"></p>
+                                        
+                                    </div>
+                                    
+                                    <div class="clear-field"></div>
+                                    
+                                </div>
+                            
+                            </div>
+                            
+                            <div class="checkboxes-wrapper">
+                            
+                                <div class="flexblock1 fond-detailed-text" style="margin-bottom: 6px;">
+                                
+                                    <input type="checkbox" checked="checked" class="custom-checkbox" id="oferta2" name="oferta2" value="agree" />
+                                    <label for="oferta2"><p class="simple-text">Я принимаю <a href="#" target="_blank" class="kontract">Договор оферты</a></p></label>
+                                    
+                        
+                                </div>
+                                
+                                <div class="flexblock1 fond-detailed-text">
+                        
+                                    <input type="checkbox" class="custom-checkbox" id="persData2" name="persData2" value="agree" />
+                                    <label for="persData2"><p class="simple-text">Я согласен на обработку моих персональных данных</p></label>
+                        
+                                </div>
+                            
+                            </div>
+                            
+                            <div class="big-button-wrapper">
+                                <button type="submit" class="donuts-big">Пожертвовать</button>
+                            </div>
+                        
+                        </div>
+                    
+                    </form>
+            
+            </div>
+        
+        </div>
+        
+        <div class="popup-close"></div>
+    
+    </div>
+    
+    
+    
+</div>
+
+<div id="popup2" class="popup hide">
+
+        <div id="popup2-block" class="fixedBlock hide">
+        
+            <div class="popup2-content">
+            
+                <img alt="" src="../images/help2.png" class="illustration" />
+                
+                <h6>Спасибо<br />за вашу помощь</h6>
+                
+                <p>Ваше пожертвование было<br />успешно отправлено</p>
+            
+            </div>
+        
+        </div>
+        
+        <div id="dogovor" class="fixedBlock hide">
+        
+            <div class="popup2-content container">
+            
+                <div class="viewport-wrapper">
+                
+                    <div class="viewport">
+                    
+                        <div class="content">
+                        
+                            <a href="#" target="_blank" class="block-style">
+                    
+                                <div class="flexblock1 fond-detailed-text">
+                        
+                                    <img alt="" src="../images/download.png" width="24" height="24" />
+                                    <span style="margin-left: 10px;">Скачать PDF</span>
+                                                           
+                                </div>
+                                
+                            </a>
+                            
+                            <h5 style="text-align: left;">Договор публичной оферты</h5>
+                                
+                            <div><p><span style="float:left;text-align: left;">г. Ростов-на-Дону</span><span style="float:right;text-align: right;">30 августа  2020  г.</span></p></div>
+                              
+                            <p style="clear: both;padding-top: 25px;">Благотворительный фонд «Возрождение нации», в лице    Председателя  Масловой Алисы Винченциуевны,  действующей  на  основании  Устава, именуемый  в  дальнейшем Благополучатель, настоящим предлагает физическим лицам или их представителям, именуемым  в  дальнейшем  Благотворитель,  совместно именуемые Стороны, заключить Договор о благотворительном пожертвовании на нижеследующих условиях:</p>
+                            
+                            <p class="punkt">1.  Общие положения о публичной оферте</p>
+                            <p>1.1. Данное предложение является публичной офертой в соответствии с пунктом 2  статьи 437  Гражданского Кодекса РФ.</p>
+                            <p>1.2. Акцептом настоящей оферты является осуществление Благотворителем перечисления денежных средств на расчётный счёт Благополучателя в качестве благотворительного пожертвования на уставную деятельность Благополучателя. Акцепт данного предложения Благотворителем означает, что последний ознакомился и согласен со всеми условиями настоящего Договора о благотворительном пожертвовании с Благополучателем.</p>
+                            <p>1.3. Оферта вступает в силу со дня, следующего за днём её публикации на официальном сайте Благополучателя  <a href="https://возрождение-нации.рф/" target="_blank">https://возрождение-нации.рф/</a>, именуемом в дальнейшем «Сайт».</p>
+                            <p>1.4. Текст  настоящей  оферты  может  быть  изменен  Благополучателем  без предварительного уведомления и действует со дня, следующего за днём его размещения на Сайте.</p>
+                            <p>1.5. Оферта действует до дня, следующего за днем размещения на Сайте извещения об отмене Оферты. Благополучатель вправе отменить Оферту в любое время без объяснения причин.</p>
+                            <p>1.6. Недействительность  одного  или  нескольких  условий  Оферты  не  влечёт недействительности всех остальных условий Оферты.</p>
+                            <p>1.7. Принимая условия данного соглашения, Благотворитель подтверждает добровольный и безвозмездный характер пожертвования.</p>
+                            
+                            <p class="punkt">2. Предмет договора</p> 
+                            <p>2.1.  По  настоящему  договору  Благотворитель  в  качестве благотворительного пожертвования  перечисляет  собственные  денежные  средства  на  расчётный  счёт Благополучателя, а Благополучатель принимает пожертвование и использует на уставные цели.</p>
+                            
+                            <p class="punkt">3. Деятельность Благополучателя</p>
+                            <p>3.1. Уставной деятельностью Благополучателя является реализация благотворительных программ  Благополучателя,  направленных   на социальную поддержку и защиту граждан, включая улучшение материального положения малообеспеченных, инвалидов и иных лиц, которые в силу своих физических или интеллектуальных возможностей, иных обстоятельств не способны самостоятельно реализовать свои права и законные интересы; социальную реабилитацию инвалидов; поддержку малообеспеченных семей с детьми инвалидами и многодетных семей; а также другие виды деятельности, указанные в Уставе Благотворительного фонда «Возрождение нации», утвержденного Протоколом № 3 от 13 февраля 2017 г. Благополучатель публикует информацию о своей работе, целях и задачах, мероприятиях и результатах на сайте <a href="https://возрождение-нации.рф/" target="_blank">https://возрождение-нации.рф/</a>, в Годовом отчете и в других открытых источниках.</p>
+
+                            <p class="punkt">4. Заключение договора</p> 
+                            <p>4.1. Акцептовать Оферту и тем самым заключить с Благополучателем Договор вправе только физическое лицо. </p>
+                            <p>4.2. Датой акцепта Оферты и соответственно датой заключения Договора является дата зачисления денежных средств на банковский счёт Благополучателя. Местом заключения Договора считается город Ростов-на-Дону Российской Федерации. В соответствии с пунктом 3 статьи 434 Гражданского кодекса Российской Федерации Договор считается заключенным в письменной форме.</p>
+                            <p>4.3. Условия  Договора  определяются  Офертой  в  редакции  (с  учётом  изменений  и дополнений),  действующей  (действующих)  на  день  оформления  платёжного распоряжения или день внесения наличных денег в кассу Благополучателя.</p>
+                            
+                            <p class="punkt">5. Внесение пожертвования</p> 
+                            <p>5.1. Благотворитель  самостоятельно  определяет  размер  суммы благотворительного пожертвования  и  перечисляет  его  Благополучателю  любым  платёжным  методом, указанным на сайте https://возрождение-нации.рф/, на условиях настоящего Договора.</p>
+                            <p>5.2. Благотворитель может оформить на сайте <a href="https://возрождение-нации.рф/" target="_blank">https://возрождение-нации.рф/</a> поручение на регулярное (ежемесячное) списание пожертвования с банковской карты.</p>
+                            <p>5.2.1. Благотворитель в соответствующей форме на сайте <a href="https://возрождение-нации.рф/" target="_blank">https://возрождение-нации.рф/</a> может выбрать сумму регулярного списания из предлагаемых вариантов или ввести свою, а так же определить дату регулярного списания из предлагаемых вариантов.</p>
+                            <p>5.2.2. Поручение считается оформленным после успешного завершения первого списания с карты с применением 3DS аутентификации в случае, если Благотворитель подключил соответствующую услугу в своем банке для обеспечения дополнительной безопасности при осуществлении онлайн-платежей, и получении уведомления об успешном списании на электронный адрес Благотворителя, указанный при оформлении поручения.</p> 
+                            <p>5.2.3. Поручение на регулярное списание действует до момента окончания срока действия карты владельца или  до  подачи  Благотворителем  письменного  уведомления  о прекращении действия поручения. Уведомление должно быть направлено на электронный адрес <a href="mailto:vnfond@mail.ru">vnfond@mail.ru</a> не менее чем за 15  календарных дней до даты очередного автоматического списания. Уведомление должно содержать следующие данные: фамилия и имя, как указано на карте; четыре последних цифры карты, с которой осуществляется автоматическое  списание  средств;  электронный  адрес,  на  который  Благополучатель отправит подтверждение о прекращении регулярного списания.</p>
+                            <p>5.3. Перечисление пожертвования на счёт Благополучателя путём списания средств со счёта мобильного телефона допускается только с номеров телефонов, оформленных на физическое лицо.</p>
+                            <p>5.4. При перечислении пожертвования через систему терминалов моментальной оплаты «Киви» (Qiwi),  для  правильной  идентификации  плательщика  Благотворитель  должен указать свой телефонный номер.</p>
+                            <p>5.5. При перечислении пожертвования путём оформления списания с банковского счёта через личный кабинет на интернет-сайте банка Благотворителя, в назначении платежа следует указать «Пожертвование на уставную деятельность Благотворительного фонда «Возрождение нации».</p>
+                            
+                            <p class="punkt">6. Права и обязанности сторон</p>
+                            <p>6.1. Благополучатель  обязуется  использовать  полученные  от  Благотворителя  по настоящему  договору  денежные  средства  строго  в  соответствии  с  действующим законодательством РФ и в рамках уставной деятельности.</p>
+                            <p>6.2. Благотворитель даёт разрешение на обработку и хранение персональных данных, используемых Благополучателем исключительно для исполнения указанного договора.</p>
+                            <p>6.3. Благополучатель  обязуется  не  раскрывать  третьим  лицам  личную  и  контактную информацию  Благотворителя  без  его  письменного  согласия,  за  исключением  случаев требования  данной  информации  государственными  органами,  имеющими  полномочия требовать такую информацию.</p>
+                            <p>6.4. Полученное от Благотворителя пожертвование, по причине закрытия потребности частично  или  полностью  не  израсходованное  согласно  назначению  пожертвования, указанному Благотворителем в платежном поручении, не возвращается Благотворителю, а перераспределяется Благополучателем самостоятельно на другие актуальные программы.</p>
+                            <p>6.5. Благополучатель имеет право извещать Благотворителя  о текущих программах с помощью электронных, почтовых и СМС-рассылок, а также с помощью телефонных обзвонов.</p>
+                            <p>6.6. По запросу Благотворителя (в виде электронного  или  обычного  письма) Благополучатель  обязан  предоставить  Благотворителю  информацию  о  сделанных Благотворителем пожертвованиях.</p>
+                            <p>6.7.  Благополучатель  не  несет  перед  Благотворителем  иных  обязательств,  кроме обязательств, указанных в настоящем Договоре.</p>
+                            
+                            <p class="punkt">7. Прочие условия</p>
+                            <p>7.1. В случае возникновения споров и разногласий между Сторонами по настоящему договору,  они  будут  по  возможности  разрешаться  путем  переговоров.  В  случае невозможности  разрешения  спора  путем  переговоров,  споры и  разногласия  могут решаться в соответствии с действующим законодательством Российской Федерации в судебных инстанциях по месту нахождения Благополучателя.</p>
+                            
+                            <p class="punkt">8. Реквизиты сторон</p>
+                            
+                            <p class="punkt">Б Л А Г О П О Л У Ч А Т Е Л Ь:</p>
+                            
+                            <p style="margin-top: 25px;">Адрес, указанный в ЕГРЮЛ: г. Ростов-на-Дону, ул. Серафимовича, д. 58 а, 3 этаж, оф. 1</p>
+                            <p>Почтовый адрес: г. Ростов-на-Дону, ул. Серафимовича, д. 58 а, 3 этаж, оф. 1</p>
+                            
+                            <p style="margin-top: 25px;">Телефон: +7 900 121 43 03</p>
+                            <p>Электронная почта: <a href="mailto:vnfond@mail.ru">vnfond@mail.ru</a></p>
+                            <p>сайт: <a href="https://возрождение-нации.рф/" target="_blank">https://возрождение-нации.рф/</a></p>
+                            
+                            <p style="margin-top: 25px;">ОГРН 1096100001843</p>
+                            <p>ИНН 6166070187</p>
+                            <p>КПП 616101001</p>
+                            
+                            <p style="margin-top: 25px;">р/с 40703810852090001143 Юго-Западный банк ПАО Сбербанк</p>
+                            <p>г. Ростов-на-Дону,</p>
+                            <p>к/с 30101810600000000602, БИК 046015602</p>
+                            
+                            <p style="margin-top: 25px;"><strong style="margin-right: 30px">Председатель</strong>  Маслова Алиса Винченциуевна</p>  
+                              
+                         </div>
+                                
+                    </div>
+                
+                </div>
+            
+            </div>
+            
+            <div class="popup-close"></div>
+        
+        </div>
+        
+        
+
+</div>
+
+<div class="pages-main">
+
+   <div class="title-page-header">
+      
+        <div class="title-page-info inner-block">
+        
+            <div class="flexblock1 menu flexblock2">
+            
+                <div class="flexblock1 logo">
+                
+                    <a href="../index.htm" style="height: 49px;"><img alt="logotip" src="../images/group26.png" style="margin-right: 20px;" width="170" height="49"></a>
+                    <div class="volume" style="margin-right: 20px;"></div>
+                    
+                
+                </div>
+                
+                <div class="flexblock1 navbar">
+                
+                    <ul class="navbar-items">
+                    
+                        <li><a href="reports.htm">Отчетность</a></li>
+                        <li><a href="programms.htm">Программы</a></li>
+                        <li><a href="fosterlings.htm">Подопечные</a></li>
+                        <li><a href="#" class="current-page">Волонтерам</a></li>
+                        <li><a href="video.htm">Видео</a></li>
+                        <li><a href="about.htm">О фонде</a></li>
+                        <li><a href="blog.htm">Блог</a></li>
+                    
+                    </ul>
+                    
+                    <div class="flexblock1 phone">
+                    
+                       <div class="phone-icon">
+                         
+                         <img alt="phone-icon" src="../images/smartphone2.png" width="24" height="24">
+                         
+                       </div> 
+                       
+                       <div class="phone-number"><span style="margin-right: 10px;">Телефон:</span>+7(900)121-43-03</div>
+                    
+                    </div>
+                    
+                    <div class="button donuts" style="margin-left: 35px; display: block;">Пожертвовать</div>
+                
+                </div>
+            
+            </div>
+        
+        </div>
+      
+      </div>
+      
+      <div class="pages-content">
+      
+        <div class="inner-block pages">
+        
+            <div id="request-submitted">
+            
+                <div class="flexblock5">
+                
+                    <img alt="" src="../images/charity1.png" />
+                    
+                    <h6 class="note">Заявка отправлена</h6>
+                    
+                    <div>
+                        <p class="simple-text">Ваша заявка на волонтерство была успешно отправлена.</p>
+                        <p class="simple-text">Мы свяжемся с вами по указанным контактам.</p>
+                    </div>
+                    
+                    <a href="../index.htm">
+                        <div class="button next-button">на главную страницу</div>
+                    </a>
+                
+                </div>
+            
+            </div>
+            
+        </div>
+        
+     </div> 
+      
+      <footer class="footer-wrapper">
+    
+      <div class="footer-big">
+      
+        <section class="inner-block footer-big-main">
+        
+            <a href="../index.htm" style="height: 49px;justify-self: start;" class="pict"><img alt="logotip" src="../images/group26.png" width="170" height="49"></a>
+            
+            <div class="navbar" style="align-self:center;">
+            
+                <ul class="flexblock1 navbar-items">
+                    
+                        <li><a href="reports.htm">Отчетность</a></li>
+                        <li><a href="programms.htm">Программы</a></li>
+                        <li><a href="fosterlings.htm">Подопечные</a></li>
+                        <li><a href="#">Волонтерам</a></li>
+                        <li><a href="video.htm">Видео</a></li>
+                        <li><a href="about.htm">О фонде</a></li>
+                        <li><a href="blog.htm">Блог</a></li>
+                    
+              </ul>
+            
+            </div>
+            
+            <div class="blog-line" style="align-self:center;"></div>
+            
+            <div style="padding-top: 9px;">
+            
+                <p class="simple-text">Начните помогать людям уже сегодня, пожертвовав любую удобную для вас сумму.</p>
+                
+                <div class="button donuts" style="margin-top: 51px;">Пожертвовать</div>
+            
+            </div>
+            
+            <div class="recvisits" style="padding-top: 9px;">
+            
+                <h5 class="header-five">Реквизиты</h5>
+                
+                <div class="flexblock3 recvisits-data">
+                
+                    <div>
+                    
+                        <p class="footer-text">Свидетельство Министерства юстиции РФ<br>о государственной регистрации<br>некоммерческой организации от 16.06.2009 г.</p>
+                        
+                        <p class="footer-text" style="line-height: 28px;">ОГРН 1096100001843<br>ИНН/КПП 6166070187/616401001</p>
+                        
+                    </div>
+                    
+                    <div>
+                    
+                        <p class="footer-text" style="line-height: 28px;">р/с 40703810852090001143<br>Юго-Западный банк ПАО Сбербанк<br>г. Ростов-на-Дону,<br>к/с 30101810600000000602,<br>БИК 046015602</p>
+                    
+                    </div>
+                    
+                    <div>
+                    
+                        <p class="footer-text" style="margin-bottom: 15px;">344002, Ростовская область,<br>г. Ростов-на-Дону,<br>ул. Серафимовича, д. 58 А, эт. 3, оф. 1</p>
+                        
+                        <div class="flexblock1 contacts" style="margin-bottom: 15px;">
+                        
+                            <img alt="phone-icon" src="../images/smartphone3.png" style="margin-right: 7px;" width="20" height="20">
+                            
+                            <p class="phone-number">+7(900)121-43-03</p>
+                        
+                        </div>
+                        
+                        <div class="flexblock1 contacts">
+                        
+                           <img alt="phone-icon" src="../images/mail2.png" style="margin-right: 13px;" width="20" height="20"> 
+                           
+                           <p class="phone-number">vnfond@mail.ru</p>
+                        
+                        </div>
+                    
+                    </div>
+                
+                </div>
+            
+            </div>
+        
+        </section>
+      
+      </div>
+      
+      <div class="footer-small">
+      
+        <section class="inner-block flexblock1 footer-small-main">
+        
+            <div>
+            
+                <p class="footer-text">Благотворительный фонд «Возрождение Нации» 2020</p>
+            
+            </div>
+            
+            <div class="flexblock1">
+            
+                <p class="footer-text" style="margin-right: 37px;"><a href="" target="_blank">Политика конфиденциальности</a></p>
+                
+                <p class="footer-text"><a href="" target="_blank">Условия возврата</a></p>
+            
+            </div>
+        
+        </section>
+      
+      </div>
+    
+    </footer>
+
+</div>
+    
+    
+<script type="text/javascript" src="../scripts/main.js"></script>
+<script type="text/javascript" src="../scripts/scrollup.js"></script>
+<script type="text/javascript" src="../scripts/volont.js"></script>
+   
+</body>
+
+</html>
